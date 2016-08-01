@@ -1,0 +1,326 @@
+<HTML><HEAD><TITLE>systuneinfo.txt.xan</title>
+<style type="text/css">
+/* FenXi static css file */
+body {
+        margin:0;
+        font-family:"Trebuchet MS", Arial, Verdana;
+        font-size:10pt;
+        color:#444444;
+        background-color:#FFFFFF;
+        text-align:left;
+}
+#header {
+        background-color:#395d76;
+        width:100%;
+        padding-top:10px;
+        padding-bottom:10px;
+        margin-bottom:20px;
+        font-size:16pt;
+        font-variant:small-caps;
+        text-align:center;
+        color:#FFFFFF;
+        font-family:Verdana, Arial, Helvetica, sans-serif;
+        background-image: url("FenXi.jpg");
+}
+#content {
+	margin-left:10px;
+	width:80%;
+}
+#header h1 {
+	font-family:Gallant,"Century Gothic", "Trebuchet MS", "Arial Narrow", Arial, sans-serif;
+	font-size:16pt;
+	/* text-transform:uppercase; */
+	font-weight:normal;
+	/* color:#000000;
+	text-align:left; */
+}
+#content h2 {
+	font-family:"Century Gothic", "Trebuchet MS", "Arial Narrow", Arial, sans-serif;
+	font-size:15pt;
+	text-transform:uppercase;
+	text-align:left;
+	font-weight:normal;
+	margin:0;
+	padding:0;
+	color:#395d76;
+	/* border-bottom:1px solid #eeeeee; */
+}
+#content table {
+    padding:2px;
+    border: 2px solid #cccccc;
+}
+#content td {
+    border-bottom: 1px solid #C1DAD7;
+    border-left: 1px solid #C1DAD7;
+}
+#content td.row0 {
+    background-color:#ffffff;
+}
+#content td.row1 {
+    background-color:#f1f5f9;
+}
+#content th {
+    background-color:#C5D5A9;/*#C1DAD7;*/
+    border-bottom: 1px solid #395d76;/*#6D929B;*/
+}
+a {
+    text-decoration:none;
+}
+a:hover {
+    background-color:#FFC726;
+}
+div.error {
+    background-color:#ffcc99;
+    border:1px solid #eeeeee;
+    padding:4px;
+    margin-bottom:10px;
+    width: 700px;
+}
+div.error_body {    
+    display: none;
+}
+div.prevnext {
+    clear:both;
+    text-align:left;
+    padding-bottom:20px;
+/*    width: 700px; */
+}
+</style>
+<script type="text/javascript">
+ // <![CDATA[
+function toggle(id){
+   if ( document.getElementById )
+      ele = document.getElementById( id );
+   else if ( document.all )
+      ele = eval( "document.all." + id );
+   else
+      return false;
+ 
+    if ( ele.style.display != "block" ) {
+      ele.style.display = "block"
+    } else {
+      ele.style.display = "none"
+    }
+
+    return true;
+}
+  // ]]>
+</script>
+</head><body><div id="header">
+<h1 align='center'>systuneinfo.txt.xan</h1>
+</div> <!-- header -->
+<div id="content">
+<h2><a name='Top'>Contents</a></h2>
+<ul>
+<li><a href='#17'>TCP Networking tunables</a>
+<li><a href='#18'>UDP Networking tunables</a>
+<li><a href='#19'>IP Networking tunables</a>
+<li><a href='#20'>CE tunables</a>
+</ul>
+<P>
+<div><h2><a name='17'>TCP Networking tunables</a></h2>
+<P><TABLE BORDER=0 CELLPADDING=4 CELLSPACING=3>
+<THEAD>
+<TR>
+<th>Tunable</th>
+<th>Value</th>
+</TR>
+</THEAD><TBODY>
+<tr><td class=row0>tcp_time_wait_interval</td><td class=row0>60000</td></tr>
+<tr><td class=row1>tcp_conn_req_max_q</td><td class=row1>128</td></tr>
+<tr><td class=row0>tcp_conn_req_max_q0</td><td class=row0>1024</td></tr>
+<tr><td class=row1>tcp_conn_req_min</td><td class=row1>1</td></tr>
+<tr><td class=row0>tcp_conn_grace_period</td><td class=row0>0</td></tr>
+<tr><td class=row1>tcp_cwnd_max</td><td class=row1>1048576</td></tr>
+<tr><td class=row0>tcp_debug</td><td class=row0>0</td></tr>
+<tr><td class=row1>tcp_smallest_nonpriv_port</td><td class=row1>1024</td></tr>
+<tr><td class=row0>tcp_ip_abort_cinterval</td><td class=row0>180000</td></tr>
+<tr><td class=row1>tcp_ip_abort_linterval</td><td class=row1>180000</td></tr>
+<tr><td class=row0>tcp_ip_abort_interval</td><td class=row0>480000</td></tr>
+<tr><td class=row1>tcp_ip_notify_cinterval</td><td class=row1>10000</td></tr>
+<tr><td class=row0>tcp_ip_notify_interval</td><td class=row0>10000</td></tr>
+<tr><td class=row1>tcp_ipv4_ttl</td><td class=row1>64</td></tr>
+<tr><td class=row0>tcp_keepalive_interval</td><td class=row0>7200000</td></tr>
+<tr><td class=row1>tcp_maxpsz_multiplier</td><td class=row1>10</td></tr>
+<tr><td class=row0>tcp_mss_def_ipv4</td><td class=row0>536</td></tr>
+<tr><td class=row1>tcp_mss_max_ipv4</td><td class=row1>65495</td></tr>
+<tr><td class=row0>tcp_mss_min</td><td class=row0>108</td></tr>
+<tr><td class=row1>tcp_naglim_def</td><td class=row1>4095</td></tr>
+<tr><td class=row0>tcp_rexmit_interval_initial</td><td class=row0>3000</td></tr>
+<tr><td class=row1>tcp_rexmit_interval_max</td><td class=row1>60000</td></tr>
+<tr><td class=row0>tcp_rexmit_interval_min</td><td class=row0>400</td></tr>
+<tr><td class=row1>tcp_deferred_ack_interval</td><td class=row1>100</td></tr>
+<tr><td class=row0>tcp_snd_lowat_fraction</td><td class=row0>0</td></tr>
+<tr><td class=row1>tcp_sth_rcv_hiwat</td><td class=row1>0</td></tr>
+<tr><td class=row0>tcp_sth_rcv_lowat</td><td class=row0>0</td></tr>
+<tr><td class=row1>tcp_dupack_fast_retransmit</td><td class=row1>3</td></tr>
+<tr><td class=row0>tcp_ignore_path_mtu</td><td class=row0>0</td></tr>
+<tr><td class=row1>tcp_smallest_anon_port</td><td class=row1>32768</td></tr>
+<tr><td class=row0>tcp_largest_anon_port</td><td class=row0>65535</td></tr>
+<tr><td class=row1>tcp_xmit_hiwat</td><td class=row1>49152</td></tr>
+<tr><td class=row0>tcp_xmit_lowat</td><td class=row0>4096</td></tr>
+<tr><td class=row1>tcp_recv_hiwat</td><td class=row1>49152</td></tr>
+<tr><td class=row0>tcp_recv_hiwat_minmss</td><td class=row0>4</td></tr>
+<tr><td class=row1>tcp_fin_wait_2_flush_interval</td><td class=row1>675000</td></tr>
+<tr><td class=row0>tcp_co_min</td><td class=row0>64</td></tr>
+<tr><td class=row1>tcp_max_buf</td><td class=row1>1048576</td></tr>
+<tr><td class=row0>tcp_strong_iss</td><td class=row0>1</td></tr>
+<tr><td class=row1>tcp_rtt_updates</td><td class=row1>20</td></tr>
+<tr><td class=row0>tcp_wscale_always</td><td class=row0>1</td></tr>
+<tr><td class=row1>tcp_tstamp_always</td><td class=row1>0</td></tr>
+<tr><td class=row0>tcp_tstamp_if_wscale</td><td class=row0>1</td></tr>
+<tr><td class=row1>tcp_rexmit_interval_extra</td><td class=row1>0</td></tr>
+<tr><td class=row0>tcp_deferred_acks_max</td><td class=row0>2</td></tr>
+<tr><td class=row1>tcp_slow_start_after_idle</td><td class=row1>4</td></tr>
+<tr><td class=row0>tcp_slow_start_initial</td><td class=row0>4</td></tr>
+<tr><td class=row1>tcp_co_timer_interval</td><td class=row1>20</td></tr>
+<tr><td class=row0>tcp_sack_permitted</td><td class=row0>2</td></tr>
+<tr><td class=row1>tcp_trace</td><td class=row1>0</td></tr>
+<tr><td class=row0>tcp_compression_enabled</td><td class=row0>1</td></tr>
+<tr><td class=row1>tcp_ipv6_hoplimit</td><td class=row1>60</td></tr>
+<tr><td class=row0>tcp_mss_def_ipv6</td><td class=row0>1220</td></tr>
+<tr><td class=row1>tcp_mss_max_ipv6</td><td class=row1>65475</td></tr>
+<tr><td class=row0>tcp_rev_src_routes</td><td class=row0>0</td></tr>
+<tr><td class=row1>tcp_local_dack_interval</td><td class=row1>50</td></tr>
+<tr><td class=row0>tcp_ndd_get_info_interval</td><td class=row0>1000</td></tr>
+<tr><td class=row1>tcp_local_dacks_max</td><td class=row1>8</td></tr>
+<tr><td class=row0>tcp_ecn_permitted</td><td class=row0>1</td></tr>
+<tr><td class=row1>tcp_rst_sent_rate_enabled</td><td class=row1>1</td></tr>
+<tr><td class=row0>tcp_rst_sent_rate</td><td class=row0>40</td></tr>
+<tr><td class=row1>tcp_push_timer_interval</td><td class=row1>50</td></tr>
+<tr><td class=row0>tcp_use_smss_as_mss_opt</td><td class=row0>0</td></tr>
+<tr><td class=row1>tcp_keepalive_abort_interval</td><td class=row1>480000</td></tr>
+<tr><td class=row0>tcp_wroff_xtra</td><td class=row0>32</td></tr>
+<tr><td class=row1>tcp_mdt_hdr_head_min</td><td class=row1>32</td></tr>
+<tr><td class=row0>tcp_mdt_hdr_tail_min</td><td class=row0>32</td></tr>
+<tr><td class=row1>tcp_mdt_max_pbufs</td><td class=row1>16</td></tr>
+<tr><td class=row0>tcp_extra_priv_ports</td><td class=row0>2049_4045</td></tr>
+<tr><td class=row1>tcp_host_param</td><td class=row1>Hash_HSP_Address_Subnet_Mask_Send_Receive_TStamp</td></tr>
+<tr><td class=row0>tcp_host_param_ipv6</td><td class=row0>Hash_HSP_Address_Subnet_Mask_Send_Receive_TStamp</td></tr>
+<tr><td class=row1>tcp_reserved_port_list</td><td class=row1>No_port_is_reserved.</td></tr>
+</tbody></table></p><div class="prevnext"><a href="#16">Previous</a> | <a href="#18">Next</a> | <a href="#content">Top</a> |<a href="#" onclick="toggle('query17');return false;">Query</a>
+<div class=error_body id=query17>select "Tunable", "Value" from systuneinfo_txt_xan1</div>
+</div></div>
+</P>
+<P>
+<div><h2><a name='18'>UDP Networking tunables</a></h2>
+<P><TABLE BORDER=0 CELLPADDING=4 CELLSPACING=3>
+<THEAD>
+<TR>
+<th>Tunable</th>
+<th>Value</th>
+</TR>
+</THEAD><TBODY>
+<tr><td class=row0>udp_wroff_extra</td><td class=row0>32</td></tr>
+<tr><td class=row1>udp_ipv4_ttl</td><td class=row1>255</td></tr>
+<tr><td class=row0>udp_ipv6_hoplimit</td><td class=row0>60</td></tr>
+<tr><td class=row1>udp_smallest_nonpriv_port</td><td class=row1>1024</td></tr>
+<tr><td class=row0>udp_do_checksum</td><td class=row0>1</td></tr>
+<tr><td class=row1>udp_smallest_anon_port</td><td class=row1>32768</td></tr>
+<tr><td class=row0>udp_largest_anon_port</td><td class=row0>65535</td></tr>
+<tr><td class=row1>udp_xmit_hiwat</td><td class=row1>57344</td></tr>
+<tr><td class=row0>udp_xmit_lowat</td><td class=row0>1024</td></tr>
+<tr><td class=row1>udp_recv_hiwat</td><td class=row1>57344</td></tr>
+<tr><td class=row0>udp_max_buf</td><td class=row0>2097152</td></tr>
+<tr><td class=row1>udp_ndd_get_info_interval</td><td class=row1>1000</td></tr>
+<tr><td class=row0>udp_extra_priv_ports</td><td class=row0>2049_4045</td></tr>
+</tbody></table></p><div class="prevnext"><a href="#17">Previous</a> | <a href="#19">Next</a> | <a href="#content">Top</a> |<a href="#" onclick="toggle('query18');return false;">Query</a>
+<div class=error_body id=query18>select "Tunable", "Value" from systuneinfo_txt_xan2</div>
+</div></div>
+</P>
+<P>
+<div><h2><a name='19'>IP Networking tunables</a></h2>
+<P><TABLE BORDER=0 CELLPADDING=4 CELLSPACING=3>
+<THEAD>
+<TR>
+<th>Tunable</th>
+<th>Value</th>
+</TR>
+</THEAD><TBODY>
+<tr><td class=row1>ip_respond_to_echo_broadcast</td><td class=row1>1</td></tr>
+<tr><td class=row0>ip_respond_to_echo_multicast</td><td class=row0>1</td></tr>
+<tr><td class=row1>ip_respond_to_timestamp</td><td class=row1>0</td></tr>
+<tr><td class=row0>ip_send_redirects</td><td class=row0>1</td></tr>
+<tr><td class=row1>ip_debug</td><td class=row1>0</td></tr>
+<tr><td class=row0>ip_mrtdebug</td><td class=row0>0</td></tr>
+<tr><td class=row1>ip_ire_timer_interval</td><td class=row1>60000</td></tr>
+<tr><td class=row0>ip_ire_arp_interval</td><td class=row0>1200000</td></tr>
+<tr><td class=row1>ip_ire_redirect_interval</td><td class=row1>60000</td></tr>
+<tr><td class=row0>ip_def_ttl</td><td class=row0>255</td></tr>
+<tr><td class=row1>ip_forward_src_routed</td><td class=row1>0</td></tr>
+<tr><td class=row0>ip_wroff_extra</td><td class=row0>32</td></tr>
+<tr><td class=row1>ip_ire_pathmtu_interval</td><td class=row1>600000</td></tr>
+<tr><td class=row0>ip_icmp_return_data_bytes</td><td class=row0>64</td></tr>
+<tr><td class=row1>ip_path_mtu_discovery</td><td class=row1>1</td></tr>
+<tr><td class=row0>ip_ignore_delete_time</td><td class=row0>30</td></tr>
+<tr><td class=row1>ip_ignore_redirect</td><td class=row1>0</td></tr>
+<tr><td class=row0>ip_output_queue</td><td class=row0>1</td></tr>
+<tr><td class=row1>ip_broadcast_ttl</td><td class=row1>1</td></tr>
+<tr><td class=row0>ip_icmp_err_interval</td><td class=row0>100</td></tr>
+<tr><td class=row1>ip_icmp_err_burst</td><td class=row1>10</td></tr>
+<tr><td class=row0>ip_reass_queue_bytes</td><td class=row0>1000000</td></tr>
+<tr><td class=row1>ip_strict_dst_multihoming</td><td class=row1>0</td></tr>
+<tr><td class=row0>ip_addrs_per_if</td><td class=row0>256</td></tr>
+<tr><td class=row1>icmp_accept_clear_messages</td><td class=row1>1</td></tr>
+<tr><td class=row0>igmp_accept_clear_messages</td><td class=row0>1</td></tr>
+<tr><td class=row1>ip_ndp_delay_first_probe_time</td><td class=row1>5000</td></tr>
+<tr><td class=row0>ip_ndp_max_unicast_solicit</td><td class=row0>3</td></tr>
+<tr><td class=row1>ip6_def_hops</td><td class=row1>255</td></tr>
+<tr><td class=row0>ip6_icmp_return_data_bytes</td><td class=row0>1280</td></tr>
+<tr><td class=row1>ip6_forward_src_routed</td><td class=row1>0</td></tr>
+<tr><td class=row0>ip6_respond_to_echo_multicast</td><td class=row0>1</td></tr>
+<tr><td class=row1>ip6_send_redirects</td><td class=row1>1</td></tr>
+<tr><td class=row0>ip6_ignore_redirect</td><td class=row0>0</td></tr>
+<tr><td class=row1>ip6_strict_dst_multihoming</td><td class=row1>0</td></tr>
+<tr><td class=row0>ip_ire_reclaim_fraction</td><td class=row0>3</td></tr>
+<tr><td class=row1>ipsec_policy_log_interval</td><td class=row1>1000</td></tr>
+<tr><td class=row0>pim_accept_clear_messages</td><td class=row0>1</td></tr>
+<tr><td class=row1>ip_ndp_unsolicit_interval</td><td class=row1>2000</td></tr>
+<tr><td class=row0>ip_ndp_unsolicit_count</td><td class=row0>3</td></tr>
+<tr><td class=row1>ip6_ignore_home_address_opt</td><td class=row1>1</td></tr>
+<tr><td class=row0>ip_policy_mask</td><td class=row0>0</td></tr>
+<tr><td class=row1>ip_multirt_ttl</td><td class=row1>1</td></tr>
+<tr><td class=row0>ip_multidata_outbound</td><td class=row0>1</td></tr>
+<tr><td class=row1>ip_ndp_defense_interval</td><td class=row1>300000</td></tr>
+<tr><td class=row0>ip_max_temp_idle</td><td class=row0>86400</td></tr>
+<tr><td class=row1>ip_max_temp_defend</td><td class=row1>1</td></tr>
+<tr><td class=row0>ip_max_defend</td><td class=row0>3</td></tr>
+<tr><td class=row1>ip_defend_interval</td><td class=row1>30</td></tr>
+<tr><td class=row0>ip_dup_recovery</td><td class=row0>300000</td></tr>
+<tr><td class=row1>ip_lso_outbound</td><td class=row1>1</td></tr>
+<tr><td class=row0>igmp_max_version</td><td class=row0>2</td></tr>
+<tr><td class=row1>mld_max_version</td><td class=row1>2</td></tr>
+<tr><td class=row0>ip_forwarding</td><td class=row0>0</td></tr>
+<tr><td class=row1>ip6_forwarding</td><td class=row1>0</td></tr>
+<tr><td class=row0>ip_rput_pullups</td><td class=row0>0</td></tr>
+<tr><td class=row1>ip_ndp_cache_report</td><td class=row1>ifname_hardware_addr_flags_proto_addr/mask</td></tr>
+<tr><td class=row0>ip_squeue_profile</td><td class=row0>1</td></tr>
+<tr><td class=row1>ip_squeue_bind</td><td class=row1>1</td></tr>
+<tr><td class=row0>ip_squeue_enter</td><td class=row0>2</td></tr>
+<tr><td class=row1>ip_squeue_fanout</td><td class=row1>0</td></tr>
+<tr><td class=row0>ip_cgtp_filter</td><td class=row0>0</td></tr>
+<tr><td class=row1>ip_soft_rings_cnt</td><td class=row1>2</td></tr>
+<tr><td class=row0>ipmp_hook_emulation</td><td class=row0>0</td></tr>
+<tr><td class=row1>e1000g0:ip_forwarding</td><td class=row1>0</td></tr>
+<tr><td class=row0>e1000g1:ip_forwarding</td><td class=row0>0</td></tr>
+<tr><td class=row1>e1000g2:ip_forwarding</td><td class=row1>0</td></tr>
+<tr><td class=row0>e1000g3:ip_forwarding</td><td class=row0>0</td></tr>
+</tbody></table></p><div class="prevnext"><a href="#18">Previous</a> | <a href="#20">Next</a> | <a href="#content">Top</a> |<a href="#" onclick="toggle('query19');return false;">Query</a>
+<div class=error_body id=query19>select "Tunable", "Value" from systuneinfo_txt_xan3</div>
+</div></div>
+</P>
+<P>
+<div><h2><a name='20'>CE tunables</a></h2>
+<P><TABLE BORDER=0 CELLPADDING=4 CELLSPACING=3>
+<THEAD>
+<TR>
+<th>Tunable</th>
+<th>Value</th>
+</TR>
+</THEAD><TBODY>
+</tbody></table></p><div class="prevnext"><a href="#19">Previous</a> | <a href="#21">Next</a> | <a href="#content">Top</a> |<a href="#" onclick="toggle('query20');return false;">Query</a>
+<div class=error_body id=query20>select "Tunable", "Value" from systuneinfo_txt_xan4</div>
+</div></div>
+</P>
+</div> <!-- footer -->
+</body></html>

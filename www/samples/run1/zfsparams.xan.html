@@ -1,0 +1,167 @@
+<HTML><HEAD><TITLE>zfsparams.xan</title>
+<style type="text/css">
+/* FenXi static css file */
+body {
+        margin:0;
+        font-family:"Trebuchet MS", Arial, Verdana;
+        font-size:10pt;
+        color:#444444;
+        background-color:#FFFFFF;
+        text-align:left;
+}
+#header {
+        background-color:#395d76;
+        width:100%;
+        padding-top:10px;
+        padding-bottom:10px;
+        margin-bottom:20px;
+        font-size:16pt;
+        font-variant:small-caps;
+        text-align:center;
+        color:#FFFFFF;
+        font-family:Verdana, Arial, Helvetica, sans-serif;
+        background-image: url("FenXi.jpg");
+}
+#content {
+	margin-left:10px;
+	width:80%;
+}
+#header h1 {
+	font-family:Gallant,"Century Gothic", "Trebuchet MS", "Arial Narrow", Arial, sans-serif;
+	font-size:16pt;
+	/* text-transform:uppercase; */
+	font-weight:normal;
+	/* color:#000000;
+	text-align:left; */
+}
+#content h2 {
+	font-family:"Century Gothic", "Trebuchet MS", "Arial Narrow", Arial, sans-serif;
+	font-size:15pt;
+	text-transform:uppercase;
+	text-align:left;
+	font-weight:normal;
+	margin:0;
+	padding:0;
+	color:#395d76;
+	/* border-bottom:1px solid #eeeeee; */
+}
+#content table {
+    padding:2px;
+    border: 2px solid #cccccc;
+}
+#content td {
+    border-bottom: 1px solid #C1DAD7;
+    border-left: 1px solid #C1DAD7;
+}
+#content td.row0 {
+    background-color:#ffffff;
+}
+#content td.row1 {
+    background-color:#f1f5f9;
+}
+#content th {
+    background-color:#C5D5A9;/*#C1DAD7;*/
+    border-bottom: 1px solid #395d76;/*#6D929B;*/
+}
+a {
+    text-decoration:none;
+}
+a:hover {
+    background-color:#FFC726;
+}
+div.error {
+    background-color:#ffcc99;
+    border:1px solid #eeeeee;
+    padding:4px;
+    margin-bottom:10px;
+    width: 700px;
+}
+div.error_body {    
+    display: none;
+}
+div.prevnext {
+    clear:both;
+    text-align:left;
+    padding-bottom:20px;
+/*    width: 700px; */
+}
+</style>
+<script type="text/javascript">
+ // <![CDATA[
+function toggle(id){
+   if ( document.getElementById )
+      ele = document.getElementById( id );
+   else if ( document.all )
+      ele = eval( "document.all." + id );
+   else
+      return false;
+ 
+    if ( ele.style.display != "block" ) {
+      ele.style.display = "block"
+    } else {
+      ele.style.display = "none"
+    }
+
+    return true;
+}
+  // ]]>
+</script>
+</head><body><div id="header">
+<h1 align='center'>zfsparams.xan</h1>
+</div> <!-- header -->
+<div id="content">
+<h2><a name='Top'>Contents</a></h2>
+<ul>
+<li><a href='#44'>ZFS Parameters</a>
+</ul>
+<P>
+<div><h2><a name='44'>ZFS Parameters</a></h2>
+<P><TABLE BORDER=0 CELLPADDING=4 CELLSPACING=3>
+<THEAD>
+<TR>
+<th>Name</th>
+<th>Value</th>
+</TR>
+</THEAD><TBODY>
+<tr><td class=row1>arc_reduce_dnlc_percent</td><td class=row1>0x3</td></tr>
+<tr><td class=row0>zfs_arc_max</td><td class=row0>0x0</td></tr>
+<tr><td class=row1>zfs_arc_min</td><td class=row1>0x0</td></tr>
+<tr><td class=row0>arc_shrink_shift</td><td class=row0>0x5</td></tr>
+<tr><td class=row1>zfs_mdcomp_disable</td><td class=row1>0x0</td></tr>
+<tr><td class=row0>zfs_prefetch_disable</td><td class=row0>0x0</td></tr>
+<tr><td class=row1>zfetch_max_streams</td><td class=row1>0x8</td></tr>
+<tr><td class=row0>zfetch_min_sec_reap</td><td class=row0>0x2</td></tr>
+<tr><td class=row1>zfetch_block_cap</td><td class=row1>0x100</td></tr>
+<tr><td class=row0>zfetch_array_rd_sz</td><td class=row0>0x100000</td></tr>
+<tr><td class=row1>zfs_default_bs</td><td class=row1>0x9</td></tr>
+<tr><td class=row0>zfs_default_ibs</td><td class=row0>0xe</td></tr>
+<tr><td class=row1>metaslab_aliquot</td><td class=row1>0x80000</td></tr>
+<tr><td class=row0>zio_taskq_threads</td><td class=row0>0x8</td></tr>
+<tr><td class=row1>spa_max_replication_override</td><td class=row1>0x3</td></tr>
+<tr><td class=row0>spa_mode</td><td class=row0>0x3</td></tr>
+<tr><td class=row1>zfs_flags</td><td class=row1>0x0</td></tr>
+<tr><td class=row0>txg_time</td><td class=row0>0x5</td></tr>
+<tr><td class=row1>zfs_vdev_cache_max</td><td class=row1>0x4000</td></tr>
+<tr><td class=row0>zfs_vdev_cache_size</td><td class=row0>0xa00000</td></tr>
+<tr><td class=row1>zfs_vdev_cache_bshift</td><td class=row1>0x10</td></tr>
+<tr><td class=row0>vdev_mirror_shift</td><td class=row0>0x15</td></tr>
+<tr><td class=row1>zfs_vdev_max_pending</td><td class=row1>0x23</td></tr>
+<tr><td class=row0>zfs_vdev_min_pending</td><td class=row0>0x4</td></tr>
+<tr><td class=row1>zfs_scrub_limit</td><td class=row1>0x46</td></tr>
+<tr><td class=row0>zfs_vdev_time_shift</td><td class=row0>0x6</td></tr>
+<tr><td class=row1>zfs_vdev_ramp_rate</td><td class=row1>0x2</td></tr>
+<tr><td class=row0>zfs_vdev_aggregation_limit</td><td class=row0>0x20000</td></tr>
+<tr><td class=row1>fzap_default_block_shift</td><td class=row1>0xe</td></tr>
+<tr><td class=row0>zfs_immediate_write_sz</td><td class=row0>0x8000</td></tr>
+<tr><td class=row1>zfs_read_chunk_size</td><td class=row1>0x100000</td></tr>
+<tr><td class=row0>zil_disable</td><td class=row0>0x0</td></tr>
+<tr><td class=row1>zfs_nocacheflush</td><td class=row1>0x1</td></tr>
+<tr><td class=row0>zio_gang_bang</td><td class=row0>0x20001</td></tr>
+<tr><td class=row1>zio_injection_enabled</td><td class=row1>0x0</td></tr>
+<tr><td class=row0>zvol_immediate_write_sz</td><td class=row0>0x8000</td></tr>
+</tbody></table></p><div class="prevnext"><a href="#43">Previous</a> | <a href="#45">Next</a> | <a href="#content">Top</a> |<a href="#" onclick="toggle('query44');return false;">Query</a>
+<div class=error_body id=query44>select "Name", "Value" from zfsparams_xan1</div>
+</div></div>
+</P>
+</div> <!-- footer -->
+</body></html>

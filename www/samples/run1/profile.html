@@ -1,0 +1,164 @@
+<HTML><HEAD><TITLE>profile</title>
+<style type="text/css">
+/* FenXi static css file */
+body {
+        margin:0;
+        font-family:"Trebuchet MS", Arial, Verdana;
+        font-size:10pt;
+        color:#444444;
+        background-color:#FFFFFF;
+        text-align:left;
+}
+#header {
+        background-color:#395d76;
+        width:100%;
+        padding-top:10px;
+        padding-bottom:10px;
+        margin-bottom:20px;
+        font-size:16pt;
+        font-variant:small-caps;
+        text-align:center;
+        color:#FFFFFF;
+        font-family:Verdana, Arial, Helvetica, sans-serif;
+        background-image: url("FenXi.jpg");
+}
+#content {
+	margin-left:10px;
+	width:80%;
+}
+#header h1 {
+	font-family:Gallant,"Century Gothic", "Trebuchet MS", "Arial Narrow", Arial, sans-serif;
+	font-size:16pt;
+	/* text-transform:uppercase; */
+	font-weight:normal;
+	/* color:#000000;
+	text-align:left; */
+}
+#content h2 {
+	font-family:"Century Gothic", "Trebuchet MS", "Arial Narrow", Arial, sans-serif;
+	font-size:15pt;
+	text-transform:uppercase;
+	text-align:left;
+	font-weight:normal;
+	margin:0;
+	padding:0;
+	color:#395d76;
+	/* border-bottom:1px solid #eeeeee; */
+}
+#content table {
+    padding:2px;
+    border: 2px solid #cccccc;
+}
+#content td {
+    border-bottom: 1px solid #C1DAD7;
+    border-left: 1px solid #C1DAD7;
+}
+#content td.row0 {
+    background-color:#ffffff;
+}
+#content td.row1 {
+    background-color:#f1f5f9;
+}
+#content th {
+    background-color:#C5D5A9;/*#C1DAD7;*/
+    border-bottom: 1px solid #395d76;/*#6D929B;*/
+}
+a {
+    text-decoration:none;
+}
+a:hover {
+    background-color:#FFC726;
+}
+div.error {
+    background-color:#ffcc99;
+    border:1px solid #eeeeee;
+    padding:4px;
+    margin-bottom:10px;
+    width: 700px;
+}
+div.error_body {    
+    display: none;
+}
+div.prevnext {
+    clear:both;
+    text-align:left;
+    padding-bottom:20px;
+/*    width: 700px; */
+}
+</style>
+<script type="text/javascript">
+ // <![CDATA[
+function toggle(id){
+   if ( document.getElementById )
+      ele = document.getElementById( id );
+   else if ( document.all )
+      ele = eval( "document.all." + id );
+   else
+      return false;
+ 
+    if ( ele.style.display != "block" ) {
+      ele.style.display = "block"
+    } else {
+      ele.style.display = "none"
+    }
+
+    return true;
+}
+  // ]]>
+</script>
+</head><body><div id="header">
+<h1 align='center'>profile</h1>
+</div> <!-- header -->
+<div id="content">
+<h2><a name='Top'>Contents</a></h2>
+<ul>
+<li><a href='#64'>System Info</a>
+<li><a href='#65'>IO</a>
+<li><a href='#66'>IO KB/s</a>
+</ul>
+<P>
+<div><h2><a name='64'>System Info</a></h2>
+<P><TABLE BORDER=0 CELLPADDING=4 CELLSPACING=3>
+<THEAD>
+<TR>
+<th>Name</th>
+<th>Value</th>
+</TR>
+</THEAD><TBODY>
+<tr><td class=row1>CPU Usr %</td><td class=row1 style="text-align: right; vertical-align: middle;">62.00</td></tr>
+<tr><td class=row0>CPU Sys %</td><td class=row0 style="text-align: right; vertical-align: middle;">33.00</td></tr>
+</tbody></table></p><div class="prevnext"><a href="#63">Previous</a> | <a href="#65">Next</a> | <a href="#content">Top</a> |<a href="#" onclick="toggle('query64');return false;">Query</a>
+<div class=error_body id=query64>select METANAME AS "Name", metavalue as "Value" from default_profile where source ='cpu'</div>
+</div></div>
+</P>
+<P>
+<div><h2><a name='65'>IO</a></h2>
+<P><TABLE BORDER=0 CELLPADDING=4 CELLSPACING=3>
+<THEAD>
+<TR>
+<th>Name</th>
+<th>Value</th>
+</TR>
+</THEAD><TBODY>
+<tr><td class=row1>Average reads per sec</td><td class=row1 style="text-align: right; vertical-align: middle;">2,083.25</td></tr>
+<tr><td class=row0>Average writes per sec</td><td class=row0 style="text-align: right; vertical-align: middle;">4,375.78</td></tr>
+<tr><td class=row1>Total Read bandwidth per sec</td><td class=row1 style="text-align: right; vertical-align: middle;">24,968.00</td></tr>
+<tr><td class=row0>Total Write bandwidth per sec</td><td class=row0 style="text-align: right; vertical-align: middle;">92,335.51</td></tr>
+<tr><td class=row1>Average reads per sec per disk</td><td class=row1 style="text-align: right; vertical-align: middle;">259.77</td></tr>
+<tr><td class=row0>Average writes per sec per disk</td><td class=row0 style="text-align: right; vertical-align: middle;">545.64</td></tr>
+<tr><td class=row1>Average Disk Service time(ms)</td><td class=row1 style="text-align: right; vertical-align: middle;">3.71</td></tr>
+<tr><td class=row0>Average Disk Busy(%)</td><td class=row0 style="text-align: right; vertical-align: middle;">65.52</td></tr>
+<tr><td class=row1>Average Read size (KB)</td><td class=row1 style="text-align: right; vertical-align: middle;">25.91</td></tr>
+<tr><td class=row0>Average write size (KB)</td><td class=row0 style="text-align: right; vertical-align: middle;">20.12</td></tr>
+</tbody></table></p><div class="prevnext"><a href="#64">Previous</a> | <a href="#66">Next</a> | <a href="#content">Top</a> |<a href="#" onclick="toggle('query65');return false;">Query</a>
+<div class=error_body id=query65>select metaname as "Name", metavalue as "Value" from default_profile where source ='io'</div>
+</div></div>
+</P>
+<P>
+<div><h2><a name='66'>IO KB/s</a></h2>
+<P><img src="profile_66.png"></img></p><div class="prevnext"><a href="#65">Previous</a> | <a href="#67">Next</a> | <a href="#content">Top</a> |<a href="#" onclick="toggle('query66');return false;">Query</a>
+<div class=error_body id=query66>select time, sum(kbrps) as "Read KB/s",sum(kbwps) as "Write KB/s"  from iostat group by Time</div>
+</div></div>
+</P>
+</div> <!-- footer -->
+</body></html>

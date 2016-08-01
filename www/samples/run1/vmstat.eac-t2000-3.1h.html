@@ -1,0 +1,175 @@
+<HTML><HEAD><TITLE>vmstat.eac-t2000-3.1h</title>
+<style type="text/css">
+/* FenXi static css file */
+body {
+        margin:0;
+        font-family:"Trebuchet MS", Arial, Verdana;
+        font-size:10pt;
+        color:#444444;
+        background-color:#FFFFFF;
+        text-align:left;
+}
+#header {
+        background-color:#395d76;
+        width:100%;
+        padding-top:10px;
+        padding-bottom:10px;
+        margin-bottom:20px;
+        font-size:16pt;
+        font-variant:small-caps;
+        text-align:center;
+        color:#FFFFFF;
+        font-family:Verdana, Arial, Helvetica, sans-serif;
+        background-image: url("FenXi.jpg");
+}
+#content {
+	margin-left:10px;
+	width:80%;
+}
+#header h1 {
+	font-family:Gallant,"Century Gothic", "Trebuchet MS", "Arial Narrow", Arial, sans-serif;
+	font-size:16pt;
+	/* text-transform:uppercase; */
+	font-weight:normal;
+	/* color:#000000;
+	text-align:left; */
+}
+#content h2 {
+	font-family:"Century Gothic", "Trebuchet MS", "Arial Narrow", Arial, sans-serif;
+	font-size:15pt;
+	text-transform:uppercase;
+	text-align:left;
+	font-weight:normal;
+	margin:0;
+	padding:0;
+	color:#395d76;
+	/* border-bottom:1px solid #eeeeee; */
+}
+#content table {
+    padding:2px;
+    border: 2px solid #cccccc;
+}
+#content td {
+    border-bottom: 1px solid #C1DAD7;
+    border-left: 1px solid #C1DAD7;
+}
+#content td.row0 {
+    background-color:#ffffff;
+}
+#content td.row1 {
+    background-color:#f1f5f9;
+}
+#content th {
+    background-color:#C5D5A9;/*#C1DAD7;*/
+    border-bottom: 1px solid #395d76;/*#6D929B;*/
+}
+a {
+    text-decoration:none;
+}
+a:hover {
+    background-color:#FFC726;
+}
+div.error {
+    background-color:#ffcc99;
+    border:1px solid #eeeeee;
+    padding:4px;
+    margin-bottom:10px;
+    width: 700px;
+}
+div.error_body {    
+    display: none;
+}
+div.prevnext {
+    clear:both;
+    text-align:left;
+    padding-bottom:20px;
+/*    width: 700px; */
+}
+</style>
+<script type="text/javascript">
+ // <![CDATA[
+function toggle(id){
+   if ( document.getElementById )
+      ele = document.getElementById( id );
+   else if ( document.all )
+      ele = eval( "document.all." + id );
+   else
+      return false;
+ 
+    if ( ele.style.display != "block" ) {
+      ele.style.display = "block"
+    } else {
+      ele.style.display = "none"
+    }
+
+    return true;
+}
+  // ]]>
+</script>
+</head><body><div id="header">
+<h1 align='center'>vmstat.eac-t2000-3.1h</h1>
+</div> <!-- header -->
+<div id="content">
+<h2><a name='Top'>Contents</a></h2>
+<ul>
+<li><a href='#67'>CPU</a>
+<li><a href='#68'>Faults</a>
+<li><a href='#69'>Kernel Threads</a>
+<li><a href='#70'>Paging</a>
+<li><a href='#71'>Free Memory & Swap</a>
+<li><a href='#72'>CPU Utilization (USR)</a>
+<li><a href='#73'>CPU Utilization (SYS)</a>
+<li><a href='#74'>CPU Utilization (Total)</a>
+</ul>
+<div><h2>Summary</h2>
+<TABLE BORDER=0 CELLPADDING=4 CELLSPACING=3>
+<THEAD>
+<TR>
+<th>Metric</th>
+<th>Average</th>
+<th>Max</th>
+<th>Min</th>
+<th>Trend</th>
+</TR>
+</THEAD><TBODY>
+
+<tr><td class=row1>CPU Utilization (USR)</td><td class=row1 style="text-align: right; vertical-align: middle;">62.00</td><td class=row1 style="text-align: right; vertical-align: middle;">70.00</td><td class=row1 style="text-align: right; vertical-align: middle;">12.00</td><td class=row1><img src="spark72.png"></img></td></tr>
+
+<tr><td class=row0>CPU Utilization (SYS)</td><td class=row0 style="text-align: right; vertical-align: middle;">33.00</td><td class=row0 style="text-align: right; vertical-align: middle;">44.00</td><td class=row0 style="text-align: right; vertical-align: middle;">20.00</td><td class=row0><img src="spark73.png"></img></td></tr>
+
+<tr><td class=row1>CPU Utilization (Total)</td><td class=row1 style="text-align: right; vertical-align: middle;">96.00</td><td class=row1 style="text-align: right; vertical-align: middle;">99.00</td><td class=row1 style="text-align: right; vertical-align: middle;">32.00</td><td class=row1><img src="spark74.png"></img></td></tr>
+
+</tbody></table>
+</div>
+<P>
+<div><h2><a name='67'>CPU</a></h2>
+<P><img src="vmstat.eac-t2000-3.1h_67.png"></p><div class="prevnext"><a href="#66">Previous</a> | <a href="#68">Next</a> | <a href="#content">Top</a> |<a href="#" onclick="toggle('query67');return false;">Query</a>
+<div class=error_body id=query67>select "Time","usr","sys","idle" from vmstat_eac_t2000_3_1h_table</div>
+</div></div>
+</P>
+<P>
+<div><h2><a name='68'>Faults</a></h2>
+<P><img src="vmstat.eac-t2000-3.1h_68.png"></img></p><div class="prevnext"><a href="#67">Previous</a> | <a href="#69">Next</a> | <a href="#content">Top</a> |<a href="#" onclick="toggle('query68');return false;">Query</a>
+<div class=error_body id=query68>select "Time","interrupts","syscalls","cswitches" from vmstat_eac_t2000_3_1h_table</div>
+</div></div>
+</P>
+<P>
+<div><h2><a name='69'>Kernel Threads</a></h2>
+<P><img src="vmstat.eac-t2000-3.1h_69.png"></img></p><div class="prevnext"><a href="#68">Previous</a> | <a href="#70">Next</a> | <a href="#content">Top</a> |<a href="#" onclick="toggle('query69');return false;">Query</a>
+<div class=error_body id=query69>select "Time","kthr_r","kthr_b","kthr_w" from vmstat_eac_t2000_3_1h_table</div>
+</div></div>
+</P>
+<P>
+<div><h2><a name='70'>Paging</a></h2>
+<P><img src="vmstat.eac-t2000-3.1h_70.png"></img></p><div class="prevnext"><a href="#69">Previous</a> | <a href="#71">Next</a> | <a href="#content">Top</a> |<a href="#" onclick="toggle('query70');return false;">Query</a>
+<div class=error_body id=query70>select "Time","page_re_ps","page_mf_ps","page_KB_pi_ps","page_KB_po_ps","page_KB_fr_ps","page_de_KB","page_scan_rate" from vmstat_eac_t2000_3_1h_table</div>
+</div></div>
+</P>
+<P>
+<div><h2><a name='71'>Free Memory & Swap</a></h2>
+<P><img src="vmstat.eac-t2000-3.1h_71.png"></img></p><div class="prevnext"><a href="#70">Previous</a> | <a href="#72">Next</a> | <a href="#content">Top</a> |<a href="#" onclick="toggle('query71');return false;">Query</a>
+<div class=error_body id=query71>select "Time","vm_swap_KB","vm_free_KB" from vmstat_eac_t2000_3_1h_table</div>
+</div></div>
+</P>
+</div> <!-- footer -->
+</body></html>

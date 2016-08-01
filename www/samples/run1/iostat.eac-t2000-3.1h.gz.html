@@ -1,0 +1,288 @@
+<HTML><HEAD><TITLE>iostat.eac-t2000-3.1h.gz</title>
+<style type="text/css">
+/* FenXi static css file */
+body {
+        margin:0;
+        font-family:"Trebuchet MS", Arial, Verdana;
+        font-size:10pt;
+        color:#444444;
+        background-color:#FFFFFF;
+        text-align:left;
+}
+#header {
+        background-color:#395d76;
+        width:100%;
+        padding-top:10px;
+        padding-bottom:10px;
+        margin-bottom:20px;
+        font-size:16pt;
+        font-variant:small-caps;
+        text-align:center;
+        color:#FFFFFF;
+        font-family:Verdana, Arial, Helvetica, sans-serif;
+        background-image: url("FenXi.jpg");
+}
+#content {
+	margin-left:10px;
+	width:80%;
+}
+#header h1 {
+	font-family:Gallant,"Century Gothic", "Trebuchet MS", "Arial Narrow", Arial, sans-serif;
+	font-size:16pt;
+	/* text-transform:uppercase; */
+	font-weight:normal;
+	/* color:#000000;
+	text-align:left; */
+}
+#content h2 {
+	font-family:"Century Gothic", "Trebuchet MS", "Arial Narrow", Arial, sans-serif;
+	font-size:15pt;
+	text-transform:uppercase;
+	text-align:left;
+	font-weight:normal;
+	margin:0;
+	padding:0;
+	color:#395d76;
+	/* border-bottom:1px solid #eeeeee; */
+}
+#content table {
+    padding:2px;
+    border: 2px solid #cccccc;
+}
+#content td {
+    border-bottom: 1px solid #C1DAD7;
+    border-left: 1px solid #C1DAD7;
+}
+#content td.row0 {
+    background-color:#ffffff;
+}
+#content td.row1 {
+    background-color:#f1f5f9;
+}
+#content th {
+    background-color:#C5D5A9;/*#C1DAD7;*/
+    border-bottom: 1px solid #395d76;/*#6D929B;*/
+}
+a {
+    text-decoration:none;
+}
+a:hover {
+    background-color:#FFC726;
+}
+div.error {
+    background-color:#ffcc99;
+    border:1px solid #eeeeee;
+    padding:4px;
+    margin-bottom:10px;
+    width: 700px;
+}
+div.error_body {    
+    display: none;
+}
+div.prevnext {
+    clear:both;
+    text-align:left;
+    padding-bottom:20px;
+/*    width: 700px; */
+}
+</style>
+<script type="text/javascript">
+ // <![CDATA[
+function toggle(id){
+   if ( document.getElementById )
+      ele = document.getElementById( id );
+   else if ( document.all )
+      ele = eval( "document.all." + id );
+   else
+      return false;
+ 
+    if ( ele.style.display != "block" ) {
+      ele.style.display = "block"
+    } else {
+      ele.style.display = "none"
+    }
+
+    return true;
+}
+  // ]]>
+</script>
+</head><body><div id="header">
+<h1 align='center'>iostat.eac-t2000-3.1h.gz</h1>
+</div> <!-- header -->
+<div id="content">
+<h2><a name='Top'>Contents</a></h2>
+<ul>
+<li><a href='#0'>Overall System Activity (per second)</a>
+<li><a href='#1'>Top 5 Hot Disks (Avg)</a>
+<li><a href='#2'>Top 5 Hot Disks (Peak)</a>
+<li><a href='#3'>Reads per second</a>
+<li><a href='#4'>Writes per second</a>
+<li><a href='#5'>Kilobytes read per second</a>
+<li><a href='#6'>Kilobytes written per second</a>
+<li><a href='#7'>Transactions actively being serviced</a>
+<li><a href='#8'>Average service time (ms)</a>
+<li><a href='#9'>Disk Busy Percentage</a>
+<li><a href='#10'>Active Disk Summary (per second)</a>
+<li><a href='#11'>Total Reads (per second)</a>
+<li><a href='#12'>Total Writes (per second)</a>
+<li><a href='#13'>Total KB Read (per second)</a>
+<li><a href='#14'>Total KB Write (per second)</a>
+<li><a href='#15'>Average Service Time</a>
+<li><a href='#16'>Average Disks used</a>
+</ul>
+<div><h2>Summary</h2>
+<TABLE BORDER=0 CELLPADDING=4 CELLSPACING=3>
+<THEAD>
+<TR>
+<th>Metric</th>
+<th>Average</th>
+<th>Max</th>
+<th>Min</th>
+<th>Trend</th>
+</TR>
+</THEAD><TBODY>
+
+<tr><td class=row0>Total Reads (per second)</td><td class=row0 style="text-align: right; vertical-align: middle;">2,083.25</td><td class=row0 style="text-align: right; vertical-align: middle;">2,619.90</td><td class=row0 style="text-align: right; vertical-align: middle;">228.90</td><td class=row0><img src="spark11.png"></img></td></tr>
+
+<tr><td class=row1>Total Writes (per second)</td><td class=row1 style="text-align: right; vertical-align: middle;">4,375.79</td><td class=row1 style="text-align: right; vertical-align: middle;">6,838.70</td><td class=row1 style="text-align: right; vertical-align: middle;">406.30</td><td class=row1><img src="spark12.png"></img></td></tr>
+
+<tr><td class=row0>Total KB Read (per second)</td><td class=row0 style="text-align: right; vertical-align: middle;">24,968.00</td><td class=row0 style="text-align: right; vertical-align: middle;">33,452.30</td><td class=row0 style="text-align: right; vertical-align: middle;">2,608.20</td><td class=row0><img src="spark13.png"></img></td></tr>
+
+<tr><td class=row1>Total KB Write (per second)</td><td class=row1 style="text-align: right; vertical-align: middle;">92,335.52</td><td class=row1 style="text-align: right; vertical-align: middle;">111,146.91</td><td class=row1 style="text-align: right; vertical-align: middle;">6,003.50</td><td class=row1><img src="spark14.png"></img></td></tr>
+
+<tr><td class=row0>Average Service Time</td><td class=row0 style="text-align: right; vertical-align: middle;">3.72</td><td class=row0 style="text-align: right; vertical-align: middle;">648.20</td><td class=row0 style="text-align: right; vertical-align: middle;">0.00</td><td class=row0><img src="spark15.png"></img></td></tr>
+
+<tr><td class=row1>Average Disks used</td><td class=row1 style="text-align: right; vertical-align: middle;">8.00</td><td class=row1 style="text-align: right; vertical-align: middle;">13.00</td><td class=row1 style="text-align: right; vertical-align: middle;">8.00</td><td class=row1><img src="spark16.png"></img></td></tr>
+
+</tbody></table>
+</div>
+<P>
+<div><h2><a name='0'>Overall System Activity (per second)</a></h2>
+<P><TABLE BORDER=0 CELLPADDING=4 CELLSPACING=3>
+<THEAD>
+<TR>
+<th>TOTAL_IOS</th>
+<th>READS</th>
+<th>WRITES</th>
+<th>TOTAL_MB</th>
+<th>MB_READ</th>
+<th>MB_WRITTEN</th>
+</TR>
+</THEAD><TBODY>
+<tr><td class=row0 style="text-align: right; vertical-align: middle;">6,459.04</td><td class=row0 style="text-align: right; vertical-align: middle;">2,083.25</td><td class=row0 style="text-align: right; vertical-align: middle;">4,375.79</td><td class=row0 style="text-align: right; vertical-align: middle;">117.30</td><td class=row0 style="text-align: right; vertical-align: middle;">24.97</td><td class=row0 style="text-align: right; vertical-align: middle;">92.34</td></tr>
+</tbody></table></p><div class="prevnext"><a href="#-1">Previous</a> | <a href="#1">Next</a> | <a href="#content">Top</a> |<a href="#" onclick="toggle('query0');return false;">Query</a>
+<div class=error_body id=query0>select avg(tot_rps) + avg(tot_wps) as total_ios,avg(tot_rps) as reads,avg(tot_wps) as writes, avg(tot_mbrps) + avg(tot_mbwps) as total_MB, avg(tot_mbrps) as MB_read,avg(tot_mbwps) as MB_written from (select sum(rps) as tot_rps, sum(wps) as tot_wps, sum(kbrps)/1000 as tot_mbrps,sum(kbwps)/1000 as tot_mbwps from iostat_eac_t2000_3_1h_gz group by time) as iostat_total</div>
+</div></div>
+</P>
+<P>
+<div><h2><a name='1'>Top 5 Hot Disks (Avg)</a></h2>
+<P><TABLE BORDER=0 CELLPADDING=4 CELLSPACING=3>
+<THEAD>
+<TR>
+<th>DEVICE</th>
+<th>AVG_SVC_TIME</th>
+</TR>
+</THEAD><TBODY>
+<tr><td class=row1>c0t1d0</td><td class=row1 style="text-align: right; vertical-align: middle;">11.30</td></tr>
+<tr><td class=row0>c1t0d0</td><td class=row0 style="text-align: right; vertical-align: middle;">9.40</td></tr>
+<tr><td class=row1>c0t0d0</td><td class=row1 style="text-align: right; vertical-align: middle;">8.04</td></tr>
+<tr><td class=row0>c4t40d1</td><td class=row0 style="text-align: right; vertical-align: middle;">6.89</td></tr>
+<tr><td class=row1>md_d2</td><td class=row1 style="text-align: right; vertical-align: middle;">3.90</td></tr>
+</tbody></table></p><div class="prevnext"><a href="#0">Previous</a> | <a href="#2">Next</a> | <a href="#content">Top</a> |<a href="#" onclick="toggle('query1');return false;">Query</a>
+<div class=error_body id=query1>select device, avg(svct) as avg_svc_time from iostat_eac_t2000_3_1h_gz group by device order by avg_svc_time desc limit 5</div>
+</div></div>
+</P>
+<P>
+<div><h2><a name='2'>Top 5 Hot Disks (Peak)</a></h2>
+<P><TABLE BORDER=0 CELLPADDING=4 CELLSPACING=3>
+<THEAD>
+<TR>
+<th>DEVICE</th>
+<th>MAX_SVC_TIME</th>
+</TR>
+</THEAD><TBODY>
+<tr><td class=row0>c4t40d1</td><td class=row0 style="text-align: right; vertical-align: middle;">648.20</td></tr>
+<tr><td class=row1>c0t0d0</td><td class=row1 style="text-align: right; vertical-align: middle;">28.20</td></tr>
+<tr><td class=row0>c0t1d0</td><td class=row0 style="text-align: right; vertical-align: middle;">18.60</td></tr>
+<tr><td class=row1>c1t0d0</td><td class=row1 style="text-align: right; vertical-align: middle;">9.40</td></tr>
+<tr><td class=row0>c3t216000C0FF80EAC9d1</td><td class=row0 style="text-align: right; vertical-align: middle;">4.90</td></tr>
+</tbody></table></p><div class="prevnext"><a href="#1">Previous</a> | <a href="#3">Next</a> | <a href="#content">Top</a> |<a href="#" onclick="toggle('query2');return false;">Query</a>
+<div class=error_body id=query2>select device, max(svct) as max_svc_time from iostat_eac_t2000_3_1h_gz group by device order by max_svc_time desc limit 5</div>
+</div></div>
+</P>
+<P>
+<div><h2><a name='3'>Reads per second</a></h2>
+<P><img src="iostat.eac-t2000-3.1h.gz_3.png"></img></p><div class="prevnext"><a href="#2">Previous</a> | <a href="#4">Next</a> | <a href="#content">Top</a> |<a href="#" onclick="toggle('query3');return false;">Query</a>
+<div class=error_body id=query3>select time, device, rps from iostat_eac_t2000_3_1h_gz</div>
+</div></div>
+</P>
+<P>
+<div><h2><a name='4'>Writes per second</a></h2>
+<P><img src="iostat.eac-t2000-3.1h.gz_4.png"></img></p><div class="prevnext"><a href="#3">Previous</a> | <a href="#5">Next</a> | <a href="#content">Top</a> |<a href="#" onclick="toggle('query4');return false;">Query</a>
+<div class=error_body id=query4>select time, device, wps from iostat_eac_t2000_3_1h_gz</div>
+</div></div>
+</P>
+<P>
+<div><h2><a name='5'>Kilobytes read per second</a></h2>
+<P><img src="iostat.eac-t2000-3.1h.gz_5.png"></img></p><div class="prevnext"><a href="#4">Previous</a> | <a href="#6">Next</a> | <a href="#content">Top</a> |<a href="#" onclick="toggle('query5');return false;">Query</a>
+<div class=error_body id=query5>select time, device, kbrps from iostat_eac_t2000_3_1h_gz</div>
+</div></div>
+</P>
+<P>
+<div><h2><a name='6'>Kilobytes written per second</a></h2>
+<P><img src="iostat.eac-t2000-3.1h.gz_6.png"></img></p><div class="prevnext"><a href="#5">Previous</a> | <a href="#7">Next</a> | <a href="#content">Top</a> |<a href="#" onclick="toggle('query6');return false;">Query</a>
+<div class=error_body id=query6>select time, device, kbwps from iostat_eac_t2000_3_1h_gz</div>
+</div></div>
+</P>
+<P>
+<div><h2><a name='7'>Transactions actively being serviced</a></h2>
+<P><img src="iostat.eac-t2000-3.1h.gz_7.png"></img></p><div class="prevnext"><a href="#6">Previous</a> | <a href="#8">Next</a> | <a href="#content">Top</a> |<a href="#" onclick="toggle('query7');return false;">Query</a>
+<div class=error_body id=query7>select time, device, actv from iostat_eac_t2000_3_1h_gz</div>
+</div></div>
+</P>
+<P>
+<div><h2><a name='8'>Average service time (ms)</a></h2>
+<P><img src="iostat.eac-t2000-3.1h.gz_8.png"></img></p><div class="prevnext"><a href="#7">Previous</a> | <a href="#9">Next</a> | <a href="#content">Top</a> |<a href="#" onclick="toggle('query8');return false;">Query</a>
+<div class=error_body id=query8>select time, device, svct from iostat_eac_t2000_3_1h_gz</div>
+</div></div>
+</P>
+<P>
+<div><h2><a name='9'>Disk Busy Percentage</a></h2>
+<P><img src="iostat.eac-t2000-3.1h.gz_9.png"></img></p><div class="prevnext"><a href="#8">Previous</a> | <a href="#10">Next</a> | <a href="#content">Top</a> |<a href="#" onclick="toggle('query9');return false;">Query</a>
+<div class=error_body id=query9>select time, device, busyp from iostat_eac_t2000_3_1h_gz</div>
+</div></div>
+</P>
+<P>
+<div><h2><a name='10'>Active Disk Summary (per second)</a></h2>
+<P><TABLE BORDER=0 CELLPADDING=4 CELLSPACING=3>
+<THEAD>
+<TR>
+<th>DEVICE</th>
+<th>READS</th>
+<th>WRITES</th>
+<th>KB_READ</th>
+<th>KB_WRITTEN</th>
+<th>ACTV_TRANS</th>
+<th>SVC_TIME</th>
+<th>BUSY_PERCENT</th>
+</TR>
+</THEAD><TBODY>
+<tr><td class=row1>c0t1d0</td><td class=row1 style="text-align: right; vertical-align: middle;">0.17</td><td class=row1 style="text-align: right; vertical-align: middle;">1.27</td><td class=row1 style="text-align: right; vertical-align: middle;">1.50</td><td class=row1 style="text-align: right; vertical-align: middle;">1.73</td><td class=row1 style="text-align: right; vertical-align: middle;">0.03</td><td class=row1 style="text-align: right; vertical-align: middle;">11.30</td><td class=row1 style="text-align: right; vertical-align: middle;">0.33</td></tr>
+<tr><td class=row0>c1t0d0</td><td class=row0 style="text-align: right; vertical-align: middle;">0.00</td><td class=row0 style="text-align: right; vertical-align: middle;">0.00</td><td class=row0 style="text-align: right; vertical-align: middle;">0.00</td><td class=row0 style="text-align: right; vertical-align: middle;">0.00</td><td class=row0 style="text-align: right; vertical-align: middle;">0.00</td><td class=row0 style="text-align: right; vertical-align: middle;">9.40</td><td class=row0 style="text-align: right; vertical-align: middle;">0.00</td></tr>
+<tr><td class=row1>c0t0d0</td><td class=row1 style="text-align: right; vertical-align: middle;">65.14</td><td class=row1 style="text-align: right; vertical-align: middle;">14.05</td><td class=row1 style="text-align: right; vertical-align: middle;">1,584.62</td><td class=row1 style="text-align: right; vertical-align: middle;">99.68</td><td class=row1 style="text-align: right; vertical-align: middle;">0.44</td><td class=row1 style="text-align: right; vertical-align: middle;">8.04</td><td class=row1 style="text-align: right; vertical-align: middle;">10.07</td></tr>
+<tr><td class=row0>c4t40d1</td><td class=row0 style="text-align: right; vertical-align: middle;">38.45</td><td class=row0 style="text-align: right; vertical-align: middle;">372.79</td><td class=row0 style="text-align: right; vertical-align: middle;">4,917.91</td><td class=row0 style="text-align: right; vertical-align: middle;">15,214.99</td><td class=row0 style="text-align: right; vertical-align: middle;">2.39</td><td class=row0 style="text-align: right; vertical-align: middle;">6.89</td><td class=row0 style="text-align: right; vertical-align: middle;">24.73</td></tr>
+<tr><td class=row1>md_d2</td><td class=row1 style="text-align: right; vertical-align: middle;">123.70</td><td class=row1 style="text-align: right; vertical-align: middle;">162.30</td><td class=row1 style="text-align: right; vertical-align: middle;">1,033.70</td><td class=row1 style="text-align: right; vertical-align: middle;">2,149.10</td><td class=row1 style="text-align: right; vertical-align: middle;">1.10</td><td class=row1 style="text-align: right; vertical-align: middle;">3.90</td><td class=row1 style="text-align: right; vertical-align: middle;">5.00</td></tr>
+<tr><td class=row0>c3t216000C0FF80EAC7d1</td><td class=row0 style="text-align: right; vertical-align: middle;">20.50</td><td class=row0 style="text-align: right; vertical-align: middle;">28.20</td><td class=row0 style="text-align: right; vertical-align: middle;">170.10</td><td class=row0 style="text-align: right; vertical-align: middle;">356.60</td><td class=row0 style="text-align: right; vertical-align: middle;">0.20</td><td class=row0 style="text-align: right; vertical-align: middle;">3.90</td><td class=row0 style="text-align: right; vertical-align: middle;">4.00</td></tr>
+<tr><td class=row1>c3t216000C0FF80EAC7d0</td><td class=row1 style="text-align: right; vertical-align: middle;">20.40</td><td class=row1 style="text-align: right; vertical-align: middle;">28.10</td><td class=row1 style="text-align: right; vertical-align: middle;">169.50</td><td class=row1 style="text-align: right; vertical-align: middle;">355.70</td><td class=row1 style="text-align: right; vertical-align: middle;">0.20</td><td class=row1 style="text-align: right; vertical-align: middle;">3.80</td><td class=row1 style="text-align: right; vertical-align: middle;">4.00</td></tr>
+<tr><td class=row0>c3t216000C0FF80EAC6d1</td><td class=row0 style="text-align: right; vertical-align: middle;">330.88</td><td class=row0 style="text-align: right; vertical-align: middle;">660.05</td><td class=row0 style="text-align: right; vertical-align: middle;">3,085.15</td><td class=row0 style="text-align: right; vertical-align: middle;">12,839.32</td><td class=row0 style="text-align: right; vertical-align: middle;">2.40</td><td class=row0 style="text-align: right; vertical-align: middle;">2.48</td><td class=row0 style="text-align: right; vertical-align: middle;">81.91</td></tr>
+<tr><td class=row1>c3t216000C0FF80EAC9d1</td><td class=row1 style="text-align: right; vertical-align: middle;">331.61</td><td class=row1 style="text-align: right; vertical-align: middle;">659.16</td><td class=row1 style="text-align: right; vertical-align: middle;">3,087.54</td><td class=row1 style="text-align: right; vertical-align: middle;">12,889.05</td><td class=row1 style="text-align: right; vertical-align: middle;">2.41</td><td class=row1 style="text-align: right; vertical-align: middle;">2.48</td><td class=row1 style="text-align: right; vertical-align: middle;">81.92</td></tr>
+<tr><td class=row0>c2t216000C0FF80EAC7d1</td><td class=row0 style="text-align: right; vertical-align: middle;">329.45</td><td class=row0 style="text-align: right; vertical-align: middle;">663.24</td><td class=row0 style="text-align: right; vertical-align: middle;">3,076.62</td><td class=row0 style="text-align: right; vertical-align: middle;">12,854.72</td><td class=row0 style="text-align: right; vertical-align: middle;">2.40</td><td class=row0 style="text-align: right; vertical-align: middle;">2.47</td><td class=row0 style="text-align: right; vertical-align: middle;">81.98</td></tr>
+<tr><td class=row1>c3t216000C0FF80EAC9d0</td><td class=row1 style="text-align: right; vertical-align: middle;">330.83</td><td class=row1 style="text-align: right; vertical-align: middle;">664.64</td><td class=row1 style="text-align: right; vertical-align: middle;">3,083.74</td><td class=row1 style="text-align: right; vertical-align: middle;">12,847.14</td><td class=row1 style="text-align: right; vertical-align: middle;">2.39</td><td class=row1 style="text-align: right; vertical-align: middle;">2.45</td><td class=row1 style="text-align: right; vertical-align: middle;">81.78</td></tr>
+<tr><td class=row0>c3t216000C0FF80EAC6d0</td><td class=row0 style="text-align: right; vertical-align: middle;">327.11</td><td class=row0 style="text-align: right; vertical-align: middle;">664.28</td><td class=row0 style="text-align: right; vertical-align: middle;">3,062.69</td><td class=row0 style="text-align: right; vertical-align: middle;">12,740.85</td><td class=row0 style="text-align: right; vertical-align: middle;">2.35</td><td class=row0 style="text-align: right; vertical-align: middle;">2.42</td><td class=row0 style="text-align: right; vertical-align: middle;">81.49</td></tr>
+<tr><td class=row1>c2t216000C0FF80EAC7d0</td><td class=row1 style="text-align: right; vertical-align: middle;">329.32</td><td class=row1 style="text-align: right; vertical-align: middle;">676.95</td><td class=row1 style="text-align: right; vertical-align: middle;">3,065.88</td><td class=row1 style="text-align: right; vertical-align: middle;">12,841.76</td><td class=row1 style="text-align: right; vertical-align: middle;">2.36</td><td class=row1 style="text-align: right; vertical-align: middle;">2.39</td><td class=row1 style="text-align: right; vertical-align: middle;">81.59</td></tr>
+</tbody></table></p><div class="prevnext"><a href="#9">Previous</a> | <a href="#11">Next</a> | <a href="#content">Top</a> |<a href="#" onclick="toggle('query10');return false;">Query</a>
+<div class=error_body id=query10>select device, avg(rps) as reads, avg(wps) as writes, avg(kbrps) as KB_read, avg(kbwps) as KB_written, avg(actv) as actv_trans, avg(svct) as svc_time, avg(busyp) as busy_percent from iostat_eac_t2000_3_1h_gz group by device having avg(svct) >= 1 order by avg(svct) desc</div>
+</div></div>
+</P>
+</div> <!-- footer -->
+</body></html>

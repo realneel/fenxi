@@ -1,0 +1,578 @@
+<HTML><HEAD><TITLE>statit.eac-t2000-3.1h</title>
+<style type="text/css">
+/* FenXi static css file */
+body {
+        margin:0;
+        font-family:"Trebuchet MS", Arial, Verdana;
+        font-size:10pt;
+        color:#444444;
+        background-color:#FFFFFF;
+        text-align:left;
+}
+#header {
+        background-color:#395d76;
+        width:100%;
+        padding-top:10px;
+        padding-bottom:10px;
+        margin-bottom:20px;
+        font-size:16pt;
+        font-variant:small-caps;
+        text-align:center;
+        color:#FFFFFF;
+        font-family:Verdana, Arial, Helvetica, sans-serif;
+        background-image: url("FenXi.jpg");
+}
+#content {
+	margin-left:10px;
+	width:80%;
+}
+#header h1 {
+	font-family:Gallant,"Century Gothic", "Trebuchet MS", "Arial Narrow", Arial, sans-serif;
+	font-size:16pt;
+	/* text-transform:uppercase; */
+	font-weight:normal;
+	/* color:#000000;
+	text-align:left; */
+}
+#content h2 {
+	font-family:"Century Gothic", "Trebuchet MS", "Arial Narrow", Arial, sans-serif;
+	font-size:15pt;
+	text-transform:uppercase;
+	text-align:left;
+	font-weight:normal;
+	margin:0;
+	padding:0;
+	color:#395d76;
+	/* border-bottom:1px solid #eeeeee; */
+}
+#content table {
+    padding:2px;
+    border: 2px solid #cccccc;
+}
+#content td {
+    border-bottom: 1px solid #C1DAD7;
+    border-left: 1px solid #C1DAD7;
+}
+#content td.row0 {
+    background-color:#ffffff;
+}
+#content td.row1 {
+    background-color:#f1f5f9;
+}
+#content th {
+    background-color:#C5D5A9;/*#C1DAD7;*/
+    border-bottom: 1px solid #395d76;/*#6D929B;*/
+}
+a {
+    text-decoration:none;
+}
+a:hover {
+    background-color:#FFC726;
+}
+div.error {
+    background-color:#ffcc99;
+    border:1px solid #eeeeee;
+    padding:4px;
+    margin-bottom:10px;
+    width: 700px;
+}
+div.error_body {    
+    display: none;
+}
+div.prevnext {
+    clear:both;
+    text-align:left;
+    padding-bottom:20px;
+/*    width: 700px; */
+}
+</style>
+<script type="text/javascript">
+ // <![CDATA[
+function toggle(id){
+   if ( document.getElementById )
+      ele = document.getElementById( id );
+   else if ( document.all )
+      ele = eval( "document.all." + id );
+   else
+      return false;
+ 
+    if ( ele.style.display != "block" ) {
+      ele.style.display = "block"
+    } else {
+      ele.style.display = "none"
+    }
+
+    return true;
+}
+  // ]]>
+</script>
+</head><body><div id="header">
+<h1 align='center'>statit.eac-t2000-3.1h</h1>
+</div> <!-- header -->
+<div id="content">
+<h2><a name='Top'>Contents</a></h2>
+<ul>
+<li><a href='#27'>Metadata</a>
+<li><a href='#28'>Elapsed Time</a>
+<li><a href='#29'>CPU Statistics</a>
+<li><a href='#30'>CPU Statistics</a>
+<li><a href='#31'>Average Load Statistics</a>
+<li><a href='#32'>Average Swap Statistics in Pages</a>
+<li><a href='#33'>Sysinfo Statistics (per second)</a>
+<li><a href='#34'>Vminfo Statistics (per second)</a>
+<li><a href='#35'>Directory Name Cache Statistics (per second)</a>
+<li><a href='#36'>Segment Map Operations (per second)</a>
+<li><a href='#37'>Buffer Cache Statistics (per second)</a>
+<li><a href='#38'>Char I/O Statistics (per second)</a>
+<li><a href='#39'>Network Statistics</a>
+<li><a href='#40'>Average Disk Statistics(per disk)</a>
+<li><a href='#41'>Total Disk Statistics(per second)</a>
+<li><a href='#42'>Hot Disks </a>
+<li><a href='#43'>Disk Statistics</a>
+</ul>
+<P>
+<div><h2><a name='27'>Metadata</a></h2>
+<P><TABLE BORDER=0 CELLPADDING=4 CELLSPACING=3>
+<THEAD>
+<TR>
+<th>NAME</th>
+<th>Value</th>
+</TR>
+</THEAD><TBODY>
+<tr><td class=row1>Hostid:</td><td class=row1>8494c136</td></tr>
+<tr><td class=row0>Hostname:</td><td class=row0>eac-t2000-3</td></tr>
+<tr><td class=row1>Version:</td><td class=row1>5.00</td></tr>
+<tr><td class=row0>Start time:</td><td class=row0>Mon Oct 29 13:35:53 2007</td></tr>
+<tr><td class=row1>Total Time</td><td class=row1>1800.08</td></tr>
+</tbody></table></p><div class="prevnext"><a href="#26">Previous</a> | <a href="#28">Next</a> | <a href="#content">Top</a> |<a href="#" onclick="toggle('query27');return false;">Query</a>
+<div class=error_body id=query27>select name,mvalue as "Value" from statit_eac_t2000_3_1h0</div>
+</div></div>
+</P>
+<P>
+<div><h2><a name='28'>Elapsed Time</a></h2>
+<P><TABLE BORDER=0 CELLPADDING=4 CELLSPACING=3>
+<THEAD>
+<TR>
+<th>METRIC</th>
+<th>Total Time</th>
+<th>Percent</th>
+</TR>
+</THEAD><TBODY>
+<tr><td class=row0>idle</td><td class=row0 style="text-align: right; vertical-align: middle;">64.76</td><td class=row0 style="text-align: right; vertical-align: middle;">3.60</td></tr>
+<tr><td class=row1>user</td><td class=row1 style="text-align: right; vertical-align: middle;">1,120.47</td><td class=row1 style="text-align: right; vertical-align: middle;">62.25</td></tr>
+<tr><td class=row0>system</td><td class=row0 style="text-align: right; vertical-align: middle;">614.85</td><td class=row0 style="text-align: right; vertical-align: middle;">34.16</td></tr>
+<tr><td class=row1>wait</td><td class=row1 style="text-align: right; vertical-align: middle;">0.00</td><td class=row1 style="text-align: right; vertical-align: middle;">0.00</td></tr>
+</tbody></table></p><div class="prevnext"><a href="#27">Previous</a> | <a href="#29">Next</a> | <a href="#content">Top</a> |<a href="#" onclick="toggle('query28');return false;">Query</a>
+<div class=error_body id=query28>select metric,ttime as "Total Time", ptime as "Percent" from statit_eac_t2000_3_1h1</div>
+</div></div>
+</P>
+<P>
+<div><h2><a name='29'>CPU Statistics</a></h2>
+<P><img src="statit.eac-t2000-3.1h_29.png"></img></p><div class="prevnext"><a href="#28">Previous</a> | <a href="#30">Next</a> | <a href="#content">Top</a> |<a href="#" onclick="toggle('query29');return false;">Query</a>
+<div class=error_body id=query29>select 1 as A,metric,ptime from statit_eac_t2000_3_1h1</div>
+</div></div>
+</P>
+<P>
+<div><h2><a name='30'>CPU Statistics</a></h2>
+<P><TABLE BORDER=0 CELLPADDING=4 CELLSPACING=3>
+<THEAD>
+<TR>
+<th>CPU</th>
+<th>Idle%</th>
+<th>User%</th>
+<th>Sys%</th>
+<th>Total(s)</th>
+</TR>
+</THEAD><TBODY>
+<tr><td class=row0>0</td><td class=row0 style="text-align: right; vertical-align: middle;">1.50</td><td class=row0 style="text-align: right; vertical-align: middle;">53.30</td><td class=row0 style="text-align: right; vertical-align: middle;">45.20</td><td class=row0 style="text-align: right; vertical-align: middle;">1,800.10</td></tr>
+<tr><td class=row1>1</td><td class=row1 style="text-align: right; vertical-align: middle;">1.90</td><td class=row1 style="text-align: right; vertical-align: middle;">61.10</td><td class=row1 style="text-align: right; vertical-align: middle;">37.00</td><td class=row1 style="text-align: right; vertical-align: middle;">1,800.10</td></tr>
+<tr><td class=row0>2</td><td class=row0 style="text-align: right; vertical-align: middle;">2.40</td><td class=row0 style="text-align: right; vertical-align: middle;">65.20</td><td class=row0 style="text-align: right; vertical-align: middle;">32.50</td><td class=row0 style="text-align: right; vertical-align: middle;">1,800.10</td></tr>
+<tr><td class=row1>3</td><td class=row1 style="text-align: right; vertical-align: middle;">2.70</td><td class=row1 style="text-align: right; vertical-align: middle;">65.70</td><td class=row1 style="text-align: right; vertical-align: middle;">31.60</td><td class=row1 style="text-align: right; vertical-align: middle;">1,800.10</td></tr>
+<tr><td class=row0>4</td><td class=row0 style="text-align: right; vertical-align: middle;">2.60</td><td class=row0 style="text-align: right; vertical-align: middle;">65.40</td><td class=row0 style="text-align: right; vertical-align: middle;">32.00</td><td class=row0 style="text-align: right; vertical-align: middle;">1,800.10</td></tr>
+<tr><td class=row1>5</td><td class=row1 style="text-align: right; vertical-align: middle;">2.90</td><td class=row1 style="text-align: right; vertical-align: middle;">65.60</td><td class=row1 style="text-align: right; vertical-align: middle;">31.60</td><td class=row1 style="text-align: right; vertical-align: middle;">1,800.10</td></tr>
+<tr><td class=row0>6</td><td class=row0 style="text-align: right; vertical-align: middle;">3.30</td><td class=row0 style="text-align: right; vertical-align: middle;">65.30</td><td class=row0 style="text-align: right; vertical-align: middle;">31.40</td><td class=row0 style="text-align: right; vertical-align: middle;">1,800.10</td></tr>
+<tr><td class=row1>7</td><td class=row1 style="text-align: right; vertical-align: middle;">3.60</td><td class=row1 style="text-align: right; vertical-align: middle;">64.50</td><td class=row1 style="text-align: right; vertical-align: middle;">31.90</td><td class=row1 style="text-align: right; vertical-align: middle;">1,800.10</td></tr>
+<tr><td class=row0>8</td><td class=row0 style="text-align: right; vertical-align: middle;">2.90</td><td class=row0 style="text-align: right; vertical-align: middle;">65.40</td><td class=row0 style="text-align: right; vertical-align: middle;">31.70</td><td class=row0 style="text-align: right; vertical-align: middle;">1,800.10</td></tr>
+<tr><td class=row1>9</td><td class=row1 style="text-align: right; vertical-align: middle;">3.40</td><td class=row1 style="text-align: right; vertical-align: middle;">65.10</td><td class=row1 style="text-align: right; vertical-align: middle;">31.40</td><td class=row1 style="text-align: right; vertical-align: middle;">1,800.10</td></tr>
+<tr><td class=row0>10</td><td class=row0 style="text-align: right; vertical-align: middle;">3.80</td><td class=row0 style="text-align: right; vertical-align: middle;">65.70</td><td class=row0 style="text-align: right; vertical-align: middle;">30.50</td><td class=row0 style="text-align: right; vertical-align: middle;">1,800.10</td></tr>
+<tr><td class=row1>11</td><td class=row1 style="text-align: right; vertical-align: middle;">4.00</td><td class=row1 style="text-align: right; vertical-align: middle;">65.40</td><td class=row1 style="text-align: right; vertical-align: middle;">30.60</td><td class=row1 style="text-align: right; vertical-align: middle;">1,800.10</td></tr>
+<tr><td class=row0>12</td><td class=row0 style="text-align: right; vertical-align: middle;">2.90</td><td class=row0 style="text-align: right; vertical-align: middle;">65.00</td><td class=row0 style="text-align: right; vertical-align: middle;">32.10</td><td class=row0 style="text-align: right; vertical-align: middle;">1,800.10</td></tr>
+<tr><td class=row1>13</td><td class=row1 style="text-align: right; vertical-align: middle;">3.70</td><td class=row1 style="text-align: right; vertical-align: middle;">65.60</td><td class=row1 style="text-align: right; vertical-align: middle;">30.70</td><td class=row1 style="text-align: right; vertical-align: middle;">1,800.10</td></tr>
+<tr><td class=row0>14</td><td class=row0 style="text-align: right; vertical-align: middle;">3.90</td><td class=row0 style="text-align: right; vertical-align: middle;">64.80</td><td class=row0 style="text-align: right; vertical-align: middle;">31.30</td><td class=row0 style="text-align: right; vertical-align: middle;">1,800.10</td></tr>
+<tr><td class=row1>15</td><td class=row1 style="text-align: right; vertical-align: middle;">4.40</td><td class=row1 style="text-align: right; vertical-align: middle;">64.90</td><td class=row1 style="text-align: right; vertical-align: middle;">30.60</td><td class=row1 style="text-align: right; vertical-align: middle;">1,800.10</td></tr>
+<tr><td class=row0>16</td><td class=row0 style="text-align: right; vertical-align: middle;">3.30</td><td class=row0 style="text-align: right; vertical-align: middle;">65.00</td><td class=row0 style="text-align: right; vertical-align: middle;">31.60</td><td class=row0 style="text-align: right; vertical-align: middle;">1,800.10</td></tr>
+<tr><td class=row1>17</td><td class=row1 style="text-align: right; vertical-align: middle;">3.80</td><td class=row1 style="text-align: right; vertical-align: middle;">64.70</td><td class=row1 style="text-align: right; vertical-align: middle;">31.50</td><td class=row1 style="text-align: right; vertical-align: middle;">1,800.10</td></tr>
+<tr><td class=row0>18</td><td class=row0 style="text-align: right; vertical-align: middle;">4.30</td><td class=row0 style="text-align: right; vertical-align: middle;">64.90</td><td class=row0 style="text-align: right; vertical-align: middle;">30.70</td><td class=row0 style="text-align: right; vertical-align: middle;">1,800.10</td></tr>
+<tr><td class=row1>19</td><td class=row1 style="text-align: right; vertical-align: middle;">4.60</td><td class=row1 style="text-align: right; vertical-align: middle;">64.40</td><td class=row1 style="text-align: right; vertical-align: middle;">31.00</td><td class=row1 style="text-align: right; vertical-align: middle;">1,800.10</td></tr>
+<tr><td class=row0>20</td><td class=row0 style="text-align: right; vertical-align: middle;">3.70</td><td class=row0 style="text-align: right; vertical-align: middle;">41.90</td><td class=row0 style="text-align: right; vertical-align: middle;">54.40</td><td class=row0 style="text-align: right; vertical-align: middle;">1,800.10</td></tr>
+<tr><td class=row1>21</td><td class=row1 style="text-align: right; vertical-align: middle;">3.90</td><td class=row1 style="text-align: right; vertical-align: middle;">64.10</td><td class=row1 style="text-align: right; vertical-align: middle;">32.00</td><td class=row1 style="text-align: right; vertical-align: middle;">1,800.10</td></tr>
+<tr><td class=row0>22</td><td class=row0 style="text-align: right; vertical-align: middle;">4.70</td><td class=row0 style="text-align: right; vertical-align: middle;">42.10</td><td class=row0 style="text-align: right; vertical-align: middle;">53.20</td><td class=row0 style="text-align: right; vertical-align: middle;">1,800.10</td></tr>
+<tr><td class=row1>23</td><td class=row1 style="text-align: right; vertical-align: middle;">4.80</td><td class=row1 style="text-align: right; vertical-align: middle;">63.70</td><td class=row1 style="text-align: right; vertical-align: middle;">31.50</td><td class=row1 style="text-align: right; vertical-align: middle;">1,800.10</td></tr>
+<tr><td class=row0>24</td><td class=row0 style="text-align: right; vertical-align: middle;">3.50</td><td class=row0 style="text-align: right; vertical-align: middle;">64.20</td><td class=row0 style="text-align: right; vertical-align: middle;">32.30</td><td class=row0 style="text-align: right; vertical-align: middle;">1,800.10</td></tr>
+<tr><td class=row1>25</td><td class=row1 style="text-align: right; vertical-align: middle;">3.20</td><td class=row1 style="text-align: right; vertical-align: middle;">44.80</td><td class=row1 style="text-align: right; vertical-align: middle;">52.00</td><td class=row1 style="text-align: right; vertical-align: middle;">1,800.10</td></tr>
+<tr><td class=row0>26</td><td class=row0 style="text-align: right; vertical-align: middle;">4.30</td><td class=row0 style="text-align: right; vertical-align: middle;">64.00</td><td class=row0 style="text-align: right; vertical-align: middle;">31.70</td><td class=row0 style="text-align: right; vertical-align: middle;">1,800.10</td></tr>
+<tr><td class=row1>27</td><td class=row1 style="text-align: right; vertical-align: middle;">4.70</td><td class=row1 style="text-align: right; vertical-align: middle;">63.90</td><td class=row1 style="text-align: right; vertical-align: middle;">31.40</td><td class=row1 style="text-align: right; vertical-align: middle;">1,800.10</td></tr>
+<tr><td class=row0>28</td><td class=row0 style="text-align: right; vertical-align: middle;">3.50</td><td class=row0 style="text-align: right; vertical-align: middle;">64.10</td><td class=row0 style="text-align: right; vertical-align: middle;">32.40</td><td class=row0 style="text-align: right; vertical-align: middle;">1,800.10</td></tr>
+<tr><td class=row1>29</td><td class=row1 style="text-align: right; vertical-align: middle;">3.80</td><td class=row1 style="text-align: right; vertical-align: middle;">64.00</td><td class=row1 style="text-align: right; vertical-align: middle;">32.20</td><td class=row1 style="text-align: right; vertical-align: middle;">1,800.10</td></tr>
+<tr><td class=row0>30</td><td class=row0 style="text-align: right; vertical-align: middle;">4.30</td><td class=row0 style="text-align: right; vertical-align: middle;">63.90</td><td class=row0 style="text-align: right; vertical-align: middle;">31.80</td><td class=row0 style="text-align: right; vertical-align: middle;">1,800.10</td></tr>
+<tr><td class=row1>31</td><td class=row1 style="text-align: right; vertical-align: middle;">4.90</td><td class=row1 style="text-align: right; vertical-align: middle;">63.90</td><td class=row1 style="text-align: right; vertical-align: middle;">31.20</td><td class=row1 style="text-align: right; vertical-align: middle;">1,800.10</td></tr>
+</tbody></table></p><div class="prevnext"><a href="#29">Previous</a> | <a href="#31">Next</a> | <a href="#content">Top</a> |<a href="#" onclick="toggle('query30');return false;">Query</a>
+<div class=error_body id=query30>select CPU,idle as "Idle%",usr as "User%",system as "Sys%",Total_s as "Total(s)" from statit_eac_t2000_3_1h2</div>
+</div></div>
+</P>
+<P>
+<div><h2><a name='31'>Average Load Statistics</a></h2>
+<P><TABLE BORDER=0 CELLPADDING=4 CELLSPACING=3>
+<THEAD>
+<TR>
+<th>STAT</th>
+<th>VALUE</th>
+</TR>
+</THEAD><TBODY>
+<tr><td class=row0>secs - monitoring interval</td><td class=row0 style="text-align: right; vertical-align: middle;">1,800.00</td></tr>
+<tr><td class=row1>avg jobs waiting on I/O</td><td class=row1 style="text-align: right; vertical-align: middle;">0.00</td></tr>
+<tr><td class=row0>avg runnable processes</td><td class=row0 style="text-align: right; vertical-align: middle;">27.21</td></tr>
+<tr><td class=row1>avg runque occupancy</td><td class=row1 style="text-align: right; vertical-align: middle;">0.96</td></tr>
+<tr><td class=row0>avg swapped jobs</td><td class=row0 style="text-align: right; vertical-align: middle;">0.00</td></tr>
+<tr><td class=row1>avg swap device occupancy</td><td class=row1 style="text-align: right; vertical-align: middle;">0.00</td></tr>
+</tbody></table></p><div class="prevnext"><a href="#30">Previous</a> | <a href="#32">Next</a> | <a href="#content">Top</a> |<a href="#" onclick="toggle('query31');return false;">Query</a>
+<div class=error_body id=query31>select Stat,value from statit_eac_t2000_3_1h3 where groupid=0</div>
+</div></div>
+</P>
+<P>
+<div><h2><a name='32'>Average Swap Statistics in Pages</a></h2>
+<P><TABLE BORDER=0 CELLPADDING=4 CELLSPACING=3>
+<THEAD>
+<TR>
+<th>STAT</th>
+<th>VALUE</th>
+</TR>
+</THEAD><TBODY>
+<tr><td class=row0>avg freemem</td><td class=row0 style="text-align: right; vertical-align: middle;">3,461,621.25</td></tr>
+<tr><td class=row1>avg reserved swap</td><td class=row1 style="text-align: right; vertical-align: middle;">6,863,747.00</td></tr>
+<tr><td class=row0>avg allocated swap</td><td class=row0 style="text-align: right; vertical-align: middle;">6,837,066.50</td></tr>
+<tr><td class=row1>avg unreserved swap</td><td class=row1 style="text-align: right; vertical-align: middle;">2,924,968.50</td></tr>
+<tr><td class=row0>avg unallocated swap</td><td class=row0 style="text-align: right; vertical-align: middle;">565,555.62</td></tr>
+</tbody></table></p><div class="prevnext"><a href="#31">Previous</a> | <a href="#33">Next</a> | <a href="#content">Top</a> |<a href="#" onclick="toggle('query32');return false;">Query</a>
+<div class=error_body id=query32>select Stat,value from statit_eac_t2000_3_1h3 where groupid=1</div>
+</div></div>
+</P>
+<P>
+<div><h2><a name='33'>Sysinfo Statistics (per second)</a></h2>
+<P><TABLE BORDER=0 CELLPADDING=4 CELLSPACING=3>
+<THEAD>
+<TR>
+<th>STAT</th>
+<th>VALUE</th>
+</TR>
+</THEAD><TBODY>
+<tr><td class=row1>phys block reads</td><td class=row1 style="text-align: right; vertical-align: middle;">0.00</td></tr>
+<tr><td class=row0>phys block writes (sync+async)</td><td class=row0 style="text-align: right; vertical-align: middle;">0.00</td></tr>
+<tr><td class=row1>logical block reads</td><td class=row1 style="text-align: right; vertical-align: middle;">745.78</td></tr>
+<tr><td class=row0>logical block writes</td><td class=row0 style="text-align: right; vertical-align: middle;">0.00</td></tr>
+<tr><td class=row1>raw I/O reads</td><td class=row1 style="text-align: right; vertical-align: middle;">0.00</td></tr>
+<tr><td class=row0>raw I/O writes</td><td class=row0 style="text-align: right; vertical-align: middle;">0.00</td></tr>
+<tr><td class=row1>context switches</td><td class=row1 style="text-align: right; vertical-align: middle;">88,424.55</td></tr>
+<tr><td class=row0>traps</td><td class=row0 style="text-align: right; vertical-align: middle;">103,555.78</td></tr>
+<tr><td class=row1>device interrupts</td><td class=row1 style="text-align: right; vertical-align: middle;">54,817.72</td></tr>
+<tr><td class=row0>system calls</td><td class=row0 style="text-align: right; vertical-align: middle;">71,543.68</td></tr>
+<tr><td class=row1>read+readv syscalls</td><td class=row1 style="text-align: right; vertical-align: middle;">20,608.22</td></tr>
+<tr><td class=row0>write+writev syscalls</td><td class=row0 style="text-align: right; vertical-align: middle;">19,610.22</td></tr>
+<tr><td class=row1>rdwr bytes read</td><td class=row1 style="text-align: right; vertical-align: middle;">1,257,297.25</td></tr>
+<tr><td class=row0>rdwr bytes written</td><td class=row0 style="text-align: right; vertical-align: middle;">2,031,924.38</td></tr>
+<tr><td class=row1>forks + vforks</td><td class=row1 style="text-align: right; vertical-align: middle;">57.12</td></tr>
+<tr><td class=row0>execs</td><td class=row0 style="text-align: right; vertical-align: middle;">28.89</td></tr>
+<tr><td class=row1>msgrcv()+msgsnd() calls</td><td class=row1 style="text-align: right; vertical-align: middle;">0.00</td></tr>
+<tr><td class=row0>semop() calls</td><td class=row0 style="text-align: right; vertical-align: middle;">1,839.83</td></tr>
+<tr><td class=row1>pathname lookups (namei)</td><td class=row1 style="text-align: right; vertical-align: middle;">4,882.71</td></tr>
+<tr><td class=row0>ufs_iget() calls</td><td class=row0 style="text-align: right; vertical-align: middle;">0.00</td></tr>
+<tr><td class=row1>inodes taken w/ attach pgs</td><td class=row1 style="text-align: right; vertical-align: middle;">0.00</td></tr>
+<tr><td class=row0>inodes taken w/ no attach pgs</td><td class=row0 style="text-align: right; vertical-align: middle;">0.00</td></tr>
+<tr><td class=row1>directory blocks read</td><td class=row1 style="text-align: right; vertical-align: middle;">0.00</td></tr>
+<tr><td class=row0>inode table overflows</td><td class=row0 style="text-align: right; vertical-align: middle;">0.00</td></tr>
+<tr><td class=row1>file table overflows</td><td class=row1 style="text-align: right; vertical-align: middle;">0.00</td></tr>
+<tr><td class=row0>proc table overflows</td><td class=row0 style="text-align: right; vertical-align: middle;">0.00</td></tr>
+<tr><td class=row1>% bread hits</td><td class=row1 style="text-align: right; vertical-align: middle;">100.00</td></tr>
+<tr><td class=row0>intrs as threads(below clock)</td><td class=row0 style="text-align: right; vertical-align: middle;">17,911.40</td></tr>
+<tr><td class=row1>intrs blkd/released (swtch)</td><td class=row1 style="text-align: right; vertical-align: middle;">48.51</td></tr>
+<tr><td class=row0>times idle() ran (swtch)</td><td class=row0 style="text-align: right; vertical-align: middle;">3,674.66</td></tr>
+<tr><td class=row1>rw reader fails (swtch)</td><td class=row1 style="text-align: right; vertical-align: middle;">1,251.84</td></tr>
+<tr><td class=row0>rw writer fails (swtch)</td><td class=row0 style="text-align: right; vertical-align: middle;">605.12</td></tr>
+<tr><td class=row1>involuntary context switches</td><td class=row1 style="text-align: right; vertical-align: middle;">33,176.91</td></tr>
+<tr><td class=row0>xcalls to other cpus</td><td class=row0 style="text-align: right; vertical-align: middle;">200,817.73</td></tr>
+<tr><td class=row1>thread_create()s</td><td class=row1 style="text-align: right; vertical-align: middle;">57.34</td></tr>
+<tr><td class=row0>cpu migrations by threads</td><td class=row0 style="text-align: right; vertical-align: middle;">14,011.48</td></tr>
+<tr><td class=row1>failed mutex enters</td><td class=row1 style="text-align: right; vertical-align: middle;">36,702.10</td></tr>
+<tr><td class=row0>times module loaded</td><td class=row0 style="text-align: right; vertical-align: middle;">0.00</td></tr>
+<tr><td class=row1>times module unloaded</td><td class=row1 style="text-align: right; vertical-align: middle;">0.00</td></tr>
+<tr><td class=row0>physical block writes (async)</td><td class=row0 style="text-align: right; vertical-align: middle;">0.00</td></tr>
+</tbody></table></p><div class="prevnext"><a href="#32">Previous</a> | <a href="#34">Next</a> | <a href="#content">Top</a> |<a href="#" onclick="toggle('query33');return false;">Query</a>
+<div class=error_body id=query33>select Stat,value from statit_eac_t2000_3_1h3 where groupid=2</div>
+</div></div>
+</P>
+<P>
+<div><h2><a name='34'>Vminfo Statistics (per second)</a></h2>
+<P><TABLE BORDER=0 CELLPADDING=4 CELLSPACING=3>
+<THEAD>
+<TR>
+<th>STAT</th>
+<th>VALUE</th>
+</TR>
+</THEAD><TBODY>
+<tr><td class=row1>page reclaims (w/ pageout)</td><td class=row1 style="text-align: right; vertical-align: middle;">3,578.70</td></tr>
+<tr><td class=row0>page reclaims from free list</td><td class=row0 style="text-align: right; vertical-align: middle;">3,578.70</td></tr>
+<tr><td class=row1>pageins</td><td class=row1 style="text-align: right; vertical-align: middle;">0.00</td></tr>
+<tr><td class=row0>pages paged in</td><td class=row0 style="text-align: right; vertical-align: middle;">0.00</td></tr>
+<tr><td class=row1>pageouts</td><td class=row1 style="text-align: right; vertical-align: middle;">0.00</td></tr>
+<tr><td class=row0>pages paged out</td><td class=row0 style="text-align: right; vertical-align: middle;">0.00</td></tr>
+<tr><td class=row1>exec/lib page ins</td><td class=row1 style="text-align: right; vertical-align: middle;">0.00</td></tr>
+<tr><td class=row0>exec/lib page outs</td><td class=row0 style="text-align: right; vertical-align: middle;">0.00</td></tr>
+<tr><td class=row1>anon page ins</td><td class=row1 style="text-align: right; vertical-align: middle;">0.00</td></tr>
+<tr><td class=row0>anon page outs</td><td class=row0 style="text-align: right; vertical-align: middle;">0.00</td></tr>
+<tr><td class=row1>fs page ins</td><td class=row1 style="text-align: right; vertical-align: middle;">0.00</td></tr>
+<tr><td class=row0>fs page outs</td><td class=row0 style="text-align: right; vertical-align: middle;">0.00</td></tr>
+<tr><td class=row1>swapins</td><td class=row1 style="text-align: right; vertical-align: middle;">0.00</td></tr>
+<tr><td class=row0>pages swapped in</td><td class=row0 style="text-align: right; vertical-align: middle;">0.00</td></tr>
+<tr><td class=row1>swapouts</td><td class=row1 style="text-align: right; vertical-align: middle;">0.00</td></tr>
+<tr><td class=row0>pages swapped out</td><td class=row0 style="text-align: right; vertical-align: middle;">0.00</td></tr>
+<tr><td class=row1>ZFOD pages</td><td class=row1 style="text-align: right; vertical-align: middle;">5,483.10</td></tr>
+<tr><td class=row0>pages freed</td><td class=row0 style="text-align: right; vertical-align: middle;">0.00</td></tr>
+<tr><td class=row1>exec/lib pages freed</td><td class=row1 style="text-align: right; vertical-align: middle;">0.00</td></tr>
+<tr><td class=row0>anon pages freed</td><td class=row0 style="text-align: right; vertical-align: middle;">0.00</td></tr>
+<tr><td class=row1>fs pages freed</td><td class=row1 style="text-align: right; vertical-align: middle;">0.00</td></tr>
+<tr><td class=row0>pgs xmnd by pgout daemon</td><td class=row0 style="text-align: right; vertical-align: middle;">0.00</td></tr>
+<tr><td class=row1>revs of page daemon hand</td><td class=row1 style="text-align: right; vertical-align: middle;">0.00</td></tr>
+<tr><td class=row0>minor pgflts: hat_fault</td><td class=row0 style="text-align: right; vertical-align: middle;">0.00</td></tr>
+<tr><td class=row1>minor pgflts: as_fault</td><td class=row1 style="text-align: right; vertical-align: middle;">10,336.06</td></tr>
+<tr><td class=row0>major page faults</td><td class=row0 style="text-align: right; vertical-align: middle;">0.00</td></tr>
+<tr><td class=row1>copy-on-write faults</td><td class=row1 style="text-align: right; vertical-align: middle;">8,762.65</td></tr>
+<tr><td class=row0>protection faults</td><td class=row0 style="text-align: right; vertical-align: middle;">2,835.55</td></tr>
+<tr><td class=row1>faults due to s/w lcking req</td><td class=row1 style="text-align: right; vertical-align: middle;">0.00</td></tr>
+<tr><td class=row0>kernel as as_flt()s</td><td class=row0 style="text-align: right; vertical-align: middle;">0.00</td></tr>
+<tr><td class=row1>times pager scheduled</td><td class=row1 style="text-align: right; vertical-align: middle;">0.00</td></tr>
+</tbody></table></p><div class="prevnext"><a href="#33">Previous</a> | <a href="#35">Next</a> | <a href="#content">Top</a> |<a href="#" onclick="toggle('query34');return false;">Query</a>
+<div class=error_body id=query34>select Stat,value from statit_eac_t2000_3_1h3 where groupid=3</div>
+</div></div>
+</P>
+<P>
+<div><h2><a name='35'>Directory Name Cache Statistics (per second)</a></h2>
+<P><TABLE BORDER=0 CELLPADDING=4 CELLSPACING=3>
+<THEAD>
+<TR>
+<th>STAT</th>
+<th>VALUE</th>
+</TR>
+</THEAD><TBODY>
+<tr><td class=row0>%)</td><td class=row0 style="text-align: right; vertical-align: middle;">18.00</td></tr>
+<tr><td class=row1>cache misses (</td><td class=row1 style="text-align: right; vertical-align: middle;">0.08</td></tr>
+<tr><td class=row0>enters into cache</td><td class=row0 style="text-align: right; vertical-align: middle;">0.11</td></tr>
+<tr><td class=row1>enters when already cached</td><td class=row1 style="text-align: right; vertical-align: middle;">0.00</td></tr>
+<tr><td class=row0>long names tried to enter</td><td class=row0 style="text-align: right; vertical-align: middle;">0.00</td></tr>
+<tr><td class=row1>long names tried to look up</td><td class=row1 style="text-align: right; vertical-align: middle;">0.00</td></tr>
+<tr><td class=row0>LRU list empty</td><td class=row0 style="text-align: right; vertical-align: middle;">1.30</td></tr>
+<tr><td class=row1>purges of cache</td><td class=row1 style="text-align: right; vertical-align: middle;">0.00</td></tr>
+</tbody></table></p><div class="prevnext"><a href="#34">Previous</a> | <a href="#36">Next</a> | <a href="#content">Top</a> |<a href="#" onclick="toggle('query35');return false;">Query</a>
+<div class=error_body id=query35>select Stat,value from statit_eac_t2000_3_1h3 where groupid=4</div>
+</div></div>
+</P>
+<P>
+<div><h2><a name='36'>Segment Map Operations (per second)</a></h2>
+<P><TABLE BORDER=0 CELLPADDING=4 CELLSPACING=3>
+<THEAD>
+<TR>
+<th>STAT</th>
+<th>VALUE</th>
+</TR>
+</THEAD><TBODY>
+<tr><td class=row0>number of segmap_faults</td><td class=row0 style="text-align: right; vertical-align: middle;">225.71</td></tr>
+<tr><td class=row1>number of segmap_faultas</td><td class=row1 style="text-align: right; vertical-align: middle;">0.00</td></tr>
+<tr><td class=row0>number of segmap_getmaps</td><td class=row0 style="text-align: right; vertical-align: middle;">278.00</td></tr>
+<tr><td class=row1>getmaps that reuse a map</td><td class=row1 style="text-align: right; vertical-align: middle;">1.88</td></tr>
+<tr><td class=row0>getmaps that reclaim</td><td class=row0 style="text-align: right; vertical-align: middle;">276.04</td></tr>
+<tr><td class=row1>getmaps reusing a slot</td><td class=row1 style="text-align: right; vertical-align: middle;">0.00</td></tr>
+<tr><td class=row0>releases that are async</td><td class=row0 style="text-align: right; vertical-align: middle;">0.00</td></tr>
+<tr><td class=row1>releases that write</td><td class=row1 style="text-align: right; vertical-align: middle;">0.00</td></tr>
+<tr><td class=row0>releases that free</td><td class=row0 style="text-align: right; vertical-align: middle;">0.00</td></tr>
+<tr><td class=row1>releases that abort</td><td class=row1 style="text-align: right; vertical-align: middle;">0.00</td></tr>
+<tr><td class=row0>releases with dontneed set</td><td class=row0 style="text-align: right; vertical-align: middle;">0.00</td></tr>
+<tr><td class=row1>releases with no other action</td><td class=row1 style="text-align: right; vertical-align: middle;">0.00</td></tr>
+<tr><td class=row0># of pagecreates</td><td class=row0 style="text-align: right; vertical-align: middle;">0.00</td></tr>
+</tbody></table></p><div class="prevnext"><a href="#35">Previous</a> | <a href="#37">Next</a> | <a href="#content">Top</a> |<a href="#" onclick="toggle('query36');return false;">Query</a>
+<div class=error_body id=query36>select Stat,value from statit_eac_t2000_3_1h3 where groupid=5</div>
+</div></div>
+</P>
+<P>
+<div><h2><a name='37'>Buffer Cache Statistics (per second)</a></h2>
+<P><TABLE BORDER=0 CELLPADDING=4 CELLSPACING=3>
+<THEAD>
+<TR>
+<th>STAT</th>
+<th>VALUE</th>
+</TR>
+</THEAD><TBODY>
+<tr><td class=row1>total buf requests</td><td class=row1 style="text-align: right; vertical-align: middle;">745.60</td></tr>
+<tr><td class=row0>buf cache hits</td><td class=row0 style="text-align: right; vertical-align: middle;">745.66</td></tr>
+<tr><td class=row1>times buf was alloced</td><td class=row1 style="text-align: right; vertical-align: middle;">0.00</td></tr>
+<tr><td class=row0>times had to sleep for buf</td><td class=row0 style="text-align: right; vertical-align: middle;">0.00</td></tr>
+<tr><td class=row1>times buf locked by someone</td><td class=row1 style="text-align: right; vertical-align: middle;">2.22</td></tr>
+<tr><td class=row0>times dup buf found</td><td class=row0 style="text-align: right; vertical-align: middle;">0.00</td></tr>
+</tbody></table></p><div class="prevnext"><a href="#36">Previous</a> | <a href="#38">Next</a> | <a href="#content">Top</a> |<a href="#" onclick="toggle('query37');return false;">Query</a>
+<div class=error_body id=query37>select Stat,value from statit_eac_t2000_3_1h3 where groupid=6</div>
+</div></div>
+</P>
+<P>
+<div><h2><a name='38'>Char I/O Statistics (per second)</a></h2>
+<P><TABLE BORDER=0 CELLPADDING=4 CELLSPACING=3>
+<THEAD>
+<TR>
+<th>STAT</th>
+<th>VALUE</th>
+</TR>
+</THEAD><TBODY>
+<tr><td class=row1>terminal input chars</td><td class=row1 style="text-align: right; vertical-align: middle;">0.00</td></tr>
+<tr><td class=row0>terminal output chars</td><td class=row0 style="text-align: right; vertical-align: middle;">0.20</td></tr>
+</tbody></table></p><div class="prevnext"><a href="#37">Previous</a> | <a href="#39">Next</a> | <a href="#content">Top</a> |<a href="#" onclick="toggle('query38');return false;">Query</a>
+<div class=error_body id=query38>select Stat,value from statit_eac_t2000_3_1h3 where groupid=7</div>
+</div></div>
+</P>
+<P>
+<div><h2><a name='39'>Network Statistics</a></h2>
+<P><TABLE BORDER=0 CELLPADDING=4 CELLSPACING=3>
+<THEAD>
+<TR>
+<th>INTERFACE</th>
+<th>IPKTS</th>
+<th>IERRS</th>
+<th>OPKTS</th>
+<th>OERRS</th>
+<th>COLLS</th>
+<th>DFRS</th>
+<th>RTRYERR</th>
+</TR>
+</THEAD><TBODY>
+<tr><td class=row1>e1000g0</td><td class=row1 style="text-align: right; vertical-align: middle;">0.00</td><td class=row1 style="text-align: right; vertical-align: middle;">0.00</td><td class=row1 style="text-align: right; vertical-align: middle;">0.00</td><td class=row1 style="text-align: right; vertical-align: middle;">0.00</td><td class=row1 style="text-align: right; vertical-align: middle;">0.00</td><td class=row1 style="text-align: right; vertical-align: middle;">0.00</td><td class=row1 style="text-align: right; vertical-align: middle;">0.00</td></tr>
+<tr><td class=row0>e1000g1</td><td class=row0 style="text-align: right; vertical-align: middle;">17,862.00</td><td class=row0 style="text-align: right; vertical-align: middle;">0.00</td><td class=row0 style="text-align: right; vertical-align: middle;">18,967.00</td><td class=row0 style="text-align: right; vertical-align: middle;">0.00</td><td class=row0 style="text-align: right; vertical-align: middle;">0.00</td><td class=row0 style="text-align: right; vertical-align: middle;">0.00</td><td class=row0 style="text-align: right; vertical-align: middle;">0.00</td></tr>
+<tr><td class=row1>e1000g2</td><td class=row1 style="text-align: right; vertical-align: middle;">0.00</td><td class=row1 style="text-align: right; vertical-align: middle;">0.00</td><td class=row1 style="text-align: right; vertical-align: middle;">0.00</td><td class=row1 style="text-align: right; vertical-align: middle;">0.00</td><td class=row1 style="text-align: right; vertical-align: middle;">0.00</td><td class=row1 style="text-align: right; vertical-align: middle;">0.00</td><td class=row1 style="text-align: right; vertical-align: middle;">0.00</td></tr>
+<tr><td class=row0>e1000g3</td><td class=row0 style="text-align: right; vertical-align: middle;">0.00</td><td class=row0 style="text-align: right; vertical-align: middle;">0.00</td><td class=row0 style="text-align: right; vertical-align: middle;">0.00</td><td class=row0 style="text-align: right; vertical-align: middle;">0.00</td><td class=row0 style="text-align: right; vertical-align: middle;">0.00</td><td class=row0 style="text-align: right; vertical-align: middle;">0.00</td><td class=row0 style="text-align: right; vertical-align: middle;">0.00</td></tr>
+<tr><td class=row1>fcip0</td><td class=row1 style="text-align: right; vertical-align: middle;">0.00</td><td class=row1 style="text-align: right; vertical-align: middle;">0.00</td><td class=row1 style="text-align: right; vertical-align: middle;">0.00</td><td class=row1 style="text-align: right; vertical-align: middle;">0.00</td><td class=row1 style="text-align: right; vertical-align: middle;">0.00</td><td class=row1 style="text-align: right; vertical-align: middle;">0.00</td><td class=row1 style="text-align: right; vertical-align: middle;">0.00</td></tr>
+<tr><td class=row0>fcip3</td><td class=row0 style="text-align: right; vertical-align: middle;">0.00</td><td class=row0 style="text-align: right; vertical-align: middle;">0.00</td><td class=row0 style="text-align: right; vertical-align: middle;">0.00</td><td class=row0 style="text-align: right; vertical-align: middle;">0.00</td><td class=row0 style="text-align: right; vertical-align: middle;">0.00</td><td class=row0 style="text-align: right; vertical-align: middle;">0.00</td><td class=row0 style="text-align: right; vertical-align: middle;">0.00</td></tr>
+<tr><td class=row1>fcip4</td><td class=row1 style="text-align: right; vertical-align: middle;">0.00</td><td class=row1 style="text-align: right; vertical-align: middle;">0.00</td><td class=row1 style="text-align: right; vertical-align: middle;">0.00</td><td class=row1 style="text-align: right; vertical-align: middle;">0.00</td><td class=row1 style="text-align: right; vertical-align: middle;">0.00</td><td class=row1 style="text-align: right; vertical-align: middle;">0.00</td><td class=row1 style="text-align: right; vertical-align: middle;">0.00</td></tr>
+<tr><td class=row0>fcip5</td><td class=row0 style="text-align: right; vertical-align: middle;">0.00</td><td class=row0 style="text-align: right; vertical-align: middle;">0.00</td><td class=row0 style="text-align: right; vertical-align: middle;">0.00</td><td class=row0 style="text-align: right; vertical-align: middle;">0.00</td><td class=row0 style="text-align: right; vertical-align: middle;">0.00</td><td class=row0 style="text-align: right; vertical-align: middle;">0.00</td><td class=row0 style="text-align: right; vertical-align: middle;">0.00</td></tr>
+<tr><td class=row1>lo0</td><td class=row1 style="text-align: right; vertical-align: middle;">1.00</td><td class=row1 style="text-align: right; vertical-align: middle;">0.00</td><td class=row1 style="text-align: right; vertical-align: middle;">1.00</td><td class=row1 style="text-align: right; vertical-align: middle;">0.00</td><td class=row1 style="text-align: right; vertical-align: middle;">0.00</td><td class=row1 style="text-align: right; vertical-align: middle;">0.00</td><td class=row1 style="text-align: right; vertical-align: middle;">0.00</td></tr>
+<tr><td class=row0>mac</td><td class=row0 style="text-align: right; vertical-align: middle;">0.00</td><td class=row0 style="text-align: right; vertical-align: middle;">0.00</td><td class=row0 style="text-align: right; vertical-align: middle;">0.00</td><td class=row0 style="text-align: right; vertical-align: middle;">0.00</td><td class=row0 style="text-align: right; vertical-align: middle;">0.00</td><td class=row0 style="text-align: right; vertical-align: middle;">0.00</td><td class=row0 style="text-align: right; vertical-align: middle;">0.00</td></tr>
+<tr><td class=row1>mac</td><td class=row1 style="text-align: right; vertical-align: middle;">408.00</td><td class=row1 style="text-align: right; vertical-align: middle;">0.00</td><td class=row1 style="text-align: right; vertical-align: middle;">101.00</td><td class=row1 style="text-align: right; vertical-align: middle;">0.00</td><td class=row1 style="text-align: right; vertical-align: middle;">0.00</td><td class=row1 style="text-align: right; vertical-align: middle;">0.00</td><td class=row1 style="text-align: right; vertical-align: middle;">0.00</td></tr>
+<tr><td class=row0>mac</td><td class=row0 style="text-align: right; vertical-align: middle;">408.00</td><td class=row0 style="text-align: right; vertical-align: middle;">0.00</td><td class=row0 style="text-align: right; vertical-align: middle;">101.00</td><td class=row0 style="text-align: right; vertical-align: middle;">0.00</td><td class=row0 style="text-align: right; vertical-align: middle;">0.00</td><td class=row0 style="text-align: right; vertical-align: middle;">0.00</td><td class=row0 style="text-align: right; vertical-align: middle;">0.00</td></tr>
+<tr><td class=row1>mac</td><td class=row1 style="text-align: right; vertical-align: middle;">408.00</td><td class=row1 style="text-align: right; vertical-align: middle;">0.00</td><td class=row1 style="text-align: right; vertical-align: middle;">101.00</td><td class=row1 style="text-align: right; vertical-align: middle;">0.00</td><td class=row1 style="text-align: right; vertical-align: middle;">0.00</td><td class=row1 style="text-align: right; vertical-align: middle;">0.00</td><td class=row1 style="text-align: right; vertical-align: middle;">0.00</td></tr>
+</tbody></table></p><div class="prevnext"><a href="#38">Previous</a> | <a href="#40">Next</a> | <a href="#content">Top</a> |<a href="#" onclick="toggle('query39');return false;">Query</a>
+<div class=error_body id=query39>select interface,ipkts,ierrs,opkts,oerrs,colls,dfrs,rtryerr from  statit_eac_t2000_3_1h4</div>
+</div></div>
+</P>
+<P>
+<div><h2><a name='40'>Average Disk Statistics(per disk)</a></h2>
+<P><TABLE BORDER=0 CELLPADDING=4 CELLSPACING=3>
+<THEAD>
+<TR>
+<th>A</th>
+<th>DISKS</th>
+<th>UTIL</th>
+<th>XFERS</th>
+<th>RDS</th>
+<th>WRTS</th>
+<th>rKB/op</th>
+<th>wKB/op</th>
+<th>WTQLEN</th>
+<th>SVQLEN</th>
+<th>SVRMS</th>
+</TR>
+</THEAD><TBODY>
+<tr><td class=row0 style="text-align: right; vertical-align: middle;">1.00</td><td class=row0 style="text-align: right; vertical-align: middle;">8.00</td><td class=row0 style="text-align: right; vertical-align: middle;">65.95</td><td class=row0 style="text-align: right; vertical-align: middle;">844.98</td><td class=row0 style="text-align: right; vertical-align: middle;">257.82</td><td class=row0 style="text-align: right; vertical-align: middle;">587.16</td><td class=row0 style="text-align: right; vertical-align: middle;">26.15</td><td class=row0 style="text-align: right; vertical-align: middle;">20.57</td><td class=row0 style="text-align: right; vertical-align: middle;">0.02</td><td class=row0 style="text-align: right; vertical-align: middle;">2.18</td><td class=row0 style="text-align: right; vertical-align: middle;">3.16</td></tr>
+</tbody></table></p><div class="prevnext"><a href="#39">Previous</a> | <a href="#41">Next</a> | <a href="#content">Top</a> |<a href="#" onclick="toggle('query40');return false;">Query</a>
+<div class=error_body id=query40>select 1 as a, count(*) as Disks, avg(util) as util,avg(xfers) as xfers,avg(rds) as rds,avg(wrts) as wrts,avg(rdbxfr)/1024 as "rKB/op",avg(wrbxfr)/1024 as "wKB/op",avg(wtqlen) as wtqlen,avg(svqlen) as svqlen,avg(svrms) as svrms from  statit_eac_t2000_3_1h5 where substr(disk, 1 ,2) != 'md' and util > 0</div>
+</div></div>
+</P>
+<P>
+<div><h2><a name='41'>Total Disk Statistics(per second)</a></h2>
+<P><TABLE BORDER=0 CELLPADDING=4 CELLSPACING=3>
+<THEAD>
+<TR>
+<th>A</th>
+<th>DISKS</th>
+<th>XFERS</th>
+<th>RDS</th>
+<th>WRTS</th>
+<th>rKB/op</th>
+<th>wKB/op</th>
+<th>rMB/s</th>
+<th>wMB/s</th>
+</TR>
+</THEAD><TBODY>
+<tr><td class=row1 style="text-align: right; vertical-align: middle;">1.00</td><td class=row1 style="text-align: right; vertical-align: middle;">8.00</td><td class=row1 style="text-align: right; vertical-align: middle;">6,759.80</td><td class=row1 style="text-align: right; vertical-align: middle;">2,062.60</td><td class=row1 style="text-align: right; vertical-align: middle;">4,697.30</td><td class=row1 style="text-align: right; vertical-align: middle;">209.19</td><td class=row1 style="text-align: right; vertical-align: middle;">168,544.00</td><td class=row1 style="text-align: right; vertical-align: middle;">24.60</td><td class=row1 style="text-align: right; vertical-align: middle;">96.71</td></tr>
+</tbody></table></p><div class="prevnext"><a href="#40">Previous</a> | <a href="#42">Next</a> | <a href="#content">Top</a> |<a href="#" onclick="toggle('query41');return false;">Query</a>
+<div class=error_body id=query41>select 1 as a, count(*) as Disks, sum(xfers) as xfers,sum(rds) as rds,sum(wrts) as wrts,sum(rdbxfr)/1024 as "rKB/op",sum(wrbxfr) as "wKB/op",sum(rds*rdbxfr)/1048576 as "rMB/s", sum(wrts*wrbxfr)/1048576 as "wMB/s"  from statit_eac_t2000_3_1h5 where substr(disk, 1 ,2) != 'md' and util > 0</div>
+</div></div>
+</P>
+<P>
+<div><h2><a name='42'>Hot Disks </a></h2>
+<P><TABLE BORDER=0 CELLPADDING=4 CELLSPACING=3>
+<THEAD>
+<TR>
+<th>DISK</th>
+<th>UTIL</th>
+<th>XFERS</th>
+<th>RDS</th>
+<th>WRTS</th>
+<th>rKB/op</th>
+<th>wKB/s</th>
+<th>SVRMS</th>
+</TR>
+</THEAD><TBODY>
+<tr><td class=row0>c2t216000C0FF80EAC7d1</td><td class=row0 style="text-align: right; vertical-align: middle;">82.30</td><td class=row0 style="text-align: right; vertical-align: middle;">1,043.00</td><td class=row0 style="text-align: right; vertical-align: middle;">325.50</td><td class=row0 style="text-align: right; vertical-align: middle;">717.50</td><td class=row0 style="text-align: right; vertical-align: middle;">9.51</td><td class=row0 style="text-align: right; vertical-align: middle;">19.48</td><td class=row0 style="text-align: right; vertical-align: middle;">2.40</td></tr>
+<tr><td class=row1>c3t216000C0FF80EAC9d1</td><td class=row1 style="text-align: right; vertical-align: middle;">82.20</td><td class=row1 style="text-align: right; vertical-align: middle;">1,038.20</td><td class=row1 style="text-align: right; vertical-align: middle;">328.30</td><td class=row1 style="text-align: right; vertical-align: middle;">710.00</td><td class=row1 style="text-align: right; vertical-align: middle;">9.47</td><td class=row1 style="text-align: right; vertical-align: middle;">19.70</td><td class=row1 style="text-align: right; vertical-align: middle;">2.40</td></tr>
+<tr><td class=row0>c3t216000C0FF80EAC6d1</td><td class=row0 style="text-align: right; vertical-align: middle;">82.20</td><td class=row0 style="text-align: right; vertical-align: middle;">1,040.30</td><td class=row0 style="text-align: right; vertical-align: middle;">326.80</td><td class=row0 style="text-align: right; vertical-align: middle;">713.60</td><td class=row0 style="text-align: right; vertical-align: middle;">9.49</td><td class=row0 style="text-align: right; vertical-align: middle;">19.58</td><td class=row0 style="text-align: right; vertical-align: middle;">2.40</td></tr>
+<tr><td class=row1>c2t216000C0FF80EAC7d0</td><td class=row1 style="text-align: right; vertical-align: middle;">82.00</td><td class=row1 style="text-align: right; vertical-align: middle;">1,058.60</td><td class=row1 style="text-align: right; vertical-align: middle;">325.90</td><td class=row1 style="text-align: right; vertical-align: middle;">732.70</td><td class=row1 style="text-align: right; vertical-align: middle;">9.48</td><td class=row1 style="text-align: right; vertical-align: middle;">19.03</td><td class=row1 style="text-align: right; vertical-align: middle;">2.30</td></tr>
+<tr><td class=row0>c3t216000C0FF80EAC9d0</td><td class=row0 style="text-align: right; vertical-align: middle;">82.00</td><td class=row0 style="text-align: right; vertical-align: middle;">1,043.80</td><td class=row0 style="text-align: right; vertical-align: middle;">325.80</td><td class=row0 style="text-align: right; vertical-align: middle;">717.90</td><td class=row0 style="text-align: right; vertical-align: middle;">9.50</td><td class=row0 style="text-align: right; vertical-align: middle;">19.43</td><td class=row0 style="text-align: right; vertical-align: middle;">2.40</td></tr>
+</tbody></table></p><div class="prevnext"><a href="#41">Previous</a> | <a href="#43">Next</a> | <a href="#content">Top</a> |<a href="#" onclick="toggle('query42');return false;">Query</a>
+<div class=error_body id=query42>select Disk, util, xfers,rds,wrts,rdbxfr/1024 as "rKB/op",wrbxfr/1024 as "wKB/s",svrms from statit_eac_t2000_3_1h5 where substr(disk, 1 ,2) != 'md' and util > 1 order by util desc limit 5</div>
+</div></div>
+</P>
+<P>
+<div><h2><a name='43'>Disk Statistics</a></h2>
+<P><TABLE BORDER=0 CELLPADDING=4 CELLSPACING=3>
+<THEAD>
+<TR>
+<th>DISK</th>
+<th>UTIL</th>
+<th>XFERS</th>
+<th>RDS</th>
+<th>WRTS</th>
+<th>RDBXFR</th>
+<th>WRBXFR</th>
+<th>WTQLEN</th>
+<th>SVQLEN</th>
+<th>SVRMS</th>
+</TR>
+</THEAD><TBODY>
+<tr><td class=row1>md2</td><td class=row1 style="text-align: right; vertical-align: middle;">0.00</td><td class=row1 style="text-align: right; vertical-align: middle;">0.00</td><td class=row1 style="text-align: right; vertical-align: middle;">0.00</td><td class=row1 style="text-align: right; vertical-align: middle;">0.00</td><td class=row1 style="text-align: right; vertical-align: middle;">0.00</td><td class=row1 style="text-align: right; vertical-align: middle;">0.00</td><td class=row1 style="text-align: right; vertical-align: middle;">0.00</td><td class=row1 style="text-align: right; vertical-align: middle;">0.00</td><td class=row1 style="text-align: right; vertical-align: middle;">0.00</td></tr>
+<tr><td class=row0>c0t0d0</td><td class=row0 style="text-align: right; vertical-align: middle;">10.30</td><td class=row0 style="text-align: right; vertical-align: middle;">83.40</td><td class=row0 style="text-align: right; vertical-align: middle;">69.20</td><td class=row0 style="text-align: right; vertical-align: middle;">14.20</td><td class=row0 style="text-align: right; vertical-align: middle;">24,928.00</td><td class=row0 style="text-align: right; vertical-align: middle;">7,308.00</td><td class=row0 style="text-align: right; vertical-align: middle;">0.00</td><td class=row0 style="text-align: right; vertical-align: middle;">0.45</td><td class=row0 style="text-align: right; vertical-align: middle;">5.50</td></tr>
+<tr><td class=row1>c0t1d0</td><td class=row1 style="text-align: right; vertical-align: middle;">0.00</td><td class=row1 style="text-align: right; vertical-align: middle;">0.00</td><td class=row1 style="text-align: right; vertical-align: middle;">0.00</td><td class=row1 style="text-align: right; vertical-align: middle;">0.00</td><td class=row1 style="text-align: right; vertical-align: middle;">0.00</td><td class=row1 style="text-align: right; vertical-align: middle;">683.00</td><td class=row1 style="text-align: right; vertical-align: middle;">0.00</td><td class=row1 style="text-align: right; vertical-align: middle;">0.00</td><td class=row1 style="text-align: right; vertical-align: middle;">7.30</td></tr>
+<tr><td class=row0>c1t0d0</td><td class=row0 style="text-align: right; vertical-align: middle;">0.00</td><td class=row0 style="text-align: right; vertical-align: middle;">0.00</td><td class=row0 style="text-align: right; vertical-align: middle;">0.00</td><td class=row0 style="text-align: right; vertical-align: middle;">0.00</td><td class=row0 style="text-align: right; vertical-align: middle;">0.00</td><td class=row0 style="text-align: right; vertical-align: middle;">0.00</td><td class=row0 style="text-align: right; vertical-align: middle;">0.00</td><td class=row0 style="text-align: right; vertical-align: middle;">0.00</td><td class=row0 style="text-align: right; vertical-align: middle;">0.00</td></tr>
+<tr><td class=row1>c3t216000C0FF80EAC6d1</td><td class=row1 style="text-align: right; vertical-align: middle;">82.20</td><td class=row1 style="text-align: right; vertical-align: middle;">1,040.30</td><td class=row1 style="text-align: right; vertical-align: middle;">326.80</td><td class=row1 style="text-align: right; vertical-align: middle;">713.60</td><td class=row1 style="text-align: right; vertical-align: middle;">9,713.00</td><td class=row1 style="text-align: right; vertical-align: middle;">20,048.00</td><td class=row1 style="text-align: right; vertical-align: middle;">0.02</td><td class=row1 style="text-align: right; vertical-align: middle;">2.47</td><td class=row1 style="text-align: right; vertical-align: middle;">2.40</td></tr>
+<tr><td class=row0>c3t216000C0FF80EAC7d1</td><td class=row0 style="text-align: right; vertical-align: middle;">0.00</td><td class=row0 style="text-align: right; vertical-align: middle;">0.00</td><td class=row0 style="text-align: right; vertical-align: middle;">0.00</td><td class=row0 style="text-align: right; vertical-align: middle;">0.00</td><td class=row0 style="text-align: right; vertical-align: middle;">0.00</td><td class=row0 style="text-align: right; vertical-align: middle;">0.00</td><td class=row0 style="text-align: right; vertical-align: middle;">0.00</td><td class=row0 style="text-align: right; vertical-align: middle;">0.00</td><td class=row0 style="text-align: right; vertical-align: middle;">0.00</td></tr>
+<tr><td class=row1>c3t216000C0FF80EAC7d0</td><td class=row1 style="text-align: right; vertical-align: middle;">0.00</td><td class=row1 style="text-align: right; vertical-align: middle;">0.00</td><td class=row1 style="text-align: right; vertical-align: middle;">0.00</td><td class=row1 style="text-align: right; vertical-align: middle;">0.00</td><td class=row1 style="text-align: right; vertical-align: middle;">0.00</td><td class=row1 style="text-align: right; vertical-align: middle;">0.00</td><td class=row1 style="text-align: right; vertical-align: middle;">0.00</td><td class=row1 style="text-align: right; vertical-align: middle;">0.00</td><td class=row1 style="text-align: right; vertical-align: middle;">0.00</td></tr>
+<tr><td class=row0>c3t216000C0FF80EAC9d1</td><td class=row0 style="text-align: right; vertical-align: middle;">82.20</td><td class=row0 style="text-align: right; vertical-align: middle;">1,038.20</td><td class=row0 style="text-align: right; vertical-align: middle;">328.30</td><td class=row0 style="text-align: right; vertical-align: middle;">710.00</td><td class=row0 style="text-align: right; vertical-align: middle;">9,702.00</td><td class=row0 style="text-align: right; vertical-align: middle;">20,177.00</td><td class=row0 style="text-align: right; vertical-align: middle;">0.02</td><td class=row0 style="text-align: right; vertical-align: middle;">2.46</td><td class=row0 style="text-align: right; vertical-align: middle;">2.40</td></tr>
+<tr><td class=row1>c3t216000C0FF80EAC9d0</td><td class=row1 style="text-align: right; vertical-align: middle;">82.00</td><td class=row1 style="text-align: right; vertical-align: middle;">1,043.80</td><td class=row1 style="text-align: right; vertical-align: middle;">325.80</td><td class=row1 style="text-align: right; vertical-align: middle;">717.90</td><td class=row1 style="text-align: right; vertical-align: middle;">9,723.00</td><td class=row1 style="text-align: right; vertical-align: middle;">19,898.00</td><td class=row1 style="text-align: right; vertical-align: middle;">0.02</td><td class=row1 style="text-align: right; vertical-align: middle;">2.44</td><td class=row1 style="text-align: right; vertical-align: middle;">2.40</td></tr>
+<tr><td class=row0>c2t216000C0FF80EAC6d1</td><td class=row0 style="text-align: right; vertical-align: middle;">0.00</td><td class=row0 style="text-align: right; vertical-align: middle;">0.00</td><td class=row0 style="text-align: right; vertical-align: middle;">0.00</td><td class=row0 style="text-align: right; vertical-align: middle;">0.00</td><td class=row0 style="text-align: right; vertical-align: middle;">0.00</td><td class=row0 style="text-align: right; vertical-align: middle;">0.00</td><td class=row0 style="text-align: right; vertical-align: middle;">0.00</td><td class=row0 style="text-align: right; vertical-align: middle;">0.00</td><td class=row0 style="text-align: right; vertical-align: middle;">0.00</td></tr>
+<tr><td class=row1>c2t216000C0FF80EAC6d0</td><td class=row1 style="text-align: right; vertical-align: middle;">0.00</td><td class=row1 style="text-align: right; vertical-align: middle;">0.00</td><td class=row1 style="text-align: right; vertical-align: middle;">0.00</td><td class=row1 style="text-align: right; vertical-align: middle;">0.00</td><td class=row1 style="text-align: right; vertical-align: middle;">0.00</td><td class=row1 style="text-align: right; vertical-align: middle;">0.00</td><td class=row1 style="text-align: right; vertical-align: middle;">0.00</td><td class=row1 style="text-align: right; vertical-align: middle;">0.00</td><td class=row1 style="text-align: right; vertical-align: middle;">0.00</td></tr>
+<tr><td class=row0>c2t216000C0FF80EAC9d1</td><td class=row0 style="text-align: right; vertical-align: middle;">0.00</td><td class=row0 style="text-align: right; vertical-align: middle;">0.00</td><td class=row0 style="text-align: right; vertical-align: middle;">0.00</td><td class=row0 style="text-align: right; vertical-align: middle;">0.00</td><td class=row0 style="text-align: right; vertical-align: middle;">0.00</td><td class=row0 style="text-align: right; vertical-align: middle;">0.00</td><td class=row0 style="text-align: right; vertical-align: middle;">0.00</td><td class=row0 style="text-align: right; vertical-align: middle;">0.00</td><td class=row0 style="text-align: right; vertical-align: middle;">0.00</td></tr>
+<tr><td class=row1>c2t216000C0FF80EAC9d0</td><td class=row1 style="text-align: right; vertical-align: middle;">0.00</td><td class=row1 style="text-align: right; vertical-align: middle;">0.00</td><td class=row1 style="text-align: right; vertical-align: middle;">0.00</td><td class=row1 style="text-align: right; vertical-align: middle;">0.00</td><td class=row1 style="text-align: right; vertical-align: middle;">0.00</td><td class=row1 style="text-align: right; vertical-align: middle;">0.00</td><td class=row1 style="text-align: right; vertical-align: middle;">0.00</td><td class=row1 style="text-align: right; vertical-align: middle;">0.00</td><td class=row1 style="text-align: right; vertical-align: middle;">0.00</td></tr>
+<tr><td class=row0>c2t216000C0FF80EAC7d1</td><td class=row0 style="text-align: right; vertical-align: middle;">82.30</td><td class=row0 style="text-align: right; vertical-align: middle;">1,043.00</td><td class=row0 style="text-align: right; vertical-align: middle;">325.50</td><td class=row0 style="text-align: right; vertical-align: middle;">717.50</td><td class=row0 style="text-align: right; vertical-align: middle;">9,739.00</td><td class=row0 style="text-align: right; vertical-align: middle;">19,945.00</td><td class=row0 style="text-align: right; vertical-align: middle;">0.02</td><td class=row0 style="text-align: right; vertical-align: middle;">2.46</td><td class=row0 style="text-align: right; vertical-align: middle;">2.40</td></tr>
+<tr><td class=row1>c4t40d1</td><td class=row1 style="text-align: right; vertical-align: middle;">24.80</td><td class=row1 style="text-align: right; vertical-align: middle;">410.80</td><td class=row1 style="text-align: right; vertical-align: middle;">38.70</td><td class=row1 style="text-align: right; vertical-align: middle;">372.00</td><td class=row1 style="text-align: right; vertical-align: middle;">130,941.00</td><td class=row1 style="text-align: right; vertical-align: middle;">41,965.00</td><td class=row1 style="text-align: right; vertical-align: middle;">0.01</td><td class=row1 style="text-align: right; vertical-align: middle;">2.30</td><td class=row1 style="text-align: right; vertical-align: middle;">5.60</td></tr>
+<tr><td class=row0>c4t40d0</td><td class=row0 style="text-align: right; vertical-align: middle;">0.00</td><td class=row0 style="text-align: right; vertical-align: middle;">0.00</td><td class=row0 style="text-align: right; vertical-align: middle;">0.00</td><td class=row0 style="text-align: right; vertical-align: middle;">0.00</td><td class=row0 style="text-align: right; vertical-align: middle;">0.00</td><td class=row0 style="text-align: right; vertical-align: middle;">0.00</td><td class=row0 style="text-align: right; vertical-align: middle;">0.00</td><td class=row0 style="text-align: right; vertical-align: middle;">0.00</td><td class=row0 style="text-align: right; vertical-align: middle;">0.00</td></tr>
+<tr><td class=row1>c3t216000C0FF80EAC6d0</td><td class=row1 style="text-align: right; vertical-align: middle;">81.80</td><td class=row1 style="text-align: right; vertical-align: middle;">1,041.70</td><td class=row1 style="text-align: right; vertical-align: middle;">322.40</td><td class=row1 style="text-align: right; vertical-align: middle;">719.40</td><td class=row1 style="text-align: right; vertical-align: middle;">9,757.00</td><td class=row1 style="text-align: right; vertical-align: middle;">19,714.00</td><td class=row1 style="text-align: right; vertical-align: middle;">0.02</td><td class=row1 style="text-align: right; vertical-align: middle;">2.40</td><td class=row1 style="text-align: right; vertical-align: middle;">2.30</td></tr>
+<tr><td class=row0>c2t216000C0FF80EAC7d0</td><td class=row0 style="text-align: right; vertical-align: middle;">82.00</td><td class=row0 style="text-align: right; vertical-align: middle;">1,058.60</td><td class=row0 style="text-align: right; vertical-align: middle;">325.90</td><td class=row0 style="text-align: right; vertical-align: middle;">732.70</td><td class=row0 style="text-align: right; vertical-align: middle;">9,703.00</td><td class=row0 style="text-align: right; vertical-align: middle;">19,489.00</td><td class=row0 style="text-align: right; vertical-align: middle;">0.02</td><td class=row0 style="text-align: right; vertical-align: middle;">2.42</td><td class=row0 style="text-align: right; vertical-align: middle;">2.30</td></tr>
+</tbody></table></p><div class="prevnext"><a href="#42">Previous</a> | <a href="#44">Next</a> | <a href="#content">Top</a> |<a href="#" onclick="toggle('query43');return false;">Query</a>
+<div class=error_body id=query43>select Disk,util,xfers,rds,wrts,rdbxfr,wrbxfr,wtqlen,svqlen,svrms from  statit_eac_t2000_3_1h5</div>
+</div></div>
+</P>
+</div> <!-- footer -->
+</body></html>

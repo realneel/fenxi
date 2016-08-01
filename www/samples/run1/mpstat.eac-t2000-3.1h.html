@@ -1,0 +1,222 @@
+<HTML><HEAD><TITLE>mpstat.eac-t2000-3.1h</title>
+<style type="text/css">
+/* FenXi static css file */
+body {
+        margin:0;
+        font-family:"Trebuchet MS", Arial, Verdana;
+        font-size:10pt;
+        color:#444444;
+        background-color:#FFFFFF;
+        text-align:left;
+}
+#header {
+        background-color:#395d76;
+        width:100%;
+        padding-top:10px;
+        padding-bottom:10px;
+        margin-bottom:20px;
+        font-size:16pt;
+        font-variant:small-caps;
+        text-align:center;
+        color:#FFFFFF;
+        font-family:Verdana, Arial, Helvetica, sans-serif;
+        background-image: url("FenXi.jpg");
+}
+#content {
+	margin-left:10px;
+	width:80%;
+}
+#header h1 {
+	font-family:Gallant,"Century Gothic", "Trebuchet MS", "Arial Narrow", Arial, sans-serif;
+	font-size:16pt;
+	/* text-transform:uppercase; */
+	font-weight:normal;
+	/* color:#000000;
+	text-align:left; */
+}
+#content h2 {
+	font-family:"Century Gothic", "Trebuchet MS", "Arial Narrow", Arial, sans-serif;
+	font-size:15pt;
+	text-transform:uppercase;
+	text-align:left;
+	font-weight:normal;
+	margin:0;
+	padding:0;
+	color:#395d76;
+	/* border-bottom:1px solid #eeeeee; */
+}
+#content table {
+    padding:2px;
+    border: 2px solid #cccccc;
+}
+#content td {
+    border-bottom: 1px solid #C1DAD7;
+    border-left: 1px solid #C1DAD7;
+}
+#content td.row0 {
+    background-color:#ffffff;
+}
+#content td.row1 {
+    background-color:#f1f5f9;
+}
+#content th {
+    background-color:#C5D5A9;/*#C1DAD7;*/
+    border-bottom: 1px solid #395d76;/*#6D929B;*/
+}
+a {
+    text-decoration:none;
+}
+a:hover {
+    background-color:#FFC726;
+}
+div.error {
+    background-color:#ffcc99;
+    border:1px solid #eeeeee;
+    padding:4px;
+    margin-bottom:10px;
+    width: 700px;
+}
+div.error_body {    
+    display: none;
+}
+div.prevnext {
+    clear:both;
+    text-align:left;
+    padding-bottom:20px;
+/*    width: 700px; */
+}
+</style>
+<script type="text/javascript">
+ // <![CDATA[
+function toggle(id){
+   if ( document.getElementById )
+      ele = document.getElementById( id );
+   else if ( document.all )
+      ele = eval( "document.all." + id );
+   else
+      return false;
+ 
+    if ( ele.style.display != "block" ) {
+      ele.style.display = "block"
+    } else {
+      ele.style.display = "none"
+    }
+
+    return true;
+}
+  // ]]>
+</script>
+</head><body><div id="header">
+<h1 align='center'>mpstat.eac-t2000-3.1h</h1>
+</div> <!-- header -->
+<div id="content">
+<h2><a name='Top'>Contents</a></h2>
+<ul>
+<li><a href='#78'>Minor faults per CPU</a>
+<li><a href='#79'>Major faults per CPU</a>
+<li><a href='#80'>Cross calls per CPU</a>
+<li><a href='#81'>Interrupts per CPU</a>
+<li><a href='#82'>Interrupt Threads per CPU</a>
+<li><a href='#83'>Context Switches per CPU</a>
+<li><a href='#84'>Involuntary Context Switches per CPU</a>
+<li><a href='#85'>Thread Migrations per CPU</a>
+<li><a href='#86'>Mutex spins per CPU</a>
+<li><a href='#87'>Reader-Writer spins per CPU</a>
+<li><a href='#88'>System calls per CPU</a>
+<li><a href='#89'>User time per CPU</a>
+<li><a href='#90'>System time per CPU</a>
+<li><a href='#91'>Wait time per CPU</a>
+<li><a href='#92'>Idle time per CPU</a>
+</ul>
+<P>
+<div><h2><a name='78'>Minor faults per CPU</a></h2>
+<P><img src="mpstat.eac-t2000-3.1h_78.png"></img></p><div class="prevnext"><a href="#77">Previous</a> | <a href="#79">Next</a> | <a href="#content">Top</a> |<a href="#" onclick="toggle('query78');return false;">Query</a>
+<div class=error_body id=query78>select "Time","CPU","minf" from mpstat_eac_t2000_3_1h_table</div>
+</div></div>
+</P>
+<P>
+<div><h2><a name='79'>Major faults per CPU</a></h2>
+<P><img src="mpstat.eac-t2000-3.1h_79.png"></img></p><div class="prevnext"><a href="#78">Previous</a> | <a href="#80">Next</a> | <a href="#content">Top</a> |<a href="#" onclick="toggle('query79');return false;">Query</a>
+<div class=error_body id=query79>select "Time","CPU","mjf" from mpstat_eac_t2000_3_1h_table</div>
+</div></div>
+</P>
+<P>
+<div><h2><a name='80'>Cross calls per CPU</a></h2>
+<P><img src="mpstat.eac-t2000-3.1h_80.png"></img></p><div class="prevnext"><a href="#79">Previous</a> | <a href="#81">Next</a> | <a href="#content">Top</a> |<a href="#" onclick="toggle('query80');return false;">Query</a>
+<div class=error_body id=query80>select "Time","CPU","xcal" from mpstat_eac_t2000_3_1h_table</div>
+</div></div>
+</P>
+<P>
+<div><h2><a name='81'>Interrupts per CPU</a></h2>
+<P><img src="mpstat.eac-t2000-3.1h_81.png"></img></p><div class="prevnext"><a href="#80">Previous</a> | <a href="#82">Next</a> | <a href="#content">Top</a> |<a href="#" onclick="toggle('query81');return false;">Query</a>
+<div class=error_body id=query81>select "Time","CPU","intr" from mpstat_eac_t2000_3_1h_table</div>
+</div></div>
+</P>
+<P>
+<div><h2><a name='82'>Interrupt Threads per CPU</a></h2>
+<P><img src="mpstat.eac-t2000-3.1h_82.png"></img></p><div class="prevnext"><a href="#81">Previous</a> | <a href="#83">Next</a> | <a href="#content">Top</a> |<a href="#" onclick="toggle('query82');return false;">Query</a>
+<div class=error_body id=query82>select "Time","CPU","ithr" from mpstat_eac_t2000_3_1h_table</div>
+</div></div>
+</P>
+<P>
+<div><h2><a name='83'>Context Switches per CPU</a></h2>
+<P><img src="mpstat.eac-t2000-3.1h_83.png"></img></p><div class="prevnext"><a href="#82">Previous</a> | <a href="#84">Next</a> | <a href="#content">Top</a> |<a href="#" onclick="toggle('query83');return false;">Query</a>
+<div class=error_body id=query83>select "Time","CPU","csw" from mpstat_eac_t2000_3_1h_table</div>
+</div></div>
+</P>
+<P>
+<div><h2><a name='84'>Involuntary Context Switches per CPU</a></h2>
+<P><img src="mpstat.eac-t2000-3.1h_84.png"></img></p><div class="prevnext"><a href="#83">Previous</a> | <a href="#85">Next</a> | <a href="#content">Top</a> |<a href="#" onclick="toggle('query84');return false;">Query</a>
+<div class=error_body id=query84>select "Time","CPU","icsw" from mpstat_eac_t2000_3_1h_table</div>
+</div></div>
+</P>
+<P>
+<div><h2><a name='85'>Thread Migrations per CPU</a></h2>
+<P><img src="mpstat.eac-t2000-3.1h_85.png"></img></p><div class="prevnext"><a href="#84">Previous</a> | <a href="#86">Next</a> | <a href="#content">Top</a> |<a href="#" onclick="toggle('query85');return false;">Query</a>
+<div class=error_body id=query85>select "Time","CPU","migr" from mpstat_eac_t2000_3_1h_table</div>
+</div></div>
+</P>
+<P>
+<div><h2><a name='86'>Mutex spins per CPU</a></h2>
+<P><img src="mpstat.eac-t2000-3.1h_86.png"></img></p><div class="prevnext"><a href="#85">Previous</a> | <a href="#87">Next</a> | <a href="#content">Top</a> |<a href="#" onclick="toggle('query86');return false;">Query</a>
+<div class=error_body id=query86>select "Time","CPU","smtx" from mpstat_eac_t2000_3_1h_table</div>
+</div></div>
+</P>
+<P>
+<div><h2><a name='87'>Reader-Writer spins per CPU</a></h2>
+<P><img src="mpstat.eac-t2000-3.1h_87.png"></img></p><div class="prevnext"><a href="#86">Previous</a> | <a href="#88">Next</a> | <a href="#content">Top</a> |<a href="#" onclick="toggle('query87');return false;">Query</a>
+<div class=error_body id=query87>select "Time","CPU","srw" from mpstat_eac_t2000_3_1h_table</div>
+</div></div>
+</P>
+<P>
+<div><h2><a name='88'>System calls per CPU</a></h2>
+<P><img src="mpstat.eac-t2000-3.1h_88.png"></img></p><div class="prevnext"><a href="#87">Previous</a> | <a href="#89">Next</a> | <a href="#content">Top</a> |<a href="#" onclick="toggle('query88');return false;">Query</a>
+<div class=error_body id=query88>select "Time","CPU","syscl" from mpstat_eac_t2000_3_1h_table</div>
+</div></div>
+</P>
+<P>
+<div><h2><a name='89'>User time per CPU</a></h2>
+<P><img src="mpstat.eac-t2000-3.1h_89.png"></img></p><div class="prevnext"><a href="#88">Previous</a> | <a href="#90">Next</a> | <a href="#content">Top</a> |<a href="#" onclick="toggle('query89');return false;">Query</a>
+<div class=error_body id=query89>select "Time","CPU","usr" from mpstat_eac_t2000_3_1h_table</div>
+</div></div>
+</P>
+<P>
+<div><h2><a name='90'>System time per CPU</a></h2>
+<P><img src="mpstat.eac-t2000-3.1h_90.png"></img></p><div class="prevnext"><a href="#89">Previous</a> | <a href="#91">Next</a> | <a href="#content">Top</a> |<a href="#" onclick="toggle('query90');return false;">Query</a>
+<div class=error_body id=query90>select "Time","CPU","sys" from mpstat_eac_t2000_3_1h_table</div>
+</div></div>
+</P>
+<P>
+<div><h2><a name='91'>Wait time per CPU</a></h2>
+<P><img src="mpstat.eac-t2000-3.1h_91.png"></img></p><div class="prevnext"><a href="#90">Previous</a> | <a href="#92">Next</a> | <a href="#content">Top</a> |<a href="#" onclick="toggle('query91');return false;">Query</a>
+<div class=error_body id=query91>select "Time","CPU","wt" from mpstat_eac_t2000_3_1h_table</div>
+</div></div>
+</P>
+<P>
+<div><h2><a name='92'>Idle time per CPU</a></h2>
+<P><img src="mpstat.eac-t2000-3.1h_92.png"></img></p><div class="prevnext"><a href="#91">Previous</a> | <a href="#93">Next</a> | <a href="#content">Top</a> |<a href="#" onclick="toggle('query92');return false;">Query</a>
+<div class=error_body id=query92>select "Time","CPU","idl" from mpstat_eac_t2000_3_1h_table</div>
+</div></div>
+</P>
+</div> <!-- footer -->
+</body></html>

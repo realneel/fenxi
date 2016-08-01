@@ -1,0 +1,1785 @@
+STATSPACK report for
+
+Database    DB Id    Instance     Inst Num Startup Time    Release     RAC
+~~~~~~~~ ----------- ------------ -------- --------------- ----------- ---
+          1834909980 bench               1 19-Apr-07 16:25 10.2.0.3.0  NO
+
+Host  Name:   schlitz1         Num CPUs:   24        Phys Memory (MB):   49,075
+~~~~
+
+Snapshot       Snap Id     Snap Time      Sessions Curs/Sess Comment
+~~~~~~~~    ---------- ------------------ -------- --------- -------------------
+Begin Snap:         19 23-Apr-07 16:13:55       54      37.2
+  End Snap:         20 23-Apr-07 16:15:55       54      37.8
+   Elapsed:                2.00 (mins)
+
+Cache Sizes                       Begin        End
+~~~~~~~~~~~                  ---------- ----------
+               Buffer Cache:    22,000M             Std Block Size:         8K
+           Shared Pool Size:    12,000M                 Log Buffer:     6,144K
+
+Load Profile                            Per Second       Per Transaction
+~~~~~~~~~~~~                       ---------------       ---------------
+                  Redo size:          3,349,175.80              2,763.80
+              Logical reads:             60,191.29                 49.67
+              Block changes:             22,281.86                 18.39
+             Physical reads:              1,687.10                  1.39
+            Physical writes:                185.76                  0.15
+                 User calls:             12,709.17                 10.49
+                     Parses:                283.99                  0.23
+                Hard parses:                  0.00                  0.00
+                      Sorts:                279.70                  0.23
+                     Logons:                 28.34                  0.02
+                   Executes:             35,279.30                 29.11
+               Transactions:              1,211.80
+
+  % Blocks changed per Read:   37.02    Recursive Call %:    65.67
+ Rollback per transaction %:    1.27       Rows per Sort:    14.93
+
+Instance Efficiency Percentages
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            Buffer Nowait %:  100.00       Redo NoWait %:  100.00
+            Buffer  Hit   %:   97.57    In-memory Sort %:   99.99
+            Library Hit   %:  100.00        Soft Parse %:  100.00
+         Execute to Parse %:   99.20         Latch Hit %:   99.92
+Parse CPU to Parse Elapsd %:             % Non-Parse CPU:
+
+ Shared Pool Statistics        Begin   End
+                               ------  ------
+             Memory Usage %:   26.43   26.43
+    % SQL with executions>1:   52.94   52.94
+  % Memory for SQL w/exec>1:   63.67   63.67
+
+Top 5 Timed Events                                                    Avg %Total
+~~~~~~~~~~~~~~~~~~                                                   wait   Call
+Event                                            Waits    Time (s)   (ms)   Time
+----------------------------------------- ------------ ----------- ------ ------
+db file sequential read                        179,850       1,888     11   67.9
+log file sync                                  144,418         825      6   29.6
+log file parallel write                         26,434          36      1    1.3
+db file scattered read                             902          12     13     .4
+enq: TX - row lock contention                      611           8     13     .3
+          -------------------------------------------------------------
+Host CPU  (CPUs: 24)
+~~~~~~~~              Load Average
+                      Begin     End      User  System    Idle     WIO     WCPU
+                    ------- -------   ------- ------- ------- ------- --------
+                      17.44   18.98     48.65   26.30   25.06    0.00    5.28
+
+Memory Statistics                       Begin          End
+~~~~~~~~~~~~~~~~~                ------------ ------------
+                  Host Mem (MB):     49,075.1     49,075.1
+                   SGA use (MB):     34,016.0     34,016.0
+                   PGA use (MB):        109.1        111.2
+    % Host Mem used for SGA+PGA:         69.5         69.5
+          -------------------------------------------------------------
+Wait Events  DB/Inst: BENCH/bench  Snaps: :snap1-:snap2
+-> s - second, cs - centisecond,  ms - millisecond, us - microsecond
+-> %Timeouts:  value of 0 indicates value was < .5%.  Value of null is truly 0
+-> Only events with Total Wait Time (s) >= .001 are shown
+-> ordered by Total Wait Time desc, Waits desc (idle events last)
+
+                                                                    Avg
+                                                %Time Total Wait   wait    Waits
+Event                                    Waits  -outs   Time (s)   (ms)     /txn
+--------------------------------- ------------ ------ ---------- ------ --------
+db file sequential read                179,850      0      1,888     11      1.2
+log file sync                          144,418      0        825      6      1.0
+log file parallel write                 26,434      0         36      1      0.2
+db file scattered read                     902      0         12     13      0.0
+enq: TX - row lock contention              611      0          8     13      0.0
+direct path read temp                    9,363      0          8      1      0.1
+db file parallel read                      225      0          3     14      0.0
+db file parallel write                   3,673      0          2      1      0.0
+SQL*Net break/reset to client            2,000      0          1      0      0.0
+latch free                                 135      0          0      3      0.0
+LGWR wait for redo copy                  4,789      0          0      0      0.0
+buffer busy waits                           85      0          0      3      0.0
+control file sequential read                88      0          0      1      0.0
+read by other session                        9      0          0      8      0.0
+control file parallel write                 48      0          0      1      0.0
+direct path write temp                      26      0          0      1      0.0
+latch: In memory undo latch                 59      0          0      0      0.0
+latch: session allocation                   10      0          0      0      0.0
+latch: cache buffers chains                 21      0          0      0      0.0
+control file single write                    4      0          0      1      0.0
+latch: redo allocation                       9      0          0      0      0.0
+latch: object queue header operat            6      0          0      0      0.0
+latch: library cache lock                    1      0          0      1      0.0
+latch: shared pool                           2      0          0      0      0.0
+latch: row cache objects                     2      0          0      0      0.0
+latch: undo global data                      1      0          0      0      0.0
+cursor: pin S                                1      0          0      0      0.0
+latch: enqueue hash chains                   1      0          0      0      0.0
+SQL*Net message from client          1,522,227      0      1,221      1     10.5
+SQL*Net message to client            1,522,213      0          4      0     10.5
+          -------------------------------------------------------------
+Background Wait Events  DB/Inst: BENCH/bench  Snaps: :snap1-:snap2
+-> %Timeouts:  value of 0 indicates value was < .5%.  Value of null is truly 0
+-> Only events with Total Wait Time (s) >= .001 are shown
+-> ordered by Total Wait Time desc, Waits desc (idle events last)
+
+                                                                    Avg
+                                                %Time Total Wait   wait    Waits
+Event                                    Waits  -outs   Time (s)   (ms)     /txn
+--------------------------------- ------------ ------ ---------- ------ --------
+log file parallel write                 26,401      0         36      1      0.2
+db file parallel write                   3,805      0          2      1      0.0
+events in waitclass Other                4,797      0          0      0      0.0
+control file parallel write                 48      0          0      1      0.0
+control file sequential read                12      0          0      1      0.0
+control file single write                    4      0          0      1      0.0
+rdbms ipc message                          536     60        937   1749      0.0
+smon timer                                   4      0        128  32017      0.0
+pmon timer                                  39    100        114   2934      0.0
+          -------------------------------------------------------------
+Wait Event Histogram  DB/Inst: BENCH/bench  Snaps: :snap1-:snap2
+-> Total Waits - units: K is 1000, M is 1000000, G is 1000000000
+-> % of Waits - column heading: <=1s is truly <1024ms, >1s is truly >=1024ms
+-> % of Waits - value: .0 indicates value was <.05%, null is truly 0
+-> Ordered by Event (idle events last)
+
+                           Total ----------------- % of Waits ------------------
+Event                      Waits  <1ms  <2ms  <4ms  <8ms <16ms <32ms  <=1s   >1s
+-------------------------- ----- ----- ----- ----- ----- ----- ----- ----- -----
+latch free                  135   80.0   1.5              11.9   6.7
+latch: In memory undo latc   59   98.3   1.7
+latch: enqueue hash chains    1  100.0
+latch: library cache lock     1  100.0
+latch: object queue header    6  100.0
+latch: redo allocation        9  100.0
+latch: row cache objects      2  100.0
+latch: session allocation    10   80.0  20.0
+latch: shared pool            2  100.0
+latch: undo global data       1  100.0
+          -------------------------------------------------------------
+
+SQL ordered by CPU  DB/Inst: BENCH/bench  Snaps: :snap1-:snap2
+-> Resources reported for PL/SQL code includes the resources used by all SQL
+   statements called by the code.
+-> Total DB CPU (s):
+-> Captured SQL accounts for       % of Total DB CPU
+-> SQL reported below exceeded  1.0% of Total DB CPU
+
+    CPU                  CPU per             Elapsd                     Old
+  Time (s)   Executions  Exec (s)  %Total   Time (s)    Buffer Gets  Hash Value
+---------- ------------ ---------- ------ ---------- --------------- ----------
+    701.94      700,770       0.00           1715.03       3,859,654 1355074911
+Module: tpcso_combined_srv@frost (TNS V1-V3)
+ -- New Order Anonymous block      DECLARE        TYPE distarray
+ IS TABLE OF VARCHAR(24) INDEX BY BINARY_INTEGER;       local_am
+t                distarray;       idx                      PLS_I
+NTEGER;        dummy_local              PLS_INTEGER;       dummy
+_start              PLS_INTEGER;       dummy_index
+
+    147.62      698,898       0.00            147.55         697,966 1064996655
+Module: tpcso_combined_srv@frost (TNS V1-V3)
+BEGIN SELECT i_name INTO :item_name FROM item WHERE i_id = :item
+_id; END;
+
+    131.36       70,984       0.00            354.56         142,278 2280903698
+Module: tpcso_combined_srv@frost (TNS V1-V3)
+SELECT C_DISCOUNT, C_LAST, C_CREDIT, W_TAX FROM CUST , WARE WHER
+E C_ID = :B3 AND C_D_ID = :B2 AND C_W_ID = W_ID AND W_ID = :B1
+
+    109.05       40,598       0.00            311.48          40,598  691693930
+Module: tpcso_combined_srv@frost (TNS V1-V3)
+UPDATE CUST SET C_BALANCE = C_BALANCE - :B1 , C_YTD_PAYMENT = C_
+YTD_PAYMENT+ :B1 , C_PAYMENT_CNT = C_PAYMENT_CNT+1 WHERE ROWID =
+ :B2 RETURNING C_ID, C_FIRST, C_MIDDLE, C_LAST, C_STREET_1, C_ST
+REET_2, C_CITY, C_STATE, C_ZIP, C_PHONE, C_SINCE, C_CREDIT, C_CR
+EDIT_LIM, C_DISCOUNT, C_BALANCE INTO :O0 ,:O1 ,:O2 ,:O3 ,:O4 ,:O
+
+     86.01       40,313       0.00            414.46         431,175  122635512
+Module: tpcso_combined_srv@frost (TNS V1-V3)
+DECLARE /* payz */       not_serializable         EXCEPTION;
+   PRAGMA EXCEPTION_INIT(not_serializable,-8177);       deadlock
+                 EXCEPTION;       PRAGMA EXCEPTION_INIT(deadlock
+,-60);       snapshot_too_old         EXCEPTION;       PRAGMA EX
+CEPTION_INIT(snapshot_too_old,-1555);    BEGIN       LOOP BEGIN
+
+     83.92      699,925       0.00             83.82       1,455,699 2201475103
+Module: tpcso_combined_srv@frost (TNS V1-V3)
+INSERT INTO ORDL (OL_O_ID, OL_D_ID, OL_W_ID, OL_NUMBER, OL_DELIV
+ERY_D, OL_I_ID, OL_SUPPLY_W_ID, OL_QUANTITY,OL_AMOUNT,OL_DIST_IN
+FO) VALUES (:B1, :B2, :B3, :B4 , :B10 , :B5 , :B6 , :B7 , :B8 ,
+:B9 )
+
+     61.23      698,923       0.00             61.05         697,582    2820940
+Module: tpcso_combined_srv@frost (TNS V1-V3)
+SELECT I_NAME FROM ITEM WHERE I_ID = :B1
+
+     51.51       27,133       0.00            201.90         181,520 3735785089
+Module: tpcso_combined_srv@frost (TNS V1-V3)
+DECLARE /* paynz */       not_serializable         EXCEPTION;
+    PRAGMA EXCEPTION_INIT(not_serializable,-8177);       deadloc
+k                 EXCEPTION;       PRAGMA EXCEPTION_INIT(deadloc
+SQL ordered by CPU  DB/Inst: BENCH/bench  Snaps: :snap1-:snap2
+-> Resources reported for PL/SQL code includes the resources used by all SQL
+   statements called by the code.
+-> Total DB CPU (s):
+-> Captured SQL accounts for       % of Total DB CPU
+-> SQL reported below exceeded  1.0% of Total DB CPU
+
+    CPU                  CPU per             Elapsd                     Old
+  Time (s)   Executions  Exec (s)  %Total   Time (s)    Buffer Gets  Hash Value
+---------- ------------ ---------- ------ ---------- --------------- ----------
+k,-60);       snapshot_too_old         EXCEPTION;       PRAGMA E
+XCEPTION_INIT(snapshot_too_old,-1555);    BEGIN       LOOP BEGIN
+
+     49.23       27,128       0.00            139.19          27,127 3645412729
+Module: tpcso_combined_srv@frost (TNS V1-V3)
+UPDATE CUST SET C_BALANCE = C_BALANCE - :B1 , C_YTD_PAYMENT = C_
+YTD_PAYMENT + :B1 , C_PAYMENT_CNT = C_PAYMENT_CNT+1 WHERE C_ID =
+ :B4 AND C_D_ID = :B3 AND C_W_ID = :B2 RETURNING ROWID, C_FIRST,
+ C_MIDDLE, C_LAST, C_STREET_1, C_STREET_2, C_CITY, C_STATE, C_ZI
+P, C_PHONE, C_SINCE, C_CREDIT, C_CREDIT_LIM, C_DISCOUNT, C_BALAN
+
+     42.25       70,537       0.00            101.70         142,391 4205404093
+Module: tpcso_combined_srv@frost (TNS V1-V3)
+UPDATE STOCK_ITEM SET S_ORDER_CNT = S_ORDER_CNT + 1, S_YTD = S_Y
+TD + :B5 , S_REMOTE_CNT = S_REMOTE_CNT + :B4 , S_QUANTITY = (CAS
+E WHEN S_QUANTITY < :B2 + 10 THEN S_QUANTITY +91 ELSE S_QUANTITY
+ END) - :B3 WHERE I_ID = :B7 AND S_W_ID = :B6 RETURNING I_PRICE,
+ I_NAME, S_QUANTITY, S_DIST_08, I_PRICE*:B1 , CASE WHEN I_DATA N
+
+     42.14       70,787       0.00             99.49         143,162  813798518
+Module: tpcso_combined_srv@frost (TNS V1-V3)
+UPDATE STOCK_ITEM SET S_ORDER_CNT = S_ORDER_CNT + 1, S_YTD = S_Y
+TD + :B5 , S_REMOTE_CNT = S_REMOTE_CNT + :B4 , S_QUANTITY = (CAS
+E WHEN S_QUANTITY < :B2 + 10 THEN S_QUANTITY +91 ELSE S_QUANTITY
+ END) - :B3 WHERE I_ID = :B7 AND S_W_ID = :B6 RETURNING I_PRICE,
+ I_NAME, S_QUANTITY, S_DIST_02, I_PRICE*:B1 , CASE WHEN I_DATA N
+
+     41.78       71,519       0.00            100.96         144,321 1306214583
+Module: tpcso_combined_srv@frost (TNS V1-V3)
+UPDATE STOCK_ITEM SET S_ORDER_CNT = S_ORDER_CNT + 1, S_YTD = S_Y
+TD + :B5 , S_REMOTE_CNT = S_REMOTE_CNT + :B4 , S_QUANTITY = (CAS
+E WHEN S_QUANTITY < :B2 + 10 THEN S_QUANTITY +91 ELSE S_QUANTITY
+ END) - :B3 WHERE I_ID = :B7 AND S_W_ID = :B6 RETURNING I_PRICE,
+ I_NAME, S_QUANTITY, S_DIST_10, I_PRICE*:B1 , CASE WHEN I_DATA N
+
+     41.46       70,363       0.00             99.63         141,976 2929337205
+Module: tpcso_combined_srv@frost (TNS V1-V3)
+UPDATE STOCK_ITEM SET S_ORDER_CNT = S_ORDER_CNT + 1, S_YTD = S_Y
+TD + :B5 , S_REMOTE_CNT = S_REMOTE_CNT + :B4 , S_QUANTITY = (CAS
+E WHEN S_QUANTITY < :B2 + 10 THEN S_QUANTITY +91 ELSE S_QUANTITY
+ END) - :B3 WHERE I_ID = :B7 AND S_W_ID = :B6 RETURNING I_PRICE,
+ I_NAME, S_QUANTITY, S_DIST_04, I_PRICE*:B1 , CASE WHEN I_DATA N
+
+     41.31       69,806       0.00             98.06         141,488 3925978891
+Module: tpcso_combined_srv@frost (TNS V1-V3)
+UPDATE STOCK_ITEM SET S_ORDER_CNT = S_ORDER_CNT + 1, S_YTD = S_Y
+TD + :B5 , S_REMOTE_CNT = S_REMOTE_CNT + :B4 , S_QUANTITY = (CAS
+E WHEN S_QUANTITY < :B2 + 10 THEN S_QUANTITY +91 ELSE S_QUANTITY
+ END) - :B3 WHERE I_ID = :B7 AND S_W_ID = :B6 RETURNING I_PRICE,
+ I_NAME, S_QUANTITY, S_DIST_07, I_PRICE*:B1 , CASE WHEN I_DATA N
+SQL ordered by CPU  DB/Inst: BENCH/bench  Snaps: :snap1-:snap2
+-> Resources reported for PL/SQL code includes the resources used by all SQL
+   statements called by the code.
+-> Total DB CPU (s):
+-> Captured SQL accounts for       % of Total DB CPU
+-> SQL reported below exceeded  1.0% of Total DB CPU
+
+    CPU                  CPU per             Elapsd                     Old
+  Time (s)   Executions  Exec (s)  %Total   Time (s)    Buffer Gets  Hash Value
+---------- ------------ ---------- ------ ---------- --------------- ----------
+
+     40.85       69,386       0.00             98.19         140,167  599989982
+Module: tpcso_combined_srv@frost (TNS V1-V3)
+UPDATE STOCK_ITEM SET S_ORDER_CNT = S_ORDER_CNT + 1, S_YTD = S_Y
+TD + :B5 , S_REMOTE_CNT = S_REMOTE_CNT + :B4 , S_QUANTITY = (CAS
+E WHEN S_QUANTITY < :B2 + 10 THEN S_QUANTITY +91 ELSE S_QUANTITY
+ END) - :B3 WHERE I_ID = :B7 AND S_W_ID = :B6 RETURNING I_PRICE,
+ I_NAME, S_QUANTITY, S_DIST_06, I_PRICE*:B1 , CASE WHEN I_DATA N
+
+          -------------------------------------------------------------
+SQL ordered by Elapsed  DB/Inst: BENCH/bench  Snaps: :snap1-:snap2
+-> Resources reported for PL/SQL code includes the resources used by all SQL
+   statements called by the code.
+-> Total DB Time (s):
+-> Captured SQL accounts for       % of Total DB Time
+-> SQL reported below exceeded  1.0% of Total DB Time
+
+  Elapsed                Elap per            CPU                        Old
+  Time (s)   Executions  Exec (s)  %Total   Time (s)  Physical Reads Hash Value
+---------- ------------ ---------- ------ ---------- --------------- ----------
+   1715.03      700,770       0.00            701.94         110,379 1355074911
+Module: tpcso_combined_srv@frost (TNS V1-V3)
+ -- New Order Anonymous block      DECLARE        TYPE distarray
+ IS TABLE OF VARCHAR(24) INDEX BY BINARY_INTEGER;       local_am
+t                distarray;       idx                      PLS_I
+NTEGER;        dummy_local              PLS_INTEGER;       dummy
+_start              PLS_INTEGER;       dummy_index
+
+    414.46       40,313       0.01             86.01          32,267  122635512
+Module: tpcso_combined_srv@frost (TNS V1-V3)
+DECLARE /* payz */       not_serializable         EXCEPTION;
+   PRAGMA EXCEPTION_INIT(not_serializable,-8177);       deadlock
+                 EXCEPTION;       PRAGMA EXCEPTION_INIT(deadlock
+,-60);       snapshot_too_old         EXCEPTION;       PRAGMA EX
+CEPTION_INIT(snapshot_too_old,-1555);    BEGIN       LOOP BEGIN
+
+    354.56       70,984       0.00            131.36          32,301 2280903698
+Module: tpcso_combined_srv@frost (TNS V1-V3)
+SELECT C_DISCOUNT, C_LAST, C_CREDIT, W_TAX FROM CUST , WARE WHER
+E C_ID = :B3 AND C_D_ID = :B2 AND C_W_ID = W_ID AND W_ID = :B1
+
+    311.48       40,598       0.01            109.05          28,467  691693930
+Module: tpcso_combined_srv@frost (TNS V1-V3)
+UPDATE CUST SET C_BALANCE = C_BALANCE - :B1 , C_YTD_PAYMENT = C_
+YTD_PAYMENT+ :B1 , C_PAYMENT_CNT = C_PAYMENT_CNT+1 WHERE ROWID =
+ :B2 RETURNING C_ID, C_FIRST, C_MIDDLE, C_LAST, C_STREET_1, C_ST
+REET_2, C_CITY, C_STATE, C_ZIP, C_PHONE, C_SINCE, C_CREDIT, C_CR
+EDIT_LIM, C_DISCOUNT, C_BALANCE INTO :O0 ,:O1 ,:O2 ,:O3 ,:O4 ,:O
+
+    201.90       27,133       0.01             51.51          15,117 3735785089
+Module: tpcso_combined_srv@frost (TNS V1-V3)
+DECLARE /* paynz */       not_serializable         EXCEPTION;
+    PRAGMA EXCEPTION_INIT(not_serializable,-8177);       deadloc
+k                 EXCEPTION;       PRAGMA EXCEPTION_INIT(deadloc
+k,-60);       snapshot_too_old         EXCEPTION;       PRAGMA E
+XCEPTION_INIT(snapshot_too_old,-1555);    BEGIN       LOOP BEGIN
+
+    147.55      698,898       0.00            147.62               0 1064996655
+Module: tpcso_combined_srv@frost (TNS V1-V3)
+BEGIN SELECT i_name INTO :item_name FROM item WHERE i_id = :item
+_id; END;
+
+    139.19       27,128       0.01             49.23          12,453 3645412729
+Module: tpcso_combined_srv@frost (TNS V1-V3)
+UPDATE CUST SET C_BALANCE = C_BALANCE - :B1 , C_YTD_PAYMENT = C_
+YTD_PAYMENT + :B1 , C_PAYMENT_CNT = C_PAYMENT_CNT+1 WHERE C_ID =
+ :B4 AND C_D_ID = :B3 AND C_W_ID = :B2 RETURNING ROWID, C_FIRST,
+ C_MIDDLE, C_LAST, C_STREET_1, C_STREET_2, C_CITY, C_STATE, C_ZI
+P, C_PHONE, C_SINCE, C_CREDIT, C_CREDIT_LIM, C_DISCOUNT, C_BALAN
+
+SQL ordered by Elapsed  DB/Inst: BENCH/bench  Snaps: :snap1-:snap2
+-> Resources reported for PL/SQL code includes the resources used by all SQL
+   statements called by the code.
+-> Total DB Time (s):
+-> Captured SQL accounts for       % of Total DB Time
+-> SQL reported below exceeded  1.0% of Total DB Time
+
+  Elapsed                Elap per            CPU                        Old
+  Time (s)   Executions  Exec (s)  %Total   Time (s)  Physical Reads Hash Value
+---------- ------------ ---------- ------ ---------- --------------- ----------
+    126.69        6,250       0.02              7.57           8,227  252305685
+Module: tpcso_combined_srv@frost (TNS V1-V3)
+declare    TYPE numarray IS TABLE OF NUMBER INDEX BY BINARY_INTE
+GER;   TYPE numlist is varray (10) of number;   dist numarray;
+ amt numarray ;   cnt pls_integer;    not_serializable EXCEPTION
+;   PRAGMA EXCEPTION_INIT(not_serializable, -8177);   deadlock
+       EXCEPTION;   PRAGMA EXCEPTION_INIT(deadlock, -60);   snap
+
+    101.70       70,537       0.00             42.25           8,002 4205404093
+Module: tpcso_combined_srv@frost (TNS V1-V3)
+UPDATE STOCK_ITEM SET S_ORDER_CNT = S_ORDER_CNT + 1, S_YTD = S_Y
+TD + :B5 , S_REMOTE_CNT = S_REMOTE_CNT + :B4 , S_QUANTITY = (CAS
+E WHEN S_QUANTITY < :B2 + 10 THEN S_QUANTITY +91 ELSE S_QUANTITY
+ END) - :B3 WHERE I_ID = :B7 AND S_W_ID = :B6 RETURNING I_PRICE,
+ I_NAME, S_QUANTITY, S_DIST_08, I_PRICE*:B1 , CASE WHEN I_DATA N
+
+    100.96       71,519       0.00             41.78           7,965 1306214583
+Module: tpcso_combined_srv@frost (TNS V1-V3)
+UPDATE STOCK_ITEM SET S_ORDER_CNT = S_ORDER_CNT + 1, S_YTD = S_Y
+TD + :B5 , S_REMOTE_CNT = S_REMOTE_CNT + :B4 , S_QUANTITY = (CAS
+E WHEN S_QUANTITY < :B2 + 10 THEN S_QUANTITY +91 ELSE S_QUANTITY
+ END) - :B3 WHERE I_ID = :B7 AND S_W_ID = :B6 RETURNING I_PRICE,
+ I_NAME, S_QUANTITY, S_DIST_10, I_PRICE*:B1 , CASE WHEN I_DATA N
+
+     99.63       70,363       0.00             41.46           7,864 2929337205
+Module: tpcso_combined_srv@frost (TNS V1-V3)
+UPDATE STOCK_ITEM SET S_ORDER_CNT = S_ORDER_CNT + 1, S_YTD = S_Y
+TD + :B5 , S_REMOTE_CNT = S_REMOTE_CNT + :B4 , S_QUANTITY = (CAS
+E WHEN S_QUANTITY < :B2 + 10 THEN S_QUANTITY +91 ELSE S_QUANTITY
+ END) - :B3 WHERE I_ID = :B7 AND S_W_ID = :B6 RETURNING I_PRICE,
+ I_NAME, S_QUANTITY, S_DIST_04, I_PRICE*:B1 , CASE WHEN I_DATA N
+
+     99.59       70,058       0.00             40.51           7,764  615033986
+Module: tpcso_combined_srv@frost (TNS V1-V3)
+UPDATE STOCK_ITEM SET S_ORDER_CNT = S_ORDER_CNT + 1, S_YTD = S_Y
+TD + :B5 , S_REMOTE_CNT = S_REMOTE_CNT + :B4 , S_QUANTITY = (CAS
+E WHEN S_QUANTITY < :B2 + 10 THEN S_QUANTITY +91 ELSE S_QUANTITY
+ END) - :B3 WHERE I_ID = :B7 AND S_W_ID = :B6 RETURNING I_PRICE,
+ I_NAME, S_QUANTITY, S_DIST_09, I_PRICE*:B1 , CASE WHEN I_DATA N
+
+     99.49       70,787       0.00             42.14           7,896  813798518
+Module: tpcso_combined_srv@frost (TNS V1-V3)
+UPDATE STOCK_ITEM SET S_ORDER_CNT = S_ORDER_CNT + 1, S_YTD = S_Y
+TD + :B5 , S_REMOTE_CNT = S_REMOTE_CNT + :B4 , S_QUANTITY = (CAS
+E WHEN S_QUANTITY < :B2 + 10 THEN S_QUANTITY +91 ELSE S_QUANTITY
+ END) - :B3 WHERE I_ID = :B7 AND S_W_ID = :B6 RETURNING I_PRICE,
+ I_NAME, S_QUANTITY, S_DIST_02, I_PRICE*:B1 , CASE WHEN I_DATA N
+
+     98.19       69,386       0.00             40.85           7,792  599989982
+Module: tpcso_combined_srv@frost (TNS V1-V3)
+SQL ordered by Elapsed  DB/Inst: BENCH/bench  Snaps: :snap1-:snap2
+-> Resources reported for PL/SQL code includes the resources used by all SQL
+   statements called by the code.
+-> Total DB Time (s):
+-> Captured SQL accounts for       % of Total DB Time
+-> SQL reported below exceeded  1.0% of Total DB Time
+
+  Elapsed                Elap per            CPU                        Old
+  Time (s)   Executions  Exec (s)  %Total   Time (s)  Physical Reads Hash Value
+---------- ------------ ---------- ------ ---------- --------------- ----------
+UPDATE STOCK_ITEM SET S_ORDER_CNT = S_ORDER_CNT + 1, S_YTD = S_Y
+TD + :B5 , S_REMOTE_CNT = S_REMOTE_CNT + :B4 , S_QUANTITY = (CAS
+E WHEN S_QUANTITY < :B2 + 10 THEN S_QUANTITY +91 ELSE S_QUANTITY
+ END) - :B3 WHERE I_ID = :B7 AND S_W_ID = :B6 RETURNING I_PRICE,
+ I_NAME, S_QUANTITY, S_DIST_06, I_PRICE*:B1 , CASE WHEN I_DATA N
+
+          -------------------------------------------------------------
+SQL ordered by Gets  DB/Inst: BENCH/bench  Snaps: :snap1-:snap2
+-> Resources reported for PL/SQL code includes the resources used by all SQL
+   statements called by the code.
+-> End Buffer Gets Threshold:     10000 Total Buffer Gets:       7,222,955
+-> Captured SQL accounts for   97.5% of Total Buffer Gets
+-> SQL reported below exceeded  1.0% of Total Buffer Gets
+
+                                                     CPU      Elapsd     Old
+  Buffer Gets    Executions  Gets per Exec  %Total Time (s)  Time (s) Hash Value
+--------------- ------------ -------------- ------ -------- --------- ----------
+      3,859,654      700,770            5.5   53.4   701.94   1715.03 1355074911
+Module: tpcso_combined_srv@frost (TNS V1-V3)
+ -- New Order Anonymous block      DECLARE        TYPE distarray
+ IS TABLE OF VARCHAR(24) INDEX BY BINARY_INTEGER;       local_am
+t                distarray;       idx                      PLS_I
+NTEGER;        dummy_local              PLS_INTEGER;       dummy
+_start              PLS_INTEGER;       dummy_index
+
+      1,455,699      699,925            2.1   20.2    83.92     83.82 2201475103
+Module: tpcso_combined_srv@frost (TNS V1-V3)
+INSERT INTO ORDL (OL_O_ID, OL_D_ID, OL_W_ID, OL_NUMBER, OL_DELIV
+ERY_D, OL_I_ID, OL_SUPPLY_W_ID, OL_QUANTITY,OL_AMOUNT,OL_DIST_IN
+FO) VALUES (:B1, :B2, :B3, :B4 , :B10 , :B5 , :B6 , :B7 , :B8 ,
+:B9 )
+
+      1,287,911        6,281          205.0   17.8    15.31     60.91 3788193610
+Module: tpcso_combined_srv@frost (TNS V1-V3)
+SELECT /*+ nocache (stok) */ count (DISTINCT s_i_id)
+ FROM ordl, stok, dist             WHERE d_id = :d_id AND d_w_id
+ = :w_id AND                   d_id = ol_d_id AND d_w_id = ol_w_
+id AND                   ol_i_id = s_i_id AND ol_w_id = s_w_id A
+ND                   s_quantity < :threshold AND
+
+        697,966      698,898            1.0    9.7   147.62    147.55 1064996655
+Module: tpcso_combined_srv@frost (TNS V1-V3)
+BEGIN SELECT i_name INTO :item_name FROM item WHERE i_id = :item
+_id; END;
+
+        697,582      698,923            1.0    9.7    61.23     61.05    2820940
+Module: tpcso_combined_srv@frost (TNS V1-V3)
+SELECT I_NAME FROM ITEM WHERE I_ID = :B1
+
+        485,329        6,250           77.7    6.7     7.57    126.69  252305685
+Module: tpcso_combined_srv@frost (TNS V1-V3)
+declare    TYPE numarray IS TABLE OF NUMBER INDEX BY BINARY_INTE
+GER;   TYPE numlist is varray (10) of number;   dist numarray;
+ amt numarray ;   cnt pls_integer;    not_serializable EXCEPTION
+;   PRAGMA EXCEPTION_INIT(not_serializable, -8177);   deadlock
+       EXCEPTION;   PRAGMA EXCEPTION_INIT(deadlock, -60);   snap
+
+        436,512       70,682            6.2    6.0    23.72     24.12 2323328631
+Module: tpcso_combined_srv@frost (TNS V1-V3)
+INSERT INTO ORDR (O_ID,O_D_ID, O_W_ID, O_C_ID, O_ENTRY_D, O_CARR
+IER_ID, O_OL_CNT, O_ALL_LOCAL) VALUES (:B1, :B2, :B3, :B4, :B5 ,
+ 11, :B6 , :B7 )
+
+        431,175       40,313           10.7    6.0    86.01    414.46  122635512
+Module: tpcso_combined_srv@frost (TNS V1-V3)
+DECLARE /* payz */       not_serializable         EXCEPTION;
+   PRAGMA EXCEPTION_INIT(not_serializable,-8177);       deadlock
+SQL ordered by Gets  DB/Inst: BENCH/bench  Snaps: :snap1-:snap2
+-> Resources reported for PL/SQL code includes the resources used by all SQL
+   statements called by the code.
+-> End Buffer Gets Threshold:     10000 Total Buffer Gets:       7,222,955
+-> Captured SQL accounts for   97.5% of Total Buffer Gets
+-> SQL reported below exceeded  1.0% of Total Buffer Gets
+
+                                                     CPU      Elapsd     Old
+  Buffer Gets    Executions  Gets per Exec  %Total Time (s)  Time (s) Hash Value
+--------------- ------------ -------------- ------ -------- --------- ----------
+                 EXCEPTION;       PRAGMA EXCEPTION_INIT(deadlock
+,-60);       snapshot_too_old         EXCEPTION;       PRAGMA EX
+CEPTION_INIT(snapshot_too_old,-1555);    BEGIN       LOOP BEGIN
+
+        214,208       71,183            3.0    3.0    21.97     24.06 2352584861
+Module: tpcso_combined_srv@frost (TNS V1-V3)
+UPDATE DIST SET D_NEXT_O_ID = D_NEXT_O_ID + 1 WHERE D_ID = :B2 A
+ND D_W_ID = :B1 RETURNING D_TAX, D_NEXT_O_ID-1 INTO :O0 ,:O1
+
+        181,520       27,133            6.7    2.5    51.51    201.90 3735785089
+Module: tpcso_combined_srv@frost (TNS V1-V3)
+DECLARE /* paynz */       not_serializable         EXCEPTION;
+    PRAGMA EXCEPTION_INIT(not_serializable,-8177);       deadloc
+k                 EXCEPTION;       PRAGMA EXCEPTION_INIT(deadloc
+k,-60);       snapshot_too_old         EXCEPTION;       PRAGMA E
+XCEPTION_INIT(snapshot_too_old,-1555);    BEGIN       LOOP BEGIN
+
+        163,062       40,468            4.0    2.3     7.23      9.68 1439772957
+Module: tpcso_combined_srv@frost (TNS V1-V3)
+SELECT ROWID FROM CUST WHERE C_D_ID = :B3 AND C_W_ID = :B2 AND C
+_LAST = :B1 ORDER BY C_LAST, C_D_ID, C_W_ID, C_FIRST
+
+        153,768       70,979            2.2    2.1    14.04     14.68 1713434978
+Module: tpcso_combined_srv@frost (TNS V1-V3)
+INSERT INTO NORD (NO_O_ID, NO_D_ID, NO_W_ID) VALUES (:B1, :B2, :
+B3)
+
+        144,321       71,519            2.0    2.0    41.78    100.96 1306214583
+Module: tpcso_combined_srv@frost (TNS V1-V3)
+UPDATE STOCK_ITEM SET S_ORDER_CNT = S_ORDER_CNT + 1, S_YTD = S_Y
+TD + :B5 , S_REMOTE_CNT = S_REMOTE_CNT + :B4 , S_QUANTITY = (CAS
+E WHEN S_QUANTITY < :B2 + 10 THEN S_QUANTITY +91 ELSE S_QUANTITY
+ END) - :B3 WHERE I_ID = :B7 AND S_W_ID = :B6 RETURNING I_PRICE,
+ I_NAME, S_QUANTITY, S_DIST_10, I_PRICE*:B1 , CASE WHEN I_DATA N
+
+        143,162       70,787            2.0    2.0    42.14     99.49  813798518
+Module: tpcso_combined_srv@frost (TNS V1-V3)
+UPDATE STOCK_ITEM SET S_ORDER_CNT = S_ORDER_CNT + 1, S_YTD = S_Y
+TD + :B5 , S_REMOTE_CNT = S_REMOTE_CNT + :B4 , S_QUANTITY = (CAS
+E WHEN S_QUANTITY < :B2 + 10 THEN S_QUANTITY +91 ELSE S_QUANTITY
+ END) - :B3 WHERE I_ID = :B7 AND S_W_ID = :B6 RETURNING I_PRICE,
+ I_NAME, S_QUANTITY, S_DIST_02, I_PRICE*:B1 , CASE WHEN I_DATA N
+
+        142,391       70,537            2.0    2.0    42.25    101.70 4205404093
+Module: tpcso_combined_srv@frost (TNS V1-V3)
+UPDATE STOCK_ITEM SET S_ORDER_CNT = S_ORDER_CNT + 1, S_YTD = S_Y
+TD + :B5 , S_REMOTE_CNT = S_REMOTE_CNT + :B4 , S_QUANTITY = (CAS
+E WHEN S_QUANTITY < :B2 + 10 THEN S_QUANTITY +91 ELSE S_QUANTITY
+ END) - :B3 WHERE I_ID = :B7 AND S_W_ID = :B6 RETURNING I_PRICE,
+ I_NAME, S_QUANTITY, S_DIST_08, I_PRICE*:B1 , CASE WHEN I_DATA N
+SQL ordered by Gets  DB/Inst: BENCH/bench  Snaps: :snap1-:snap2
+-> Resources reported for PL/SQL code includes the resources used by all SQL
+   statements called by the code.
+-> End Buffer Gets Threshold:     10000 Total Buffer Gets:       7,222,955
+-> Captured SQL accounts for   97.5% of Total Buffer Gets
+-> SQL reported below exceeded  1.0% of Total Buffer Gets
+
+                                                     CPU      Elapsd     Old
+  Buffer Gets    Executions  Gets per Exec  %Total Time (s)  Time (s) Hash Value
+--------------- ------------ -------------- ------ -------- --------- ----------
+
+        142,278       70,984            2.0    2.0   131.36    354.56 2280903698
+Module: tpcso_combined_srv@frost (TNS V1-V3)
+SELECT C_DISCOUNT, C_LAST, C_CREDIT, W_TAX FROM CUST , WARE WHER
+E C_ID = :B3 AND C_D_ID = :B2 AND C_W_ID = W_ID AND W_ID = :B1
+
+        141,976       70,363            2.0    2.0    41.46     99.63 2929337205
+Module: tpcso_combined_srv@frost (TNS V1-V3)
+UPDATE STOCK_ITEM SET S_ORDER_CNT = S_ORDER_CNT + 1, S_YTD = S_Y
+TD + :B5 , S_REMOTE_CNT = S_REMOTE_CNT + :B4 , S_QUANTITY = (CAS
+E WHEN S_QUANTITY < :B2 + 10 THEN S_QUANTITY +91 ELSE S_QUANTITY
+ END) - :B3 WHERE I_ID = :B7 AND S_W_ID = :B6 RETURNING I_PRICE,
+ I_NAME, S_QUANTITY, S_DIST_04, I_PRICE*:B1 , CASE WHEN I_DATA N
+
+        141,799       70,058            2.0    2.0    40.51     99.59  615033986
+Module: tpcso_combined_srv@frost (TNS V1-V3)
+UPDATE STOCK_ITEM SET S_ORDER_CNT = S_ORDER_CNT + 1, S_YTD = S_Y
+
+          -------------------------------------------------------------
+SQL ordered by Reads  DB/Inst: BENCH/bench  Snaps: :snap1-:snap2
+-> End Disk Reads Threshold:      1000  Total Disk Reads:         202,452
+-> Captured SQL accounts for   99.9% of Total Disk Reads
+-> SQL reported below exceeded  1.0% of Total Disk Reads
+
+                                                     CPU      Elapsd     Old
+ Physical Reads  Executions  Reads per Exec %Total Time (s)  Time (s) Hash Value
+--------------- ------------ -------------- ------ -------- --------- ----------
+        110,379      700,770            0.2   54.5   701.94   1715.03 1355074911
+Module: tpcso_combined_srv@frost (TNS V1-V3)
+ -- New Order Anonymous block      DECLARE        TYPE distarray
+ IS TABLE OF VARCHAR(24) INDEX BY BINARY_INTEGER;       local_am
+t                distarray;       idx                      PLS_I
+NTEGER;        dummy_local              PLS_INTEGER;       dummy
+_start              PLS_INTEGER;       dummy_index
+
+         32,301       70,984            0.5   16.0   131.36    354.56 2280903698
+Module: tpcso_combined_srv@frost (TNS V1-V3)
+SELECT C_DISCOUNT, C_LAST, C_CREDIT, W_TAX FROM CUST , WARE WHER
+E C_ID = :B3 AND C_D_ID = :B2 AND C_W_ID = W_ID AND W_ID = :B1
+
+         32,267       40,313            0.8   15.9    86.01    414.46  122635512
+Module: tpcso_combined_srv@frost (TNS V1-V3)
+DECLARE /* payz */       not_serializable         EXCEPTION;
+   PRAGMA EXCEPTION_INIT(not_serializable,-8177);       deadlock
+                 EXCEPTION;       PRAGMA EXCEPTION_INIT(deadlock
+,-60);       snapshot_too_old         EXCEPTION;       PRAGMA EX
+CEPTION_INIT(snapshot_too_old,-1555);    BEGIN       LOOP BEGIN
+
+         28,467       40,598            0.7   14.1   109.05    311.48  691693930
+Module: tpcso_combined_srv@frost (TNS V1-V3)
+UPDATE CUST SET C_BALANCE = C_BALANCE - :B1 , C_YTD_PAYMENT = C_
+YTD_PAYMENT+ :B1 , C_PAYMENT_CNT = C_PAYMENT_CNT+1 WHERE ROWID =
+ :B2 RETURNING C_ID, C_FIRST, C_MIDDLE, C_LAST, C_STREET_1, C_ST
+REET_2, C_CITY, C_STATE, C_ZIP, C_PHONE, C_SINCE, C_CREDIT, C_CR
+EDIT_LIM, C_DISCOUNT, C_BALANCE INTO :O0 ,:O1 ,:O2 ,:O3 ,:O4 ,:O
+
+         20,479            1       20,479.0   10.1     0.00     31.88 2544184539
+Module: SQL*Plus
+begin :snap1 := statspack.snap; end;
+
+         20,444            1       20,444.0   10.1     0.00     17.01 3195300417
+Module: SQL*Plus
+INSERT INTO STATS$SQL_SUMMARY ( SNAP_ID , DBID , INSTANCE_NUMBER
+ , TEXT_SUBSET , SQL_ID , SHARABLE_MEM , SORTS , MODULE , LOADED
+_VERSIONS , FETCHES , EXECUTIONS , PX_SERVERS_EXECUTIONS , END_O
+F_FETCH_COUNT , LOADS , INVALIDATIONS , PARSE_CALLS , DISK_READS
+ , DIRECT_WRITES , BUFFER_GETS , APPLICATION_WAIT_TIME , CONCURR
+
+         15,117       27,133            0.6    7.5    51.51    201.90 3735785089
+Module: tpcso_combined_srv@frost (TNS V1-V3)
+DECLARE /* paynz */       not_serializable         EXCEPTION;
+    PRAGMA EXCEPTION_INIT(not_serializable,-8177);       deadloc
+k                 EXCEPTION;       PRAGMA EXCEPTION_INIT(deadloc
+k,-60);       snapshot_too_old         EXCEPTION;       PRAGMA E
+XCEPTION_INIT(snapshot_too_old,-1555);    BEGIN       LOOP BEGIN
+
+         12,453       27,128            0.5    6.2    49.23    139.19 3645412729
+Module: tpcso_combined_srv@frost (TNS V1-V3)
+UPDATE CUST SET C_BALANCE = C_BALANCE - :B1 , C_YTD_PAYMENT = C_
+SQL ordered by Reads  DB/Inst: BENCH/bench  Snaps: :snap1-:snap2
+-> End Disk Reads Threshold:      1000  Total Disk Reads:         202,452
+-> Captured SQL accounts for   99.9% of Total Disk Reads
+-> SQL reported below exceeded  1.0% of Total Disk Reads
+
+                                                     CPU      Elapsd     Old
+ Physical Reads  Executions  Reads per Exec %Total Time (s)  Time (s) Hash Value
+--------------- ------------ -------------- ------ -------- --------- ----------
+YTD_PAYMENT + :B1 , C_PAYMENT_CNT = C_PAYMENT_CNT+1 WHERE C_ID =
+ :B4 AND C_D_ID = :B3 AND C_W_ID = :B2 RETURNING ROWID, C_FIRST,
+ C_MIDDLE, C_LAST, C_STREET_1, C_STREET_2, C_CITY, C_STATE, C_ZI
+P, C_PHONE, C_SINCE, C_CREDIT, C_CREDIT_LIM, C_DISCOUNT, C_BALAN
+
+          8,227        6,250            1.3    4.1     7.57    126.69  252305685
+Module: tpcso_combined_srv@frost (TNS V1-V3)
+declare    TYPE numarray IS TABLE OF NUMBER INDEX BY BINARY_INTE
+GER;   TYPE numlist is varray (10) of number;   dist numarray;
+ amt numarray ;   cnt pls_integer;    not_serializable EXCEPTION
+;   PRAGMA EXCEPTION_INIT(not_serializable, -8177);   deadlock
+       EXCEPTION;   PRAGMA EXCEPTION_INIT(deadlock, -60);   snap
+
+          8,002       70,537            0.1    4.0    42.25    101.70 4205404093
+Module: tpcso_combined_srv@frost (TNS V1-V3)
+UPDATE STOCK_ITEM SET S_ORDER_CNT = S_ORDER_CNT + 1, S_YTD = S_Y
+TD + :B5 , S_REMOTE_CNT = S_REMOTE_CNT + :B4 , S_QUANTITY = (CAS
+E WHEN S_QUANTITY < :B2 + 10 THEN S_QUANTITY +91 ELSE S_QUANTITY
+ END) - :B3 WHERE I_ID = :B7 AND S_W_ID = :B6 RETURNING I_PRICE,
+ I_NAME, S_QUANTITY, S_DIST_08, I_PRICE*:B1 , CASE WHEN I_DATA N
+
+          7,965       71,519            0.1    3.9    41.78    100.96 1306214583
+Module: tpcso_combined_srv@frost (TNS V1-V3)
+UPDATE STOCK_ITEM SET S_ORDER_CNT = S_ORDER_CNT + 1, S_YTD = S_Y
+TD + :B5 , S_REMOTE_CNT = S_REMOTE_CNT + :B4 , S_QUANTITY = (CAS
+E WHEN S_QUANTITY < :B2 + 10 THEN S_QUANTITY +91 ELSE S_QUANTITY
+ END) - :B3 WHERE I_ID = :B7 AND S_W_ID = :B6 RETURNING I_PRICE,
+ I_NAME, S_QUANTITY, S_DIST_10, I_PRICE*:B1 , CASE WHEN I_DATA N
+
+          7,896       70,787            0.1    3.9    42.14     99.49  813798518
+Module: tpcso_combined_srv@frost (TNS V1-V3)
+UPDATE STOCK_ITEM SET S_ORDER_CNT = S_ORDER_CNT + 1, S_YTD = S_Y
+TD + :B5 , S_REMOTE_CNT = S_REMOTE_CNT + :B4 , S_QUANTITY = (CAS
+E WHEN S_QUANTITY < :B2 + 10 THEN S_QUANTITY +91 ELSE S_QUANTITY
+ END) - :B3 WHERE I_ID = :B7 AND S_W_ID = :B6 RETURNING I_PRICE,
+ I_NAME, S_QUANTITY, S_DIST_02, I_PRICE*:B1 , CASE WHEN I_DATA N
+
+          7,864       70,363            0.1    3.9    41.46     99.63 2929337205
+Module: tpcso_combined_srv@frost (TNS V1-V3)
+UPDATE STOCK_ITEM SET S_ORDER_CNT = S_ORDER_CNT + 1, S_YTD = S_Y
+TD + :B5 , S_REMOTE_CNT = S_REMOTE_CNT + :B4 , S_QUANTITY = (CAS
+E WHEN S_QUANTITY < :B2 + 10 THEN S_QUANTITY +91 ELSE S_QUANTITY
+ END) - :B3 WHERE I_ID = :B7 AND S_W_ID = :B6 RETURNING I_PRICE,
+ I_NAME, S_QUANTITY, S_DIST_04, I_PRICE*:B1 , CASE WHEN I_DATA N
+
+          7,792       69,386            0.1    3.8    40.85     98.19  599989982
+Module: tpcso_combined_srv@frost (TNS V1-V3)
+UPDATE STOCK_ITEM SET S_ORDER_CNT = S_ORDER_CNT + 1, S_YTD = S_Y
+TD + :B5 , S_REMOTE_CNT = S_REMOTE_CNT + :B4 , S_QUANTITY = (CAS
+E WHEN S_QUANTITY < :B2 + 10 THEN S_QUANTITY +91 ELSE S_QUANTITY
+ END) - :B3 WHERE I_ID = :B7 AND S_W_ID = :B6 RETURNING I_PRICE,
+ I_NAME, S_QUANTITY, S_DIST_06, I_PRICE*:B1 , CASE WHEN I_DATA N
+SQL ordered by Reads  DB/Inst: BENCH/bench  Snaps: :snap1-:snap2
+-> End Disk Reads Threshold:      1000  Total Disk Reads:         202,452
+-> Captured SQL accounts for   99.9% of Total Disk Reads
+-> SQL reported below exceeded  1.0% of Total Disk Reads
+
+                                                     CPU      Elapsd     Old
+ Physical Reads  Executions  Reads per Exec %Total Time (s)  Time (s) Hash Value
+--------------- ------------ -------------- ------ -------- --------- ----------
+
+          7,775       69,806            0.1    3.8    41.31     98.06 3925978891
+Module: tpcso_combined_srv@frost (TNS V1-V3)
+UPDATE STOCK_ITEM SET S_ORDER_CNT = S_ORDER_CNT + 1, S_YTD = S_Y
+
+          -------------------------------------------------------------
+SQL ordered by Executions  DB/Inst: BENCH/bench  Snaps: :snap1-:snap2
+-> End Executions Threshold:       100  Total Executions:       4,233,516
+-> Captured SQL accounts for  100.3% of Total Executions
+-> SQL reported below exceeded  1.0% of Total Executions
+
+                                                CPU per    Elap per     Old
+ Executions   Rows Processed   Rows per Exec    Exec (s)   Exec (s)  Hash Value
+------------ --------------- ---------------- ----------- ---------- ----------
+     700,770         700,241              1.0       0.00        0.00 1355074911
+Module: tpcso_combined_srv@frost (TNS V1-V3)
+ -- New Order Anonymous block      DECLARE        TYPE distarray
+ IS TABLE OF VARCHAR(24) INDEX BY BINARY_INTEGER;       local_am
+t                distarray;       idx                      PLS_I
+NTEGER;        dummy_local              PLS_INTEGER;       dummy
+_start              PLS_INTEGER;       dummy_index
+
+     699,925         707,618              1.0       0.00        0.00 2201475103
+Module: tpcso_combined_srv@frost (TNS V1-V3)
+INSERT INTO ORDL (OL_O_ID, OL_D_ID, OL_W_ID, OL_NUMBER, OL_DELIV
+ERY_D, OL_I_ID, OL_SUPPLY_W_ID, OL_QUANTITY,OL_AMOUNT,OL_DIST_IN
+FO) VALUES (:B1, :B2, :B3, :B4 , :B10 , :B5 , :B6 , :B7 , :B8 ,
+:B9 )
+
+     698,923         698,221              1.0       0.00        0.00    2820940
+Module: tpcso_combined_srv@frost (TNS V1-V3)
+SELECT I_NAME FROM ITEM WHERE I_ID = :B1
+
+     698,898         698,191              1.0       0.00        0.00 1064996655
+Module: tpcso_combined_srv@frost (TNS V1-V3)
+BEGIN SELECT i_name INTO :item_name FROM item WHERE i_id = :item
+_id; END;
+
+      71,519          72,037              1.0       0.00        0.00 1306214583
+Module: tpcso_combined_srv@frost (TNS V1-V3)
+UPDATE STOCK_ITEM SET S_ORDER_CNT = S_ORDER_CNT + 1, S_YTD = S_Y
+TD + :B5 , S_REMOTE_CNT = S_REMOTE_CNT + :B4 , S_QUANTITY = (CAS
+E WHEN S_QUANTITY < :B2 + 10 THEN S_QUANTITY +91 ELSE S_QUANTITY
+ END) - :B3 WHERE I_ID = :B7 AND S_W_ID = :B6 RETURNING I_PRICE,
+ I_NAME, S_QUANTITY, S_DIST_10, I_PRICE*:B1 , CASE WHEN I_DATA N
+
+      71,183          71,061              1.0       0.00        0.00 2352584861
+Module: tpcso_combined_srv@frost (TNS V1-V3)
+UPDATE DIST SET D_NEXT_O_ID = D_NEXT_O_ID + 1 WHERE D_ID = :B2 A
+ND D_W_ID = :B1 RETURNING D_TAX, D_NEXT_O_ID-1 INTO :O0 ,:O1
+
+      70,984          70,971              1.0       0.00        0.00 2280903698
+Module: tpcso_combined_srv@frost (TNS V1-V3)
+SELECT C_DISCOUNT, C_LAST, C_CREDIT, W_TAX FROM CUST , WARE WHER
+E C_ID = :B3 AND C_D_ID = :B2 AND C_W_ID = W_ID AND W_ID = :B1
+
+      70,979          70,979              1.0       0.00        0.00 1713434978
+Module: tpcso_combined_srv@frost (TNS V1-V3)
+INSERT INTO NORD (NO_O_ID, NO_D_ID, NO_W_ID) VALUES (:B1, :B2, :
+B3)
+
+      70,787          71,509              1.0       0.00        0.00  813798518
+Module: tpcso_combined_srv@frost (TNS V1-V3)
+UPDATE STOCK_ITEM SET S_ORDER_CNT = S_ORDER_CNT + 1, S_YTD = S_Y
+TD + :B5 , S_REMOTE_CNT = S_REMOTE_CNT + :B4 , S_QUANTITY = (CAS
+E WHEN S_QUANTITY < :B2 + 10 THEN S_QUANTITY +91 ELSE S_QUANTITY
+SQL ordered by Executions  DB/Inst: BENCH/bench  Snaps: :snap1-:snap2
+-> End Executions Threshold:       100  Total Executions:       4,233,516
+-> Captured SQL accounts for  100.3% of Total Executions
+-> SQL reported below exceeded  1.0% of Total Executions
+
+                                                CPU per    Elap per     Old
+ Executions   Rows Processed   Rows per Exec    Exec (s)   Exec (s)  Hash Value
+------------ --------------- ---------------- ----------- ---------- ----------
+ END) - :B3 WHERE I_ID = :B7 AND S_W_ID = :B6 RETURNING I_PRICE,
+ I_NAME, S_QUANTITY, S_DIST_02, I_PRICE*:B1 , CASE WHEN I_DATA N
+
+      70,682          70,683              1.0       0.00        0.00 2323328631
+Module: tpcso_combined_srv@frost (TNS V1-V3)
+INSERT INTO ORDR (O_ID,O_D_ID, O_W_ID, O_C_ID, O_ENTRY_D, O_CARR
+IER_ID, O_OL_CNT, O_ALL_LOCAL) VALUES (:B1, :B2, :B3, :B4, :B5 ,
+ 11, :B6 , :B7 )
+
+      70,537          71,108              1.0       0.00        0.00 4205404093
+Module: tpcso_combined_srv@frost (TNS V1-V3)
+UPDATE STOCK_ITEM SET S_ORDER_CNT = S_ORDER_CNT + 1, S_YTD = S_Y
+TD + :B5 , S_REMOTE_CNT = S_REMOTE_CNT + :B4 , S_QUANTITY = (CAS
+E WHEN S_QUANTITY < :B2 + 10 THEN S_QUANTITY +91 ELSE S_QUANTITY
+ END) - :B3 WHERE I_ID = :B7 AND S_W_ID = :B6 RETURNING I_PRICE,
+ I_NAME, S_QUANTITY, S_DIST_08, I_PRICE*:B1 , CASE WHEN I_DATA N
+
+      70,363          70,908              1.0       0.00        0.00 2929337205
+Module: tpcso_combined_srv@frost (TNS V1-V3)
+UPDATE STOCK_ITEM SET S_ORDER_CNT = S_ORDER_CNT + 1, S_YTD = S_Y
+TD + :B5 , S_REMOTE_CNT = S_REMOTE_CNT + :B4 , S_QUANTITY = (CAS
+E WHEN S_QUANTITY < :B2 + 10 THEN S_QUANTITY +91 ELSE S_QUANTITY
+ END) - :B3 WHERE I_ID = :B7 AND S_W_ID = :B6 RETURNING I_PRICE,
+ I_NAME, S_QUANTITY, S_DIST_04, I_PRICE*:B1 , CASE WHEN I_DATA N
+
+      70,058          70,804              1.0       0.00        0.00  615033986
+Module: tpcso_combined_srv@frost (TNS V1-V3)
+UPDATE STOCK_ITEM SET S_ORDER_CNT = S_ORDER_CNT + 1, S_YTD = S_Y
+TD + :B5 , S_REMOTE_CNT = S_REMOTE_CNT + :B4 , S_QUANTITY = (CAS
+E WHEN S_QUANTITY < :B2 + 10 THEN S_QUANTITY +91 ELSE S_QUANTITY
+ END) - :B3 WHERE I_ID = :B7 AND S_W_ID = :B6 RETURNING I_PRICE,
+ I_NAME, S_QUANTITY, S_DIST_09, I_PRICE*:B1 , CASE WHEN I_DATA N
+
+      69,806          70,646              1.0       0.00        0.00 3925978891
+Module: tpcso_combined_srv@frost (TNS V1-V3)
+UPDATE STOCK_ITEM SET S_ORDER_CNT = S_ORDER_CNT + 1, S_YTD = S_Y
+TD + :B5 , S_REMOTE_CNT = S_REMOTE_CNT + :B4 , S_QUANTITY = (CAS
+E WHEN S_QUANTITY < :B2 + 10 THEN S_QUANTITY +91 ELSE S_QUANTITY
+ END) - :B3 WHERE I_ID = :B7 AND S_W_ID = :B6 RETURNING I_PRICE,
+ I_NAME, S_QUANTITY, S_DIST_07, I_PRICE*:B1 , CASE WHEN I_DATA N
+
+      69,386          70,005              1.0       0.00        0.00  599989982
+Module: tpcso_combined_srv@frost (TNS V1-V3)
+UPDATE STOCK_ITEM SET S_ORDER_CNT = S_ORDER_CNT + 1, S_YTD = S_Y
+TD + :B5 , S_REMOTE_CNT = S_REMOTE_CNT + :B4 , S_QUANTITY = (CAS
+E WHEN S_QUANTITY < :B2 + 10 THEN S_QUANTITY +91 ELSE S_QUANTITY
+ END) - :B3 WHERE I_ID = :B7 AND S_W_ID = :B6 RETURNING I_PRICE,
+ I_NAME, S_QUANTITY, S_DIST_06, I_PRICE*:B1 , CASE WHEN I_DATA N
+
+      69,069          69,688              1.0       0.00        0.00 2746612599
+Module: tpcso_combined_srv@frost (TNS V1-V3)
+UPDATE STOCK_ITEM SET S_ORDER_CNT = S_ORDER_CNT + 1, S_YTD = S_Y
+SQL ordered by Executions  DB/Inst: BENCH/bench  Snaps: :snap1-:snap2
+-> End Executions Threshold:       100  Total Executions:       4,233,516
+-> Captured SQL accounts for  100.3% of Total Executions
+-> SQL reported below exceeded  1.0% of Total Executions
+
+                                                CPU per    Elap per     Old
+ Executions   Rows Processed   Rows per Exec    Exec (s)   Exec (s)  Hash Value
+------------ --------------- ---------------- ----------- ---------- ----------
+TD + :B5 , S_REMOTE_CNT = S_REMOTE_CNT + :B4 , S_QUANTITY = (CAS
+E WHEN S_QUANTITY < :B2 + 10 THEN S_QUANTITY +91 ELSE S_QUANTITY
+ END) - :B3 WHERE I_ID = :B7 AND S_W_ID = :B6 RETURNING I_PRICE,
+ I_NAME, S_QUANTITY, S_DIST_05, I_PRICE*:B1 , CASE WHEN I_DATA N
+
+      68,700          69,428              1.0       0.00        0.00 3213055379
+Module: tpcso_combined_srv@frost (TNS V1-V3)
+UPDATE STOCK_ITEM SET S_ORDER_CNT = S_ORDER_CNT + 1, S_YTD = S_Y
+TD + :B5 , S_REMOTE_CNT = S_REMOTE_CNT + :B4 , S_QUANTITY = (CAS
+E WHEN S_QUANTITY < :B2 + 10 THEN S_QUANTITY +91 ELSE S_QUANTITY
+
+          -------------------------------------------------------------
+SQL ordered by Parse Calls  DB/Inst: BENCH/bench  Snaps: :snap1-:snap2
+-> End Parse Calls Threshold:      1000 Total Parse Calls:          34,079
+-> Captured SQL accounts for   80.8% of Total Parse Calls
+-> SQL reported below exceeded  1.0% of Total Parse Calls
+
+                           % Total    Old
+ Parse Calls  Executions   Parses  Hash Value
+------------ ------------ -------- ----------
+       3,443        3,443    10.10  610232272
+Module: tpcso_combined_srv@frost (TNS V1-V3)
+BEGIN inittpcc.init_pay; END;
+
+       3,443        3,443    10.10 3840591838
+select privilege# from sysauth$ where (grantee#=:1 or grantee#=1
+) and privilege#>0
+
+       3,440        3,440    10.09 3392907754
+Module: tpcso_combined_srv@frost (TNS V1-V3)
+BEGIN inittpcc.init_no(:idx1arr); END;
+
+       3,440        3,440    10.09 3425645771
+select decode(failover_method, NULL, 0 , 'BASIC', 1, 'PRECONNECT
+', 2 , 'PREPARSE', 4 , 0), decode(failover_type, NULL, 1 , 'NONE
+', 1 , 'SESSION', 2, 'SELECT',  4, 1), failover_retries, failove
+r_delay, flags from service$ where name = :1
+
+       3,440        3,440    10.09 4143084494
+select privilege#,level from sysauth$ connect by grantee#=prior
+privilege# and privilege#>0 start with grantee#=:1 and privilege
+#>0
+
+       3,439        3,439    10.09  801255854
+select SYS_CONTEXT('USERENV', 'SERVER_HOST'), SYS_CONTEXT('USERE
+NV', 'DB_UNIQUE_NAME'), SYS_CONTEXT('USERENV', 'INSTANCE_NAME'),
+ SYS_CONTEXT('USERENV', 'SERVICE_NAME'), INSTANCE_NUMBER, STARTU
+P_TIME, SYS_CONTEXT('USERENV', 'DB_DOMAIN') from v$instance wher
+e INSTANCE_NAME=SYS_CONTEXT('USERENV', 'INSTANCE_NAME')
+
+       3,437        3,437    10.09 4084882229
+Module: tpcso_combined_srv@frost (TNS V1-V3)
+BEGIN inittpcc.init_del ; END;
+
+       3,430        3,430    10.06 4166735688
+select value$ from props$ where name = 'GLOBAL_DB_NAME'
+
+          -------------------------------------------------------------
+Instance Activity Stats  DB/Inst: BENCH/bench  Snaps: :snap1-:snap2
+
+Statistic                                      Total     per Second    per Trans
+--------------------------------- ------------------ -------------- ------------
+CR blocks created                              1,745           14.5          0.0
+Cached Commit SCN referenced                   5,626           46.9          0.0
+Commit SCN cached                                  0            0.0          0.0
+DBWR checkpoint buffers written                    0            0.0          0.0
+DBWR checkpoints                                   0            0.0          0.0
+DBWR revisited being-written buff                  0            0.0          0.0
+DBWR thread checkpoint buffers wr                  0            0.0          0.0
+DBWR transaction table writes                      0            0.0          0.0
+DBWR undo block writes                             0            0.0          0.0
+IMU CR rollbacks                               1,795           15.0          0.0
+IMU Flushes                                    3,136           26.1          0.0
+IMU Redo allocation size                  58,507,776      487,564.8        402.4
+IMU bind flushes                                   0            0.0          0.0
+IMU commits                                  142,634        1,188.6          1.0
+IMU contention                                   920            7.7          0.0
+IMU ktichg flush                                   0            0.0          0.0
+IMU pool not allocated                             0            0.0          0.0
+IMU recursive-transaction flush                    1            0.0          0.0
+IMU undo allocation size               3,259,831,136   27,165,259.5     22,417.3
+IMU- failed to get a private stra                  0            0.0          0.0
+SQL*Net roundtrips to/from client          1,511,085       12,592.4         10.4
+active txn count during cleanout               3,140           26.2          0.0
+application wait time                            826            6.9          0.0
+background checkpoints completed                   0            0.0          0.0
+background checkpoints started                     0            0.0          0.0
+background timeouts                              360            3.0          0.0
+branch node splits                                 1            0.0          0.0
+buffer is not pinned count                 2,867,955       23,899.6         19.7
+buffer is pinned count                        75,171          626.4          0.5
+bytes received via SQL*Net from c        198,114,493    1,650,954.1      1,362.4
+bytes sent via SQL*Net to client         307,091,803    2,559,098.4      2,111.8
+calls to get snapshot scn: kcmgss            894,475        7,454.0          6.2
+calls to kcmgas                              152,029        1,266.9          1.1
+calls to kcmgcs                                2,137           17.8          0.0
+change write time                              1,941           16.2          0.0
+cleanout - number of ktugct calls              8,902           74.2          0.1
+cleanouts and rollbacks - consist              1,222           10.2          0.0
+cleanouts only - consistent read                 112            0.9          0.0
+cluster key scan block gets                   73,153          609.6          0.5
+cluster key scans                          2,813,706       23,447.6         19.4
+cold recycle reads                                 0            0.0          0.0
+commit batch/immediate performed               1,031            8.6          0.0
+commit batch/immediate requested               1,031            8.6          0.0
+commit cleanout failures: block l                  0            0.0          0.0
+commit cleanout failures: buffer                   0            0.0          0.0
+commit cleanout failures: callbac                 12            0.1          0.0
+commit cleanout failures: cannot                 349            2.9          0.0
+commit cleanouts                           1,414,347       11,786.2          9.7
+commit cleanouts successfully com          1,413,963       11,783.0          9.7
+commit immediate performed                     1,031            8.6          0.0
+commit immediate requested                     1,031            8.6          0.0
+commit txn count during cleanout               6,364           53.0          0.0
+concurrency wait time                             29            0.2          0.0
+consistent changes                             2,529           21.1          0.0
+consistent gets                            4,261,760       35,514.7         29.3
+consistent gets - examination              3,918,346       32,652.9         27.0
+Instance Activity Stats  DB/Inst: BENCH/bench  Snaps: :snap1-:snap2
+
+Statistic                                      Total     per Second    per Trans
+--------------------------------- ------------------ -------------- ------------
+consistent gets direct                         6,825           56.9          0.1
+consistent gets from cache                 4,255,120       35,459.3         29.3
+cursor authentications                             0            0.0          0.0
+data blocks consistent reads - un              1,848           15.4          0.0
+db block changes                           2,673,823       22,281.9         18.4
+db block gets                              2,960,460       24,670.5         20.4
+db block gets direct                               0            0.0          0.0
+db block gets from cache                   2,960,450       24,670.4         20.4
+deferred (CURRENT) block cleanout            928,914        7,741.0          6.4
+dirty buffers inspected                       14,824          123.5          0.1
+enqueue conversions                               45            0.4          0.0
+enqueue releases                             157,939        1,316.2          1.1
+enqueue requests                             157,941        1,316.2          1.1
+enqueue timeouts                                   0            0.0          0.0
+enqueue waits                                    599            5.0          0.0
+exchange deadlocks                                 0            0.0          0.0
+execute count                              4,233,516       35,279.3         29.1
+failed probes on index block recl                  0            0.0          0.0
+free buffer inspected                        183,985        1,533.2          1.3
+free buffer requested                        178,261        1,485.5          1.2
+heap block compress                           70,107          584.2          0.5
+hot buffers moved to head of LRU             134,573        1,121.4          0.9
+immediate (CR) block cleanout app              1,334           11.1          0.0
+immediate (CURRENT) block cleanou              6,601           55.0          0.1
+index crx upgrade (found)                          2            0.0          0.0
+index crx upgrade (positioned)                10,208           85.1          0.1
+index fast full scans (full)                       0            0.0          0.0
+index fetch by key                               230            1.9          0.0
+index scans kdiixs1                          112,142          934.5          0.8
+leaf node 90-10 splits                             7            0.1          0.0
+leaf node splits                                 480            4.0          0.0
+lob reads                                          0            0.0          0.0
+lob writes                                         0            0.0          0.0
+lob writes unaligned                               0            0.0          0.0
+logons cumulative                              3,401           28.3          0.0
+messages received                             30,369          253.1          0.2
+messages sent                                 30,368          253.1          0.2
+no buffer to keep pinned count                     0            0.0          0.0
+no work - consistent read gets               232,775        1,939.8          1.6
+opened cursors cumulative                     34,095          284.1          0.2
+parse count (failures)                             0            0.0          0.0
+parse count (hard)                                 0            0.0          0.0
+parse count (total)                           34,079          284.0          0.2
+physical read IO requests                    190,549        1,587.9          1.3
+physical read bytes                    1,725,915,136   14,382,626.1     11,868.8
+physical read total IO requests              190,641        1,588.7          1.3
+physical read total bytes              1,727,422,464   14,395,187.2     11,879.2
+physical read total multi block r              5,612           46.8          0.0
+physical reads                               202,452        1,687.1          1.4
+physical reads cache                         175,168        1,459.7          1.2
+physical reads cache prefetch                  1,239           10.3          0.0
+physical reads direct                         27,284          227.4          0.2
+physical reads direct temporary t             20,458          170.5          0.1
+physical reads prefetch warmup                     0            0.0          0.0
+physical write IO requests                    14,688          122.4          0.1
+physical write bytes                     182,607,872    1,521,732.3      1,255.8
+Instance Activity Stats  DB/Inst: BENCH/bench  Snaps: :snap1-:snap2
+
+Statistic                                      Total     per Second    per Trans
+--------------------------------- ------------------ -------------- ------------
+physical write total IO requests              44,666          372.2          0.3
+physical write total bytes               605,958,144    5,049,651.2      4,167.1
+physical write total multi block              33,704          280.9          0.2
+physical writes                               22,291          185.8          0.2
+physical writes direct                            48            0.4          0.0
+physical writes direct temporary                  48            0.4          0.0
+physical writes from cache                    22,243          185.4          0.2
+physical writes non checkpoint                10,694           89.1          0.1
+pinned buffers inspected                           0            0.0          0.0
+prefetch warmup blocks aged out b                 14            0.1          0.0
+queue flush                                        0            0.0          0.0
+queue position update                          6,452           53.8          0.0
+queue splits                                   4,273           35.6          0.0
+recursive calls                            2,917,338       24,311.2         20.1
+redo blocks written                          825,239        6,877.0          5.7
+redo buffer allocation retries                     0            0.0          0.0
+redo entries                                 224,690        1,872.4          1.6
+redo log space requests                            0            0.0          0.0
+redo log space wait time                           0            0.0          0.0
+redo ordering marks                              887            7.4          0.0
+redo size                                401,901,096    3,349,175.8      2,763.8
+redo subscn max counts                         8,671           72.3          0.1
+redo synch time                               85,793          714.9          0.6
+redo synch writes                            144,440        1,203.7          1.0
+redo wastage                               7,316,140       60,967.8         50.3
+redo write time                                3,896           32.5          0.0
+redo writer latching time                         37            0.3          0.0
+redo writes                                   26,385          219.9          0.2
+rollback changes - undo records a             18,261          152.2          0.1
+rollbacks only - consistent read                 524            4.4          0.0
+rows fetched via callback                  2,739,864       22,832.2         18.8
+serializable aborts                              840            7.0          0.0
+session cursor cache hits                         10            0.1          0.0
+session logical reads                      7,222,955       60,191.3         49.7
+session pga memory                         1,918,984       15,991.5         13.2
+session pga memory max                     2,344,216       19,535.1         16.1
+session uga memory                        95,489,184      795,743.2        656.7
+session uga memory max                   657,471,552    5,478,929.6      4,521.3
+shared hash latch upgrades - no w            114,985          958.2          0.8
+shared hash latch upgrades - wait                  4            0.0          0.0
+sorts (disk)                                       2            0.0          0.0
+sorts (memory)                                33,562          279.7          0.2
+sorts (rows)                                 501,082        4,175.7          3.5
+sql area evicted                                   0            0.0          0.0
+sql area purged                                    0            0.0          0.0
+summed dirty queue length                    143,123        1,192.7          1.0
+switch current to new buffer                       1            0.0          0.0
+table fetch by rowid                          40,719          339.3          0.3
+table fetch continued row                          0            0.0          0.0
+table scan blocks gotten                      10,197           85.0          0.1
+table scan rows gotten                       193,743        1,614.5          1.3
+table scans (short tables)                     6,798           56.7          0.1
+total number of times SMON posted                  4            0.0          0.0
+transaction rollbacks                          1,031            8.6          0.0
+transaction tables consistent rea                  0            0.0          0.0
+transaction tables consistent rea                  0            0.0          0.0
+Instance Activity Stats  DB/Inst: BENCH/bench  Snaps: :snap1-:snap2
+
+Statistic                                      Total     per Second    per Trans
+--------------------------------- ------------------ -------------- ------------
+undo change vector size                  272,900,120    2,274,167.7      1,876.7
+user I/O wait time                           191,035        1,592.0          1.3
+user calls                                 1,525,100       12,709.2         10.5
+user commits                                 143,573        1,196.4          1.0
+user rollbacks                                 1,843           15.4          0.0
+write clones created in backgroun                  0            0.0          0.0
+write clones created in foregroun                  0            0.0          0.0
+          -------------------------------------------------------------
+
+Instance Activity Stats  DB/Inst: BENCH/bench  Snaps: :snap1-:snap2
+-> Statistics with absolute values (should not be diffed)
+
+Statistic                             Begin Value       End Value
+--------------------------------- --------------- ---------------
+logons current                                 54              54
+opened cursors current                      2,008           2,042
+session cursor cache count                215,589         239,405
+          -------------------------------------------------------------
+
+Instance Activity Stats  DB/Inst: BENCH/bench  Snaps: :snap1-:snap2
+-> Statistics identified by '(derived)' come from sources other than SYSSTAT
+
+Statistic                                      Total  per Hour
+--------------------------------- ------------------ ---------
+log switches (derived)                             0       .00
+          -------------------------------------------------------------
+
+OS Statistics  DB/Inst: BENCH/bench  Snaps: :snap1-:snap2
+-> ordered by statistic type (CPU use, Virtual Memory, Hardware Config), Name
+
+Statistic                                  Total
+------------------------- ----------------------
+BUSY_TIME                                215,575
+IDLE_TIME                                 72,084
+SYS_TIME                                  75,642
+USER_TIME                                139,933
+LOAD                                          19
+OS_CPU_WAIT_TIME                          15,200
+VM_IN_BYTES                                    0
+VM_OUT_BYTES                                   0
+PHYSICAL_MEMORY_BYTES             51,458,965,504
+NUM_CPUS                                      24
+          -------------------------------------------------------------
+Tablespace IO Stats  DB/Inst: BENCH/bench  Snaps: :snap1-:snap2
+->ordered by IOs (Reads + Writes) desc
+
+Tablespace
+------------------------------
+                 Av      Av     Av                    Av        Buffer Av Buf
+         Reads Reads/s Rd(ms) Blks/Rd       Writes Writes/s      Waits Wt(ms)
+-------------- ------- ------ ------- ------------ -------- ---------- ------
+CUST_0
+        87,552     730   10.6     1.0        8,445       70          0    0.0
+STOK_0
+        85,042     709   10.2     1.0        4,369       36          7    1.4
+TEMP_0
+         9,453      79    0.0     2.2           48        0          0    0.0
+ORDR_0
+         8,278      69   12.7     1.0            0        0          7    0.0
+ICUST2_0
+           246       2   14.1     1.0            0        0          0    0.0
+HIST_0
+           158       1   11.3     1.0            9        0         34    3.8
+IORDR2_0
+            88       1   11.4     1.0            0        0          0    0.0
+NORD_0
+            61       1   11.3     1.0            1        0          1    0.0
+SP_0
+            20       0   10.0     1.0            0        0          0    0.0
+          -------------------------------------------------------------
+File IO Stats  DB/Inst: BENCH/bench  Snaps: :snap1-:snap2
+->Mx Rd Bkt: Max bucket time for single block read
+->ordered by Tablespace, File
+
+Tablespace               Filename
+------------------------ ----------------------------------------------------
+                        Av   Mx                                             Av
+                 Av     Rd   Rd    Av                    Av        Buffer BufWt
+         Reads Reads/s (ms)  Bkt Blks/Rd       Writes Writes/s      Waits  (ms)
+-------------- ------- ----- --- ------- ------------ -------- ---------- ------
+CUST_0                   /10glinks/cust_0_0
+         8,657      72  10.6         1.0          815        7          0
+                         /10glinks/cust_0_1
+         7,149      60  10.6         1.0          722        6          0
+                         /10glinks/cust_0_2
+         7,880      66  10.6         1.0          771        6          0
+                         /10glinks/cust_0_3
+         9,158      76  10.5         1.0          890        7          0
+                         /10glinks/cust_0_4
+         9,374      78  10.5         1.0          898        7          0
+                         /10glinks/cust_0_5
+         9,122      76  10.5         1.0          875        7          0
+                         /10glinks/cust_0_6
+         8,585      72  10.7         1.0          752        6          0
+                         /10glinks/cust_0_7
+         9,287      77  10.6         1.0          943        8          0
+                         /10glinks/cust_0_8
+         9,282      77  10.5         1.0          887        7          0
+                         /10glinks/cust_0_9
+         9,058      75  10.5         1.0          892        7          0
+
+HIST_0                   /10glinks/hist_0_0
+           158       1  11.3         1.0            9        0         34    3.8
+
+ICUST2_0                 /10glinks/icust2_0_0
+           124       1  13.9         1.0            0        0          0
+                         /10glinks/icust2_0_1
+           122       1  14.3         1.0            0        0          0
+
+IORDR2_0                 /10glinks/iordr2_0_0
+            88       1  11.4         1.0            0        0          0
+
+NORD_0                   /10glinks/nord_0_0
+            61       1  11.3         1.0            1        0          1    0.0
+
+ORDR_0                   /10glinks/ordr_0_0
+           676       6  12.4         1.0            0        0          0
+                         /10glinks/ordr_0_1
+           642       5  13.6         1.0            0        0          0
+                         /10glinks/ordr_0_10
+           728       6  12.4         1.0            0        0          0
+                         /10glinks/ordr_0_11
+           697       6  12.3         1.0            0        0          0
+                         /10glinks/ordr_0_2
+           695       6  12.8         1.0            0        0          0
+                         /10glinks/ordr_0_3
+           717       6  12.9         1.0            0        0          0
+                         /10glinks/ordr_0_4
+           715       6  12.6         1.0            0        0          0
+                         /10glinks/ordr_0_5
+File IO Stats  DB/Inst: BENCH/bench  Snaps: :snap1-:snap2
+->Mx Rd Bkt: Max bucket time for single block read
+->ordered by Tablespace, File
+
+Tablespace               Filename
+------------------------ ----------------------------------------------------
+                        Av   Mx                                             Av
+                 Av     Rd   Rd    Av                    Av        Buffer BufWt
+         Reads Reads/s (ms)  Bkt Blks/Rd       Writes Writes/s      Waits  (ms)
+-------------- ------- ----- --- ------- ------------ -------- ---------- ------
+           698       6  12.9         1.0            0        0          0
+ORDR_0                   /10glinks/ordr_0_6
+           653       5  13.1         1.0            0        0          0
+                         /10glinks/ordr_0_7
+           675       6  12.8         1.0            0        0          1    0.0
+                         /10glinks/ordr_0_8
+           680       6  12.3         1.0            0        0          6    0.0
+                         /10glinks/ordr_0_9
+           702       6  12.8         1.0            0        0          0
+
+SP_0                     /10glinks/sp_0
+            20       0  10.0         1.0            0        0          0
+
+STOK_0                   /10glinks/stok_0_0
+         8,141      68  10.3         1.0          414        3          0
+                         /10glinks/stok_0_1
+         8,538      71  10.1         1.0          469        4          0
+                         /10glinks/stok_0_2
+         8,533      71  10.3         1.0          432        4          1    0.0
+                         /10glinks/stok_0_3
+         8,706      73  10.1         1.0          454        4          0
+                         /10glinks/stok_0_4
+         8,109      68  10.4         1.0          391        3          2    0.0
+                         /10glinks/stok_0_5
+         8,778      73  10.2         1.0          448        4          1    0.0
+                         /10glinks/stok_0_6
+         8,147      68  10.1         1.0          434        4          1    0.0
+                         /10glinks/stok_0_7
+         8,603      72  10.2         1.0          431        4          0
+                         /10glinks/stok_0_8
+         8,520      71  10.1         1.0          424        4          1   10.0
+                         /10glinks/stok_0_9
+         8,967      75  10.1         1.0          472        4          1    0.0
+
+TEMP_0                   /10glinks/temp_0_1
+         9,453      79   0.0         2.2           48        0          0
+
+          -------------------------------------------------------------
+Buffer Pool Statistics  DB/Inst: BENCH/bench  Snaps: :snap1-:snap2
+-> Standard block size Pools  D: default,  K: keep,  R: recycle
+-> Default Pools for other block sizes: 2k, 4k, 8k, 16k, 32k
+-> Buffers: the number of buffers.  Units of K, M, G are divided by 1000
+
+                                                            Free Writ     Buffer
+            Pool         Buffer     Physical    Physical  Buffer Comp       Busy
+P   Buffers Hit%           Gets        Reads      Writes   Waits Wait      Waits
+--- ------- ---- -------------- ------------ ----------- ------- ---- ----------
+16k    251K  100      1,933,814        8,281           0       0    0          7
+D      494K  100      1,602,805          418           7       0    0         43
+K     1484K   98      3,374,143       78,210       7,684       0    0          7
+R      247K   72        311,807       88,635      11,814       0    0         34
+          -------------------------------------------------------------
+
+Instance Recovery Stats  DB/Inst: BENCH/bench  Snaps: :snap1-:snap2
+-> B: Begin snapshot,  E: End snapshot
+
+  Targt Estd                                  Log File  Log Ckpt    Log Ckpt
+  MTTR  MTTR   Recovery   Actual    Target      Size     Timeout    Interval
+   (s)   (s)   Estd IOs  Redo Blks Redo Blks Redo Blks  Redo Blks  Redo Blks
+- ----- ----- ---------- --------- --------- ---------- --------- ------------
+B     0   484               923891    911897    1880010    911897
+E     0   701              1748454   1745202    1880010   1745202
+          -------------------------------------------------------------
+
+
+Buffer wait Statistics  DB/Inst: BENCH/bench  Snaps: :snap1-:snap2
+-> ordered by wait time desc, waits desc
+
+Class                        Waits Total Wait Time (s) Avg Time (ms)
+---------------------- ----------- ------------------- -------------
+data block                      88                   0             5
+undo header                      9                   0             0
+1st level bmb                    3                   0             0
+          -------------------------------------------------------------
+Process Memory Summary Stats  DB/Inst: BENCH/bench  Snaps: :snap1-:snap2
+-> B: Begin snap   E: End snap
+-> All rows below contain absolute values (i.e. not diffed over the interval)
+-> Max Alloc is Maximum PGA Allocation size at snapshot time
+   Hist Max Alloc is the Historical Max Allocation for still-connected processes
+-> Num Procs or Allocs:  For Begin/End snapshot lines, it is the number of
+   processes. For Category lines, it is the number of allocations
+-> ordered by Begin/End snapshot, Alloc (MB) desc
+
+                                                                  Hist   Num
+                                          Avg    Std Dev   Max    Max   Procs
+             Alloc     Used    Freeabl   Alloc    Alloc   Alloc  Alloc    or
+  Category   (MB)      (MB)      (MB)     (MB)    (MB)    (MB)    (MB)  Allocs
+- -------- --------- --------- -------- -------- ------- ------- ------ ------
+B --------     110.2      96.4       .0      1.9     2.0      15     15     58
+  Other        101.3                         1.7     2.0      15     15     59
+  SQL            7.7       4.7                .2      .1       0      1     46
+  PL/SQL         1.8       1.5                .0      .0       0      0     57
+E --------     110.3      96.1       .0      2.0     2.0      15     15     56
+  Other        101.2                         1.8     2.0      15     15     57
+  SQL            7.7       4.7                .2      .1       0      1     46
+  PL/SQL         1.8       1.6                .0      .0       0      0     55
+          -------------------------------------------------------------
+
+Top Process Memory (by component)  DB/Inst: BENCH/bench  Snaps: :snap1-:snap2
+-> ordered by Begin/End snapshot, Alloc (MB) desc
+
+                        Alloc   Used   Freeabl     Max      Hist Max
+     PId Category       (MB)    (MB)     (MB)   Alloc (MB) Alloc (MB)
+- ------ ------------- ------- ------- -------- ---------- ----------
+B      6 LGWR --------    15.3    11.2       .0       15.3       15.3
+         Other            15.3                        15.3       15.3
+         PL/SQL             .0      .0                  .0         .0
+      16 CKPT --------     4.6      .6       .0        4.6        4.6
+         Other             4.6                         4.6        4.6
+         SQL                .0      .0                  .0         .1
+         PL/SQL             .0      .0                  .0         .0
+      56 TNS V1-V3 ---     3.3     3.2       .0        3.3        3.3
+         Other             3.2                         3.2        3.2
+         SQL                .2      .1                  .2         .8
+         PL/SQL             .0      .0                  .0         .0
+       2 DBW0 --------     3.0     3.0       .0        3.0        7.1
+         Other             3.0                         3.0        7.1
+         PL/SQL             .0      .0                  .0         .0
+       3 DBW1 --------     3.0     3.0       .0        3.0        3.0
+         Other             3.0                         3.0        3.0
+         PL/SQL             .0      .0                  .0         .0
+      13 DBW2 --------     3.0     3.0       .0        3.0        3.0
+         Other             3.0                         3.0        3.0
+         PL/SQL             .0      .0                  .0         .0
+      25 MMON --------     2.0     1.6       .0        2.0        2.0
+         Other             1.8                         1.8        1.8
+         SQL                .1      .1                  .1         .6
+         PL/SQL             .0      .0                  .0         .0
+      30  ------------     1.9     1.7       .0        1.9        1.9
+         Other             1.6                         1.6        1.6
+         SQL                .2      .1                  .2         .2
+         PL/SQL             .0      .0                  .0         .0
+      37  ------------     1.8     1.7       .0        1.8        1.8
+         Other             1.6                         1.6        1.6
+         SQL                .2      .1                  .2         .2
+         PL/SQL             .0      .0                  .0         .0
+      32  ------------     1.8     1.7       .0        1.8        1.8
+         Other             1.6                         1.6        1.6
+         SQL                .2      .1                  .2         .2
+         PL/SQL             .0      .0                  .0         .0
+      31  ------------     1.8     1.7       .0        1.8        1.8
+         Other             1.6                         1.6        1.6
+         SQL                .2      .1                  .2         .2
+         PL/SQL             .0      .0                  .0         .0
+      39  ------------     1.8     1.7       .0        1.8        1.8
+         Other             1.6                         1.6        1.6
+         SQL                .2      .1                  .2         .2
+         PL/SQL             .0      .0                  .0         .0
+      15  ------------     1.8     1.7       .0        1.8        1.8
+         Other             1.6                         1.6        1.6
+         SQL                .2      .1                  .2         .2
+         PL/SQL             .0      .0                  .0         .0
+      41  ------------     1.8     1.7       .0        1.8        1.8
+         Other             1.5                         1.5        1.5
+         SQL                .2      .2                  .2         .2
+         PL/SQL             .0      .0                  .0         .0
+      50  ------------     1.8     1.7       .0        1.8        1.8
+
+Top Process Memory (by component)  DB/Inst: BENCH/bench  Snaps: :snap1-:snap2
+-> ordered by Begin/End snapshot, Alloc (MB) desc
+
+                        Alloc   Used   Freeabl     Max      Hist Max
+     PId Category       (MB)    (MB)     (MB)   Alloc (MB) Alloc (MB)
+- ------ ------------- ------- ------- -------- ---------- ----------
+B     50 Other             1.6                         1.6        1.6
+         SQL                .2      .1                  .2         .2
+         PL/SQL             .0      .0                  .0         .0
+      55  ------------     1.8     1.7       .0        1.8        1.8
+         Other             1.6                         1.6        1.6
+         SQL                .2      .1                  .2         .2
+         PL/SQL             .0      .0                  .0         .0
+      27  ------------     1.8     1.7       .0        1.8        1.8
+         Other             1.6                         1.6        1.6
+         SQL                .2      .1                  .2         .2
+         PL/SQL             .0      .0                  .0         .0
+      61  ------------     1.8     1.7       .0        1.8        1.8
+         Other             1.6                         1.6        1.6
+         SQL                .2      .1                  .2         .2
+         PL/SQL             .0      .0                  .0         .0
+      34  ------------     1.8     1.7       .0        1.8        1.8
+         Other             1.5                         1.5        1.5
+         SQL                .2      .1                  .2         .2
+         PL/SQL             .0      .0                  .0         .0
+      14  ------------     1.8     1.6       .0        1.8        1.8
+         Other             1.5                         1.5        1.5
+         SQL                .2      .1                  .2         .2
+         PL/SQL             .0      .0                  .0         .0
+E      6 LGWR --------    15.3    11.2       .0       15.3       15.3
+         Other            15.3                        15.3       15.3
+         PL/SQL             .0      .0                  .0         .0
+      16 CKPT --------     4.6      .6       .0        4.6        4.6
+         Other             4.6                         4.6        4.6
+         SQL                .0      .0                  .0         .1
+         PL/SQL             .0      .0                  .0         .0
+      56 TNS V1-V3 ---     3.9     3.4       .0        3.9        4.4
+         Other             3.6                         3.6        3.6
+         SQL                .2      .1                  .2         .9
+         PL/SQL             .0      .0                  .0         .0
+       2 DBW0 --------     3.0     3.0       .0        3.0        7.1
+         Other             3.0                         3.0        7.1
+         PL/SQL             .0      .0                  .0         .0
+       3 DBW1 --------     3.0     3.0       .0        3.0        3.0
+         Other             3.0                         3.0        3.0
+         PL/SQL             .0      .0                  .0         .0
+      13 DBW2 --------     3.0     3.0       .0        3.0        3.0
+         Other             3.0                         3.0        3.0
+         PL/SQL             .0      .0                  .0         .0
+      25 MMON --------     2.0     1.6       .0        2.0        2.0
+         Other             1.8                         1.8        1.8
+         SQL                .1      .1                  .1         .6
+         PL/SQL             .0      .0                  .0         .0
+      30  ------------     1.9     1.7       .0        1.9        1.9
+         Other             1.6                         1.6        1.6
+         SQL                .2      .1                  .2         .2
+         PL/SQL             .0      .0                  .0         .0
+      49  ------------     1.8     1.7       .0        1.8        1.8
+         Other             1.6                         1.6        1.6
+
+Top Process Memory (by component)  DB/Inst: BENCH/bench  Snaps: :snap1-:snap2
+-> ordered by Begin/End snapshot, Alloc (MB) desc
+
+                        Alloc   Used   Freeabl     Max      Hist Max
+     PId Category       (MB)    (MB)     (MB)   Alloc (MB) Alloc (MB)
+- ------ ------------- ------- ------- -------- ---------- ----------
+E     49 SQL                .2      .1                  .2         .2
+         PL/SQL             .0      .0                  .0         .0
+      18  ------------     1.8     1.6       .0        1.8        1.8
+         Other             1.6                         1.6        1.6
+         SQL                .2      .1                  .2         .2
+         PL/SQL             .0      .0                  .0         .0
+      33  ------------     1.8     1.7       .0        1.8        1.8
+         Other             1.6                         1.6        1.6
+         SQL                .2      .1                  .2         .2
+         PL/SQL             .0      .0                  .0         .0
+      37  ------------     1.8     1.7       .0        1.8        1.8
+         Other             1.6                         1.6        1.6
+         SQL                .2      .1                  .2         .2
+         PL/SQL             .0      .0                  .0         .0
+      32  ------------     1.8     1.7       .0        1.8        1.8
+         Other             1.6                         1.6        1.6
+         SQL                .2      .1                  .2         .2
+         PL/SQL             .0      .0                  .0         .0
+      31  ------------     1.8     1.7       .0        1.8        1.8
+         Other             1.6                         1.6        1.6
+         SQL                .2      .1                  .2         .2
+         PL/SQL             .0      .0                  .0         .0
+      39  ------------     1.8     1.7       .0        1.8        1.8
+         Other             1.6                         1.6        1.6
+         SQL                .2      .1                  .2         .2
+         PL/SQL             .0      .0                  .0         .0
+      24  ------------     1.8     1.7       .0        1.8        1.8
+         Other             1.6                         1.6        1.6
+         SQL                .2      .1                  .2         .2
+         PL/SQL             .0      .0                  .0         .0
+      52  ------------     1.8     1.7       .0        1.8        1.8
+         Other             1.6                         1.6        1.6
+         SQL                .2      .1                  .2         .2
+         PL/SQL             .0      .0                  .0         .0
+      15  ------------     1.8     1.7       .0        1.8        1.8
+         Other             1.6                         1.6        1.6
+         SQL                .2      .1                  .2         .2
+         PL/SQL             .0      .0                  .0         .0
+      41  ------------     1.8     1.7       .0        1.8        1.8
+         Other             1.6                         1.6        1.6
+         SQL                .2      .1                  .2         .2
+         PL/SQL             .0      .0                  .0         .0
+      55  ------------     1.8     1.7       .0        1.8        1.8
+         Other             1.6                         1.6        1.6
+         SQL                .2      .1                  .2         .2
+         PL/SQL             .0      .0                  .0         .0
+          -------------------------------------------------------------
+Enqueue activity  DB/Inst: BENCH/bench  Snaps: :snap1-:snap2
+-> only enqueues with waits are shown
+-> Enqueue stats gathered prior to 10g should not be compared with 10g data
+-> ordered by Wait Time desc, Waits desc
+
+Enqueue Type (Request Reason)
+------------------------------------------------------------------------------
+    Requests    Succ Gets Failed Gets       Waits Wt Time (s)  Av Wt Time(ms)
+------------ ------------ ----------- ----------- ------------ --------------
+TX-Transaction (row lock contention)
+         602          602           0         602            0            .00
+          -------------------------------------------------------------
+
+Latch Activity  DB/Inst: BENCH/bench  Snaps: :snap1-:snap2
+->"Get Requests", "Pct Get Miss" and "Avg Slps/Miss" are statistics for
+  willing-to-wait latch get requests
+->"NoWait Requests", "Pct NoWait Miss" are for no-wait latch get requests
+->"Pct Misses" for both should be very close to 0.0
+
+                                           Pct    Avg   Wait                 Pct
+                              Get          Get   Slps   Time       NoWait NoWait
+Latch                       Requests      Miss  /Miss    (s)     Requests   Miss
+------------------------ -------------- ------ ------ ------ ------------ ------
+ASM db client latch                  80    0.0             0            0
+Consistent RBA                   26,393    0.0             0            0
+FOB s.o list latch                   38    0.0             0            0
+In memory undo latch          4,922,011    0.0    0.2      0            0
+KMG MMAN ready and start             40    0.0             0            0
+KTF sga latch                         0                    0           39    0.0
+KWQP Prop Status                      1    0.0             0            0
+Memory Management Latch               0                    0           40    0.0
+OS process                       10,200    0.0             0            0
+OS process allocation             6,838    0.0    0.0      0            0
+OS process: request allo          6,799    0.0    0.0      0            0
+PL/SQL warning settings          13,594    0.0             0            0
+SQL memory manager worka             67    0.0             0            0
+Shared B-Tree                         3    0.0             0            0
+active checkpoint queue           4,147    0.0             0            0
+active service list              20,397    0.1    0.0      0           40    0.0
+cache buffer handles              1,760    0.0             0            0
+cache buffers lru chain          52,859    0.1    0.0      0      188,664    0.2
+cache table scan latch              900    0.0             0          900    0.0
+channel handle pool latc          6,803    0.0    0.3      0            0
+channel operations paren         10,794    0.0    0.0      0            0
+checkpoint queue latch          295,640    0.0    0.0      0      327,539    0.0
+client/application info          16,995    0.0             0            0
+compile environment latc         12,761    0.0             0            0
+dml lock allocation                 134    0.0             0            0
+dummy allocation                  6,801    0.0    0.0      0            0
+enqueue hash chains             316,399    0.1    0.0      0            0
+enqueues                         29,677    0.1    0.0      0            0
+event group latch                 3,399    0.0             0            0
+file cache latch                     10    0.0             0            0
+global KZLD latch for me          3,398    0.0             0            0
+ksuosstats global area                2    0.0             0            0
+ktm global data                       4    0.0             0            0
+kwqbsn:qsga                           3    0.0             0            0
+lgwr LWN SCN                     26,398    0.0    0.0      0            0
+library cache                   189,686    0.1    0.0      0            0
+library cache lock              139,556    0.0    0.0      0            0
+library cache lock alloc          6,806    0.0             0            0
+library cache pin                67,990    0.0    0.0      0            0
+list of block allocation             14    0.0             0            0
+loader state object free              8    0.0             0            0
+message pool operations              10    0.0             0            0
+messages                         65,313    0.1    0.0      0            0
+mostly latch-free SCN            28,177    1.4    0.0      0            0
+multiblock read objects          13,743    0.1    0.0      0            0
+ncodef allocation latch               2    0.0             0            0
+object queue header heap         68,348    0.0             0            2    0.0
+object queue header oper        806,509    0.1    0.0      0            0
+parallel query alloc buf             16    0.0             0            0
+parameter list                   30,624    0.0    0.0      0            0
+Latch Activity  DB/Inst: BENCH/bench  Snaps: :snap1-:snap2
+->"Get Requests", "Pct Get Miss" and "Avg Slps/Miss" are statistics for
+  willing-to-wait latch get requests
+->"NoWait Requests", "Pct NoWait Miss" are for no-wait latch get requests
+->"Pct Misses" for both should be very close to 0.0
+
+                                           Pct    Avg   Wait                 Pct
+                              Get          Get   Slps   Time       NoWait NoWait
+Latch                       Requests      Miss  /Miss    (s)     Requests   Miss
+------------------------ -------------- ------ ------ ------ ------------ ------
+parameter table allocati          3,400    0.4    0.0      0            0
+post/wait queue                 247,672    1.8    0.0      0      143,898    0.4
+process allocation                6,800    1.2    0.4      0        3,362    1.1
+process group creation            6,800    0.0             0            0
+redo allocation               1,790,512    0.0    0.0      0      223,477    1.7
+redo copy                             0                    0      224,775    2.1
+redo writing                     86,803    0.0    0.0      0            0
+resmgr group change latc          3,399    0.0             0            0
+resmgr:actses active lis          6,798    0.0             0            0
+resmgr:actses change gro          3,398    0.0             0            0
+resmgr:free threads list          6,797    0.0    0.0      0            0
+resmgr:schema config                  1    0.0             0            0
+row cache objects               283,121    0.1    0.0      0            0
+rules engine rule set st            100    0.0             0            0
+sequence cache                   10,199    0.0             0            0
+session allocation               32,505    0.6    0.0      0            0
+session idle bit              3,058,622    0.1    0.0      0            0
+session switching                     2    0.0             0            0
+session timer                        39    0.0             0            0
+shared pool                      81,574    0.2    0.0      0            0
+sort extent pool                     36    0.0             0            0
+transaction allocation                7    0.0             0            0
+transaction branch alloc              2    0.0             0            0
+undo global data                520,608    0.0    0.0      0            0
+user lock                        13,596    0.4    0.0      0            0
+          -------------------------------------------------------------
+Latch Sleep breakdown  DB/Inst: BENCH/bench  Snaps: :snap1-:snap2
+-> ordered by misses desc
+
+                                       Get                                 Spin
+Latch Name                        Requests       Misses      Sleeps        Gets
+-------------------------- --------------- ------------ ----------- -----------
+post/wait queue                    247,672        4,371           7       4,364
+session idle bit                 3,058,622        2,675         102       2,573
+redo allocation                  1,790,512          576           7         569
+object queue header operat         806,509          466           6         460
+mostly latch-free SCN               28,177          401           1         400
+In memory undo latch             4,922,011          298          59         239
+session allocation                  32,505          195           9         186
+enqueue hash chains                316,399          169           1         168
+row cache objects                  283,121          167           2         165
+undo global data                   520,608          146           1         145
+shared pool                         81,574          144           2         142
+process allocation                   6,800           84          30          54
+user lock                           13,596           57           1          56
+library cache lock                 139,556           37           1          36
+channel handle pool latch            6,803            3           1           2
+          -------------------------------------------------------------
+Latch Miss Sources  DB/Inst: BENCH/bench  Snaps: :snap1-:snap2
+-> only latches with sleeps are shown
+-> ordered by name, sleeps desc
+
+                                                     NoWait              Waiter
+Latch Name               Where                       Misses     Sleeps   Sleeps
+------------------------ -------------------------- ------- ---------- --------
+In memory undo latch     ktiFlush: child                  0         49        4
+In memory undo latch     kticmt: child                    0          8        1
+In memory undo latch     ktiTxnPoolFree                   0          1        0
+In memory undo latch     kturbk                           0          1        5
+active service list      ksws_event: ksws event           0         10        1
+cache buffers lru chain  kcbzgws                          0          1        0
+channel handle pool latc ksrchconnect()                   0          1        0
+cost function            kzulrl                           0          1        0
+enqueue hash chains      ksqgtl3                          0          1        1
+event range base latch   No latch                         0         48        0
+library cache lock       kgllkdl: child: cleanup          0          1        1
+mostly latch-free SCN    kcslcu3                          0          1        1
+object queue header oper kcbo_switch_cq                   0          7        9
+object queue header oper kcbw_link_q                      0          3        0
+post/wait queue          ksliwat:remove                   0          6        6
+post/wait queue          ksliwat:add:nowait               0          1        0
+process allocation       ksucrp                           0         27        0
+process allocation       ksudlp                           0          6       21
+process allocation       ksuapc                           0          1       13
+redo allocation          kcrfw_redo_gen: redo alloc       0          7        0
+row cache objects        kqrpre: find obj                 0          2        2
+session allocation       ksuxds: KSUSFCLC not set         0          6        1
+session allocation       ksucrp                           0          2        0
+session allocation       ksucri                           0          1        4
+session idle bit         ksupuc: set busy                 0         76       38
+session idle bit         ksupuc: clear busy               0         48       86
+shared pool              kghalo                           0          1        1
+shared pool              kghupr1                          0          1        0
+undo global data         ktudba: KSLBEGIN                 0          1        0
+          -------------------------------------------------------------
+Dictionary Cache Stats  DB/Inst: BENCH/bench  Snaps: :snap1-:snap2
+->"Pct Misses"  should be very low (< 2% in most cases)
+->"Final Usage" is the number of cache entries being used in End Snapshot
+
+                                   Get    Pct    Scan   Pct      Mod      Final
+Cache                         Requests   Miss    Reqs  Miss     Reqs      Usage
+------------------------- ------------ ------ ------- ----- -------- ----------
+dc_objects                       3,400    0.0       0              0        954
+dc_profiles                      3,400    0.0       0              0          1
+dc_segments                         13    0.0       0              1      2,081
+dc_sequences                         1    0.0       0              1          7
+dc_tablespace_quotas                 1    0.0       0              1          5
+dc_tablespaces                  18,245    0.0       0              0         21
+dc_usernames                     6,800    0.0       0              0         11
+dc_users                        91,791    0.0       0              0         27
+          -------------------------------------------------------------
+Rule Sets  DB/Inst: BENCH/bench  Snaps: :snap1-:snap2
+-> * indicates Rule Set activity (re)started between Begin/End snaps
+-> Top 25 ordered by Evaluations desc
+
+                                                               No-SQL  SQL
+Rule                                *     Eval/sec Reloads/sec Eval % Eval %
+----------------------------------- - ------------ ----------- ------ ------
+SYS.ALERT_QUE_R                                  0           0      0      0
+          -------------------------------------------------------------
+SGA Memory Summary  DB/Inst: BENCH/bench  Snaps: :snap1-:snap2
+
+                                                        End Size (Bytes)
+SGA regions                      Begin Size (Bytes)       (if different)
+------------------------------ -------------------- --------------------
+Database Buffers                     23,068,672,000
+Fixed Size                                2,243,128
+Redo Buffers                              6,488,064
+Variable Size                        12,590,958,024
+                               -------------------- --------------------
+sum                                  35,668,361,216
+          -------------------------------------------------------------
+
+
+SGA breakdown difference  DB/Inst: BENCH/bench  Snaps: :snap1-:snap2
+-> Top 35 rows by size, ordered by Pool, Name (note rows with null values for
+   Pool column, or Names showing free memory are always shown)
+-> Null value for Begin MB or End MB indicates the size of that Pool/Name was
+   insignificant, or zero in that snapshot
+
+Pool   Name                                 Begin MB         End MB  % Diff
+------ ------------------------------ -------------- -------------- --------
+shared KTI-UNDO                              2,125.0        2,125.0     0.00
+shared free memory                           8,828.5        8,828.5    -0.00
+       buffer_cache                         22,000.0       22,000.0     0.00
+       fixed_sga                                 2.1            2.1     0.00
+       log_buffer                                6.2            6.2     0.00
+          -------------------------------------------------------------
+SQL Memory Statistics  DB/Inst: BENCH/bench  Snaps: :snap1-:snap2
+
+                                   Begin            End         % Diff
+                          -------------- -------------- --------------
+   Avg Cursor Size (KB):           25.52          25.52            .00
+ Cursor to Parent ratio:            1.06           1.06            .00
+          Total Cursors:           1,566          1,566            .00
+          Total Parents:           1,479          1,479            .00
+          -------------------------------------------------------------
+init.ora Parameters  DB/Inst: BENCH/bench  Snaps: :snap1-:snap2
+
+                                                                  End value
+Parameter Name                Begin value                       (if different)
+----------------------------- --------------------------------- --------------
+_collect_undo_stats           FALSE
+_cursor_cache_frame_bind_memo TRUE
+_db_writer_flush_imu          FALSE
+_enable_list_io               FALSE
+_hash_join_enabled            FALSE
+_imu_pools                    1200
+_in_memory_undo               TRUE
+_lgwr_async_io                FALSE
+_lightweight_hdrs             TRUE
+_optimizer_cache_stats        FALSE
+_optimizer_cost_model         io
+_smu_debug_mode               1536
+_two_pass                     FALSE
+aq_tm_processes               0
+compatible                    10.1.0.0.0
+control_files                 /10glinks/control_001
+cursor_space_for_time         TRUE
+db_16k_cache_size             4194304000
+db_block_checking             FALSE
+db_block_checksum             typical
+db_block_size                 8192
+db_cache_size                 4194304000
+db_file_multiblock_read_count 1
+db_files                      524
+db_keep_cache_size            12582912000
+db_name                       bench
+db_recycle_cache_size         2097152000
+dml_locks                     500
+java_pool_size                0
+log_checkpoint_timeout        1200
+log_checkpoints_to_alert      TRUE
+max_dump_file_size            1000
+optimizer_mode                CHOOSE
+parallel_max_servers          256
+pga_aggregate_target          0
+plsql_optimize_level          2
+processes                     2000
+query_rewrite_enabled         FALSE
+recovery_parallelism          256
+replication_dependency_tracki FALSE
+sessions                      4000
+shared_pool_size              12582912000
+statistics_level              BASIC
+timed_statistics              FALSE
+trace_enabled                 FALSE
+transactions_per_rollback_seg 1
+undo_management               AUTO
+undo_retention                2
+undo_tablespace               undo_1
+          -------------------------------------------------------------
+
+End of Report ( /export/home/dbbench/output/O.TPCSO.1y/statspack.schlitz1.1y )
+

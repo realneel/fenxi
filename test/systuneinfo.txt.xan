@@ -1,0 +1,207 @@
+Title: System wide tunables
+--------------------------------------------------------
+ 
+ 
+Section: TCP Networking tunables
+Tunable 	Value
+tcp_time_wait_interval 			60000
+tcp_conn_req_max_q 			128
+tcp_conn_req_max_q0 			1024
+tcp_conn_req_min 			1
+tcp_conn_grace_period 			0
+tcp_cwnd_max 			1048576
+tcp_debug 			0
+tcp_smallest_nonpriv_port 			1024
+tcp_ip_abort_cinterval 			180000
+tcp_ip_abort_linterval 			180000
+tcp_ip_abort_interval 			480000
+tcp_ip_notify_cinterval 			10000
+tcp_ip_notify_interval 			10000
+tcp_ipv4_ttl 			64
+tcp_keepalive_interval 			7200000
+tcp_maxpsz_multiplier 			10
+tcp_mss_def_ipv4 			536
+tcp_mss_max_ipv4 			65495
+tcp_mss_min 			108
+tcp_naglim_def 			4095
+tcp_rexmit_interval_initial 			3000
+tcp_rexmit_interval_max 			60000
+tcp_rexmit_interval_min 			400
+tcp_deferred_ack_interval 			100
+tcp_snd_lowat_fraction 			0
+tcp_sth_rcv_hiwat 			0
+tcp_sth_rcv_lowat 			0
+tcp_dupack_fast_retransmit 			3
+tcp_ignore_path_mtu 			0
+tcp_smallest_anon_port 			32768
+tcp_largest_anon_port 			65535
+tcp_xmit_hiwat 			49152
+tcp_xmit_lowat 			4096
+tcp_recv_hiwat 			49152
+tcp_recv_hiwat_minmss 			4
+tcp_fin_wait_2_flush_interval 			675000
+tcp_co_min 			64
+tcp_max_buf 			1048576
+tcp_strong_iss 			1
+tcp_rtt_updates 			20
+tcp_wscale_always 			1
+tcp_tstamp_always 			0
+tcp_tstamp_if_wscale 			1
+tcp_rexmit_interval_extra 			0
+tcp_deferred_acks_max 			2
+tcp_slow_start_after_idle 			4
+tcp_slow_start_initial 			4
+tcp_co_timer_interval 			20
+tcp_sack_permitted 			2
+tcp_trace 			0
+tcp_compression_enabled 			1
+tcp_ipv6_hoplimit 			60
+tcp_mss_def_ipv6 			1220
+tcp_mss_max_ipv6 			65475
+tcp_rev_src_routes 			0
+tcp_local_dack_interval 			50
+tcp_ndd_get_info_interval 			1000
+tcp_local_dacks_max 			8
+tcp_ecn_permitted 			1
+tcp_rst_sent_rate_enabled 			1
+tcp_rst_sent_rate 			40
+tcp_push_timer_interval 			50
+tcp_use_smss_as_mss_opt 			0
+tcp_keepalive_abort_interval 			480000
+tcp_wroff_xtra 			32
+tcp_mdt_hdr_head_min 			32
+tcp_mdt_hdr_tail_min 			32
+tcp_mdt_max_pbufs 			16
+tcp_extra_priv_ports 			2049_4045
+tcp_host_param 			Hash_HSP_Address_Subnet_Mask_Send_Receive_TStamp
+tcp_host_param_ipv6 			Hash_HSP_Address_Subnet_Mask_Send_Receive_TStamp
+tcp_reserved_port_list 			No_port_is_reserved.
+--------------------------------------------------------
+ 
+ 
+Section: UDP Networking tunables
+Tunable 	Value
+udp_wroff_extra 			32
+udp_ipv4_ttl 			255
+udp_ipv6_hoplimit 			60
+udp_smallest_nonpriv_port 			1024
+udp_do_checksum 			1
+udp_smallest_anon_port 			32768
+udp_largest_anon_port 			65535
+udp_xmit_hiwat 			57344
+udp_xmit_lowat 			1024
+udp_recv_hiwat 			57344
+udp_max_buf 			2097152
+udp_ndd_get_info_interval 			1000
+udp_extra_priv_ports 			2049_4045
+--------------------------------------------------------
+ 
+ 
+Section: IP Networking tunables
+Tunable 	Value
+ip_respond_to_echo_broadcast 			1
+ip_respond_to_echo_multicast 			1
+ip_respond_to_timestamp 			0
+ip_send_redirects 			1
+ip_debug 			0
+ip_mrtdebug 			0
+ip_ire_timer_interval 			60000
+ip_ire_arp_interval 			1200000
+ip_ire_redirect_interval 			60000
+ip_def_ttl 			255
+ip_forward_src_routed 			0
+ip_wroff_extra 			32
+ip_ire_pathmtu_interval 			600000
+ip_icmp_return_data_bytes 			64
+ip_path_mtu_discovery 			1
+ip_ignore_delete_time 			30
+ip_ignore_redirect 			0
+ip_output_queue 			1
+ip_broadcast_ttl 			1
+ip_icmp_err_interval 			100
+ip_icmp_err_burst 			10
+ip_reass_queue_bytes 			1000000
+ip_strict_dst_multihoming 			0
+ip_addrs_per_if 			256
+icmp_accept_clear_messages 			1
+igmp_accept_clear_messages 			1
+ip_ndp_delay_first_probe_time 			5000
+ip_ndp_max_unicast_solicit 			3
+ip6_def_hops 			255
+ip6_icmp_return_data_bytes 			1280
+ip6_forward_src_routed 			0
+ip6_respond_to_echo_multicast 			1
+ip6_send_redirects 			1
+ip6_ignore_redirect 			0
+ip6_strict_dst_multihoming 			0
+ip_ire_reclaim_fraction 			3
+ipsec_policy_log_interval 			1000
+pim_accept_clear_messages 			1
+ip_ndp_unsolicit_interval 			2000
+ip_ndp_unsolicit_count 			3
+ip6_ignore_home_address_opt 			1
+ip_policy_mask 			0
+ip_multirt_ttl 			1
+ip_multidata_outbound 			1
+ip_ndp_defense_interval 			300000
+ip_max_temp_idle 			86400
+ip_max_temp_defend 			1
+ip_max_defend 			3
+ip_defend_interval 			30
+ip_dup_recovery 			300000
+ip_lso_outbound 			1
+ip_forwarding 			0
+ip6_forwarding 			0
+ipv4_mrtun_ire_status 			IRE_stq_in_ill_in_src_addr_max_frag_ref
+ipv4_srcif_ire_status 			IRE_stq_in_ill_addr_gateway_max_frag_ref_type_in/out/forward
+ip_rput_pullups 			0
+ip_ndp_cache_report 			ifname_hardware_addr_flags_proto_addr/mask
+ip_squeue_profile 			1
+ip_squeue_bind 			1
+ip_squeue_enter 			2
+ip_squeue_fanout 			0
+ip_cgtp_filter 			0
+ip_soft_rings_cnt 			2
+ce0:ip_forwarding 			0
+ce1:ip_forwarding 			0
+ce3:ip_forwarding 			0
+hme0:ip_forwarding 			0
+qfe0:ip_forwarding 			0
+--------------------------------------------------------
+ 
+ 
+Section: CE tunables
+Tunable 	Value
+instance 			0
+adv_autoneg_cap 			1
+adv_1000fdx_cap 			1
+adv_1000hdx_cap 			1
+adv_100T4_cap 			0
+adv_100fdx_cap 			0
+adv_100hdx_cap 			0
+adv_10fdx_cap 			0
+adv_10hdx_cap 			0
+adv_asmpause_cap 			0
+adv_pause_cap 			0
+master_cfg_enable 			0
+master_cfg_value 			0
+use_int_xcvr 			0
+enable_ipg0 			1
+ipg0 			8
+ipg1 			8
+ipg2 			4
+rx_intr_pkts 			8
+rx_intr_time 			3
+red_dv4to6k 			0
+red_dv6to8k 			0
+red_dv8to10k 			0
+red_dv10to12k 			0
+tx_dma_weight 			0
+rx_dma_weight 			0
+infinite_burst 			1
+disable_64bit 			0
+accept_jumbo 			0
+laggr_multistream 			0
+--------------------------------------------------------
+ 
+ 

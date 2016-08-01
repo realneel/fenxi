@@ -1,0 +1,178 @@
+Title: Sample
+
+Section: Test Line
+Display: Line;h=400;w=500;xaxis=x axis title;yaxis=y axis title;yaxistype=log;;;;
+Time  val  val1
+0	1  100
+10  10  80
+20  20  40
+40  40  20
+80  80  10
+100  100  1
+
+Section: Test MultiAxisLine;xaxistype=log
+Display: MultiAxisLine;xaxistype=log;w=450;h=200
+Time  val  val1
+0       1  100
+10  10  80
+20  20  40
+40  40  20
+80  80  10
+100  100  1
+
+Section: Test Log
+Display: Log
+Time  val  val1
+0       1  100
+10  10  80
+20  20  40
+40  40  20
+80  80  10
+100  100  1
+
+
+Section: Test area
+Display: area
+Time  val  val1
+0       1  100
+10  10  80
+20  20  40
+40  40  20
+80  80  10
+100  100  1
+
+
+Section: Test stacked area
+Display: stacked area
+Time  val  val1
+0       1  100
+10  10  80
+20  20  40
+40  40  20
+80  80  10
+100  100  1
+
+
+Section: Test pie;h=200;w=200
+Display: pie;h=200;w=200
+Time  val  val1
+0       1  100
+10  10  80
+20  20  40
+40  40  20
+80  80  10
+100  100  1
+
+
+Section: Test scatter
+Display: scatter
+Time  val  val1
+0       1  100
+10  10  80
+20  20  40
+40  40  20
+80  80  10
+100  100  1
+
+
+Section: Test bar
+Display: bar
+Time  val  val1
+0       1  100
+10  10  80
+20  20  40
+40  40  20
+80  80  10
+100  100  1
+
+
+Section: Test bar2
+Display: bar2
+Time  val  val1
+0       1  100
+10  10  80
+20  20  40
+40  40  20
+80  80  10
+100  100  1
+
+
+Section: Test bar3d
+Display: bar3d
+Time  val  val1
+0       1  100
+10  10  80
+20  20  40
+40  40  20
+80  80  10
+100  100  1
+
+
+Section: Test stacked bar
+Display: stacked bar
+Time  val  val1
+0       1  100
+10  10  80
+20  20  40
+40  40  20
+80  80  10
+100  100  1
+
+
+Section: Test stacked bar 3d
+Display: stacked bar 3d
+Time  val  val1
+0       1  100
+10  10  80
+20  20  40
+40  40  20
+80  80  10
+100  100  1
+
+
+Section: Test histogram
+Display: histogram
+Time  val  val1
+0       1  100
+10  10  80
+20  20  40
+40  40  20
+80  80  10
+100  100  1
+
+
+Section: Test logbar
+Display: logbar
+Time  val  val1
+0       1  100
+10  10  80
+20  20  40
+40  40  20
+80  80  10
+100  100  1
+
+
+Section: Test times
+Display: times
+Time  val  val1
+0       1  100
+10  10  80
+20  20  40
+40  40  20
+80  80  10
+100  100  1
+
+
+Section: Test table
+Display: table
+Time  val  val1
+0       1  100
+10  10  80
+20  20  40
+40  40  20
+80  80  10
+100  100  1
+
+
+
+
